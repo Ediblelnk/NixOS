@@ -5,10 +5,9 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -53,7 +52,7 @@
     isNormalUser = true;
     description = "Peter Schaefer";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -85,7 +84,7 @@
   security.pam.services.gdm.enableGnomeKeyring = true;
 
   environment.variables = {
-    SSH_AUTH_SOCK  = "/run/user/1000/keyring/ssh";
+    SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
     NIXOS_OZONE_WL = "1";
   };
 
@@ -115,6 +114,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-  
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
