@@ -11,27 +11,24 @@ cecho() {
     echo -e "$1$2$NC"
 }
 
-build-system() {
+build() {
     cecho $GREEN "[slang]: building system"
     sudo nixos-rebuild switch --flake $SCRIPT_DIR
 }
 
-build() {
-    build-system
-}
-
-dry-system() {
+dry() {
     cecho $GREEN "[slang]: dry-building system"
     sudo nixos-rebuild dry-build --flake $SCRIPT_DIR
-}
-
-dry() {
-    dry-system
 }
 
 update() {
     cecho $GREEN "[slang]: updating packages"
     sudo nix flake update --flake $SCRIPT_DIR
+}
+
+upgrade() {
+    update
+    build
 }
 
 powerwash() {
@@ -40,13 +37,8 @@ powerwash() {
     build
 }
 
-upgrade() {
-    update
-    build
-}
-
 case $1 in
-update | upgrade | build-system | build | powerwash | dry-system | dry)
+update | upgrade | build | powerwash | dry)
     $1
     ;;
 *)
