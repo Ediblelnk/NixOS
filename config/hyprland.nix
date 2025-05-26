@@ -22,7 +22,16 @@
   environment.systemPackages = with pkgs; [
     kitty # terminal emulator
     seahorse # GNOME keyring manager
+    nemo # file manager
     wofi # application launcher
     waybar # status bar for Wayland
+
+    adwaita-icon-theme # icon theme
+    adwaita-qt # Qt integration for Adwaita theme
+    adwaita-qt6 # Qt6 integration for Adwaita theme
+    gnome-themes-extra # additional GNOME themes
+    qt5.qtwayland # Qt Wayland support
+    qt6.qmake # Qt6 build system
+    qt6.qtwayland # Qt6 Wayland support
   ];
 }
