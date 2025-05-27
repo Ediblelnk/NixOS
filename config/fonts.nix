@@ -3,4 +3,6 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
   ];
+
+  environment.systemPackages = with pkgs; [ font-awesome ];
 }

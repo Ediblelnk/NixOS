@@ -6,6 +6,7 @@
     ./hyprland.nix
     ./hardware.nix
     ./il8n.nix
+    ./languages.nix
     ./network.nix
     ./packages.nix
     ./power.nix
