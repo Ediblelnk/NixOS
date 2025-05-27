@@ -3,7 +3,7 @@
   users.users.edibleink = {
     isNormalUser = true;
     description = "Peter Schaefer";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "input" ];
     packages = with pkgs; [ ];
   };
 }

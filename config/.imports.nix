@@ -8,6 +8,7 @@
     ./il8n.nix
     ./network.nix
     ./packages.nix
+    ./power.nix
     ./time.nix
     ./users.nix
   ];
