@@ -29,11 +29,14 @@
     kitty # terminal emulator
     seahorse # GNOME keyring manager
     nemo # file manager
-    wofi # application launcher
+    rofi # application launcher
     waybar # status bar for Wayland
     swww # wallpaper setter
 
     killall # utility to kill processes
+
+    brightnessctl # control screen brightness
+    playerctl # media player control
 
     adwaita-icon-theme # icon theme
     adwaita-qt # Qt integration for Adwaita theme

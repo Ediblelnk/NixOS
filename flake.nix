@@ -11,7 +11,7 @@
     in {
       nixosConfigurations.nixos = lib.nixosSystem {
         inherit system;
-        modules = [ ./config/.imports.nix ];
+        modules = [ ./nixos/.imports.nix ];
       };
     };
 }

@@ -1,0 +1,8 @@
+--target=~/.config
+--ignore=.git/*
+--ignore=nixos/*
+--ignore=.stowrc
+--ignore=flake.lock
+--ignore=flake.nix
+--ignore=README.md
+--ignore=slang.sh
