@@ -11,6 +11,8 @@
     vscode
     libsecret
     nixfmt-classic
+
+    stow
     git
   ];
 }
