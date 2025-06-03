@@ -26,6 +26,11 @@
   };
 
   environment.systemPackages = with pkgs; [
+    hyprpaper
+    hyprpicker
+    hyprlock
+    hypridle
+
     kitty # terminal emulator
     seahorse # GNOME keyring manager
     nemo # file manager
@@ -34,9 +39,9 @@
     swww # wallpaper setter
 
     killall # utility to kill processes
-
     brightnessctl # control screen brightness
     playerctl # media player control
+    wl-clipboard # clipboard management for Wayland
 
     adwaita-icon-theme # icon theme
     adwaita-qt # Qt integration for Adwaita theme
