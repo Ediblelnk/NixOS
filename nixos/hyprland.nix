@@ -36,7 +36,7 @@
     nemo # file manager
     rofi # application launcher
     waybar # status bar for Wayland
-    swww # wallpaper setter
+    pywal # color scheme generator
 
     killall # utility to kill processes
     brightnessctl # control screen brightness

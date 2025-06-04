@@ -1,5 +1,6 @@
 --target=~/.config
 --ignore=.git/*
+--ignore=.vscode/*
 --ignore=nixos/*
 --ignore=.stowrc
 --ignore=flake.lock
