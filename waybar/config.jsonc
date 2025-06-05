@@ -1,30 +1,31 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 40, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
+    "layer": "top",
+    "height": 40,
+    "margin-top": 5,
+    "margin-right": 5,
+    "margin-bottom": 0,
+    "margin-left": 5,
+    "reload_style_on_change": true,
     "modules-left": [
         "mpd",
         "hyprland/workspaces",
-        "hyprland/window",
-        "hyprland/submap"
+        "hyprland/submap",
+        "cpu",
+        "memory",
+        "temperature"
     ],
-    "modules-center": [],
+    "modules-center": [
+        "hyprland/window"
+    ],
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
         "backlight",
+        "power-profiles-daemon",
         "battery",
         "clock",
-        "tray",
         "custom/power"
     ],
     "hyprland/workspaces": {
@@ -42,57 +43,24 @@
         }
     },
     "hyprland/window": {
-        "format": "{}",
-        "icon": true
+        "format": "{title}",
+        "icon": true,
+        "icon-size": 16,
+        "rewrite": {
+            "(.*) - Brave": "$1",
+            "(.*) :: (.*) :: Visual Studio Code": "$2  $1"
+        },
+        "separate-outputs": true
     },
     "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": [
-            "",
-            ""
-        ],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "  "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": " ",
+            "deactivated": " "
         }
-    },
-    "tray": {
-        "spacing": 10
     },
     "clock": {
         "format": " {:%H:%M}",
@@ -135,7 +103,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
+        "format": " {percent}%",
         "format-icons": [
             "",
             "",
@@ -156,7 +124,7 @@
         },
         "format": "{icon} {capacity}%",
         "format-full": "{icon}{capacity}%",
-        "format-charging": " {capacity}%",
+        "format-charging": "{capacity}%",
         "format-plugged": "{capacity}%",
         "format-alt": "{icon} {time}",
         "format-icons": [
@@ -173,13 +141,12 @@
         "tooltip": true,
         "format-icons": {
             "default": "",
-            "performance": "",
-            "balanced": "",
-            "power-saver": ""
+            "performance": " Performance",
+            "balanced": " Balanced",
+            "power-saver": " Power Saver"
         }
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "  {signalStrength}%",
         "format-ethernet": " {ipaddr}/{cidr}",
         "tooltip-format": "{essid}",
@@ -188,24 +155,23 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{icon} {volume}% {format_source}",
-        "format-bluetooth-muted": "{icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": " {volume}%",
+        "format": "{icon}{volume}% {format_source}",
+        "format-bluetooth": "{icon}{volume}% {format_source}",
+        "format-bluetooth-muted": "{icon} {format_source}",
+        "format-muted": "{format_source}",
+        "format-source": "{volume}%",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
+            "headphone": " ",
+            "hands-free": " ", // 
+            "headset": " ", // 
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
             "default": [
-                "",
-                "",
-                ""
+                " ",
+                " ",
+                " "
             ]
         },
         "on-click": "pavucontrol"
@@ -218,8 +184,8 @@
         "menu-actions": {
             "shutdown": "shutdown",
             "reboot": "reboot",
-            "suspend": "systemctl suspend"
-            // "hibernate": "systemctl hibernate"
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate"
         }
     }
 }
