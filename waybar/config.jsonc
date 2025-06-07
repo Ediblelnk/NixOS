@@ -23,9 +23,9 @@
         "pulseaudio",
         "network",
         "backlight",
-        "power-profiles-daemon",
         "battery",
         "clock",
+        "power-profiles-daemon",
         "custom/power"
     ],
     "hyprland/workspaces": {
@@ -103,18 +103,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": " {percent}%",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+        "format": " {percent}%"
     },
     "battery": {
         "states": {
@@ -155,7 +144,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "format": "{icon}{volume}% {format_source}",
+        "format": "{icon}{volume:3}% {format_source}",
         "format-bluetooth": "{icon}{volume}% {format_source}",
         "format-bluetooth-muted": "{icon} {format_source}",
         "format-muted": "{format_source}",
