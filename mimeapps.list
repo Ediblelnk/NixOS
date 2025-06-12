@@ -1,0 +1,19 @@
+[Default Applications]
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
+text/css=code.desktop
+application/json=code.desktop
+text/plain=code.desktop
+application/octet-stream=code.desktop
+image/png=pix.desktop
+x-scheme-handler/webcal=brave-browser.desktop
+
+[Added Associations]
+text/css=code.desktop;
+application/json=code.desktop;
+text/plain=code.desktop;
+application/octet-stream=code.desktop;
+image/png=pix.desktop;

@@ -30,6 +30,7 @@
     hyprpicker
     hyprlock
     hypridle
+    hyprshot
 
     kitty # terminal emulator
     seahorse # GNOME keyring manager
@@ -37,6 +38,12 @@
     rofi # application launcher
     waybar # status bar for Wayland
     pywal # color scheme generator
+
+    libnotify # notification library
+    swaynotificationcenter
+
+    fastfetch
+    lf
 
     killall # utility to kill processes
     brightnessctl # control screen brightness

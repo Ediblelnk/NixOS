@@ -11,8 +11,10 @@
     vscode
     libsecret
     nixfmt-classic
+    pix
 
     stow
     git
+    fzf
   ];
 }
