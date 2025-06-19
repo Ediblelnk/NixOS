@@ -41,6 +41,7 @@
 
     libnotify # notification library
     swaynotificationcenter
+    pavucontrol
 
     fastfetch
     lf

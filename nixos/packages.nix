@@ -16,5 +16,6 @@
     stow
     git
     fzf
+    starship
   ];
 }

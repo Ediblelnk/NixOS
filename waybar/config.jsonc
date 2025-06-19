@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top",
-    "height": 40,
+    // "height": 40,
     "margin-top": 5,
     "margin-right": 5,
     "margin-bottom": 0,
@@ -49,7 +49,7 @@
         "icon-size": 16,
         "rewrite": {
             "(.*) - Brave": "$1",
-            "(.*) :: (.*) :: Visual Studio Code": "$2  $1"
+            "(.*) :: (.*) :: Visual Studio Code": "$2 󰘬 $1"
         },
         "separate-outputs": true
     },
@@ -59,12 +59,12 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": " ",
-            "deactivated": " "
+            "activated": "󰈈",
+            "deactivated": "󰈉"
         }
     },
     "clock": {
-        "format": " {:%H:%M}",
+        "format": "󰥔 {:%H:%M}",
         "format-alt": "{:%A, %B %d, %Y (%R)}  ",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
@@ -87,24 +87,34 @@
         }
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": "󰘚 {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": " {}%"
+        "format": "󰍛 {percentage}%"
     },
     "temperature": {
         "critical-threshold": 80,
-        "format": "{icon} {temperatureC}°C",
+        "format": "{icon}",
         "format-icons": [
-            "",
-            "",
-            ""
+            "󱃃",
+            "󰔏",
+            "󱃂"
         ]
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": " {percent}%"
+        "format": "{icon} ",
+        "format-alt": "{icon} {percent}%",
+        "format-icons": {
+            "default": [
+                "󰽤",
+                "󰽥",
+                "󰽣",
+                "󰽦",
+                "󰽢"
+            ]
+        }
     },
     "battery": {
         "states": {
@@ -112,62 +122,87 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-time": "{H}h{M}m",
-        "format-full": "{icon}{capacity}%",
-        "format-charging": "{capacity}%",
+        "format-alt": "{icon}",
         "format-plugged": "{capacity}%",
-        "format-alt": "{icon} {time}",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+        "format-icons": {
+            "charging": [
+                "󰢜",
+                "󰂆",
+                "󰂇",
+                "󰂈",
+                "󰢝",
+                "󰂉",
+                "󰢞",
+                "󰂊",
+                "󰂋",
+                "󰂅"
+            ],
+            "default": [
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ]
+        }
     },
     "power-profiles-daemon": {
         "format": "{icon}",
-        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip-format": "{profile}",
         "tooltip": true,
         "format-icons": {
-            "default": "",
-            "performance": " Performance",
-            "balanced": " Balanced",
-            "power-saver": " Power Saver"
+            "default": "󱐋",
+            "performance": "󱐋",
+            "balanced": "󰗑",
+            "power-saver": "󰌪"
         }
     },
     "network": {
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-wifi": "{icon}",
+        "format-alt": "{icon} {signalStrength}%",
+        "format-ethernet": "{icon}",
         "tooltip-format": "{essid}",
-        "format-linked": " {ifname} (No IP)",
-        "format-disconnected": "⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-disconnected": "󰤫",
+        "format-icons": {
+            "wifi": [
+                "󰤯",
+                "󰤟",
+                "󰤢",
+                "󰤥",
+                "󰤨"
+            ],
+            "ethernet": "󰈁"
+        }
     },
     "pulseaudio": {
-        "format": "{icon}{volume:3}% {format_source}",
-        "format-bluetooth": "{icon}{volume}% {format_source}",
-        "format-bluetooth-muted": "{icon} {format_source}",
-        "format-muted": "{format_source}",
+        "format": "{icon} {volume}% {format_source}",
+        "format-muted": "󰸈 {format_source}",
+        "format-bluetooth": "󰂯 {icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "󰂲 {icon} {format_source}",
         "format-source": "{volume}%",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": " ",
-            "hands-free": " ", // 
-            "headset": " ", // 
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
+            "headphone": "󰋋",
+            "hands-free": "󰋋",
+            "headset": "󰋋",
+            "phone": "󰏲",
+            "portable": "󰏲",
+            "car": "󰄋",
             "default": [
-                " ",
-                " ",
-                " "
+                "󰕿",
+                "󰖀",
+                "󰕾"
             ]
         },
         "on-click": "pavucontrol"
     },
     "custom/power": {
-        "format": "⏻ ",
+        "format": "󰐥",
         "tooltip": false,
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/power_menu.xml",
@@ -182,14 +217,14 @@
         "tooltip": false,
         "format": "{icon}",
         "format-icons": {
-            "notification": "<span foreground='red'><sup></sup></span>",
-            "none": "",
-            "dnd-notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-none": "",
-            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "inhibited-none": "",
-            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-inhibited-none": ""
+            "notification": "󱅫",
+            "none": "󰂚",
+            "dnd-notification": "󱅫",
+            "dnd-none": "󰂛",
+            "inhibited-notification": "󱅫",
+            "inhibited-none": "󰂚",
+            "dnd-inhibited-notification": "󱅫",
+            "dnd-inhibited-none": "󰂛"
         },
         "return-type": "json",
         "exec-if": "which swaync-client",
