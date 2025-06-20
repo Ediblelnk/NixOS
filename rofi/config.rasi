@@ -1,2 +1,15 @@
+@theme "theme.rasi"
 
-@theme "~/.cache/wal/colors-rofi-light.rasi"
+configuration {
+	modi: "drun,run,filebrowser,window";
+    modes: "window,drun,run";
+	case-sensitive: false;
+	cycle: true;
+	filter: "";
+	scroll-method: 0;
+	normalize-match: true;
+	show-icons: false;
+	steal-focus: true;
+/*	dpi: -1;*/
+}
+

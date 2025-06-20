@@ -1,9 +1,10 @@
 #!/bin/bash
 
+echo "Generating Pywal Chrome theme..."
+
 . ~/.cache/wal/colors.sh # import colors from pywal
 
 THEME_NAME="Pywal"
-
 
 DIR=$(dirname "${BASH_SOURCE[0]}")
 THEME_DIR="$DIR/$THEME_NAME"
@@ -20,16 +21,15 @@ prepare() {
     if [ -d $THEME_DIR ]; then
         rm -rf $THEME_DIR
     fi
-    
+
     mkdir $THEME_DIR
     mkdir "$THEME_DIR/images"
-    
-    # Copy wallpaper so it can be used in theme  
+
+    # Copy wallpaper so it can be used in theme
     background_image="images/theme_ntp_background_norepeat.png"
     cp "$wallpaper" "$THEME_DIR/$background_image"
 
 }
-
 
 background=$(hexToRgb $background)
 foreground=$(hexToRgb $foreground)
@@ -38,7 +38,7 @@ secondary=$(hexToRgb $color8)
 
 generate() {
     # Theme template
-    cat > "$THEME_DIR/manifest.json" << EOF
+    cat >"$THEME_DIR/manifest.json" <<EOF
     {
       "manifest_version": 3,
       "version": "1.0",
