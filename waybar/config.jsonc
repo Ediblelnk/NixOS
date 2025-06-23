@@ -8,37 +8,39 @@
     "margin-left": 5,
     "reload_style_on_change": true,
     "modules-left": [
-        "mpd",
+        "idle_inhibitor",
+        "clock",
         "hyprland/workspaces",
-        "hyprland/submap",
         "cpu",
         "memory",
-        "temperature"
+        "temperature",
+        "hyprland/submap"
     ],
     "modules-center": [
+        "custom/notification",
         "hyprland/window"
     ],
     "modules-right": [
-        "idle_inhibitor",
+        "bluetooth",
         "pulseaudio",
         "network",
         "backlight",
-        "battery",
-        "clock",
         "power-profiles-daemon",
-        "custom/notification",
+        "battery",
         "custom/power"
     ],
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "active": ""
+            "1": "󰄰",
+            "2": "󰄰",
+            "3": "󰄰",
+            "4": "󰄰",
+            "5": "󰄰",
+            "special": "󱨧",
+            "active": "󰪥"
         },
+        "show-special": true,
         "persistent-workspaces": {
             "*": 5 // 5 workspaces by default on every monitor
         }
@@ -46,7 +48,7 @@
     "hyprland/window": {
         "format": "{title}",
         "icon": true,
-        "icon-size": 16,
+        "icon-size": 20,
         "rewrite": {
             "(.*) - Brave": "$1",
             "(.*) :: (.*) :: Visual Studio Code": "$2 󰘬 $1"
@@ -65,7 +67,7 @@
     },
     "clock": {
         "format": "󰥔 {:%H:%M}",
-        "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+        "format-alt": "{:%A, %B %d, %Y (%R)}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
@@ -87,28 +89,35 @@
         }
     },
     "cpu": {
-        "format": "󰘚 {usage}%",
+        "format": "",
+        "format-warning": "󰘚 {usage}%",
+        "format-critical": "󰘚 {usage}%",
+        "states": {
+            "warning": 75,
+            "critical": 90
+        },
         "tooltip": false
     },
     "memory": {
-        "format": "󰍛 {percentage}%"
+        "format": "",
+        "format-warning": "󰍛 {percentage}%",
+        "format-critical": "󰍛 {percentage}%",
+        "states": {
+            "warning": 75,
+            "critical": 90
+        }
     },
     "temperature": {
-        "critical-threshold": 80,
-        "format": "{icon}",
-        "format-icons": [
-            "󱃃",
-            "󰔏",
-            "󱃂"
-        ]
+        "critical-threshold": 70,
+        "format": "",
+        "format-critical": "󱃂 {temperatureC}°C"
     },
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{icon} ",
         "format-alt": "{icon} {percent}%",
+        "tooltip-format": "{icon} {percent}%",
         "format-icons": {
             "default": [
-                "󰽤",
                 "󰽥",
                 "󰽣",
                 "󰽦",
@@ -151,6 +160,16 @@
             ]
         }
     },
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "󰂲",
+        "format-on": "",
+        "format-connected": "󰂱",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "on-click": "blueman-manager"
+    },
     "power-profiles-daemon": {
         "format": "{icon}",
         "tooltip-format": "{profile}",
@@ -182,9 +201,7 @@
     "pulseaudio": {
         "format": "{icon} {volume}% {format_source}",
         "format-muted": "󰸈 {format_source}",
-        "format-bluetooth": "󰂯 {icon} {volume}% {format_source}",
-        "format-bluetooth-muted": "󰂲 {icon} {format_source}",
-        "format-source": "{volume}%",
+        "format-source": "",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "󰋋",
@@ -217,14 +234,14 @@
         "tooltip": false,
         "format": "{icon}",
         "format-icons": {
-            "notification": "󱅫",
-            "none": "󰂚",
-            "dnd-notification": "󱅫",
-            "dnd-none": "󰂛",
-            "inhibited-notification": "󱅫",
-            "inhibited-none": "󰂚",
-            "dnd-inhibited-notification": "󱅫",
-            "dnd-inhibited-none": "󰂛"
+            "notification": "󰂚",
+            "none": "󰂜",
+            "dnd-notification": "󰂛",
+            "dnd-none": "󰪑",
+            "inhibited-notification": "󰂛",
+            "inhibited-none": "󰪑",
+            "dnd-inhibited-notification": "󰂛",
+            "dnd-inhibited-none": "󰪑"
         },
         "return-type": "json",
         "exec-if": "which swaync-client",
