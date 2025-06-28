@@ -10,8 +10,11 @@
   services.displayManager.sddm.wayland.enable = true;
   services.displayManager.sddm.theme = "where_is_my_sddm_theme";
   services.gnome.gnome-keyring.enable = true;
-  security.polkit.enable = true;
-  security.pam.services.login.enableGnomeKeyring = true;
+  security = {
+    polkit.enable = true;
+    pam.services.hyprlock = { };
+    pam.services.login.enableGnomeKeyring = true;
+  };
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
