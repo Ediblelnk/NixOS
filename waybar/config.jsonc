@@ -8,16 +8,17 @@
     "margin-left": 5,
     "reload_style_on_change": true,
     "modules-left": [
+        "power-profiles-daemon",
         "idle_inhibitor",
         "clock",
         "hyprland/workspaces",
+        "custom/notification",
         "cpu",
         "memory",
         "temperature",
         "hyprland/submap"
     ],
     "modules-center": [
-        "custom/notification",
         "hyprland/window"
     ],
     "modules-right": [
@@ -25,20 +26,19 @@
         "pulseaudio",
         "network",
         "backlight",
-        "power-profiles-daemon",
         "battery",
         "custom/power"
     ],
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "1": "󰄰",
-            "2": "󰄰",
-            "3": "󰄰",
-            "4": "󰄰",
-            "5": "󰄰",
-            "special": "󱨧",
-            "active": "󰪥"
+            "1": "󰇊",
+            "2": "󰇋",
+            "3": "󰇌",
+            "4": "󰇍",
+            "5": "󰇎",
+            "special": "󰝮",
+            "active": "󱓼"
         },
         "show-special": true,
         "persistent-workspaces": {
@@ -66,27 +66,10 @@
         }
     },
     "clock": {
+        "interval": 60,
+        "tooltip": true,
         "format": "󰥔 {:%H:%M}",
-        "format-alt": "{:%A, %B %d, %Y (%R)}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode": "year",
-            "mode-mon-col": 3,
-            "weeks-pos": "right",
-            "on-scroll": 1,
-            "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "days": "<span color='#ecc6d9'><b>{}</b></span>",
-                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-            }
-        },
-        "actions": {
-            "on-click-right": "mode",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
+        "tooltip-format": "{:%Y-%m-%d}"
     },
     "cpu": {
         "format": "",
@@ -113,15 +96,28 @@
         "format-critical": "󱃂 {temperatureC}°C"
     },
     "backlight": {
-        "format": "{icon} ",
+        "format": "{icon}",
         "format-alt": "{icon} {percent}%",
         "tooltip-format": "{icon} {percent}%",
         "format-icons": {
+            // "default": [
+            //     "󰽥",
+            //     "󰽣",
+            //     "󰽦",
+            //     "󰽢"
+            // ]
             "default": [
-                "󰽥",
-                "󰽣",
-                "󰽦",
-                "󰽢"
+                "󰛩",
+                "󱩎",
+                "󱩏",
+                "󱩐",
+                "󱩑",
+                "󱩒",
+                "󱩓",
+                "󱩔",
+                "󱩕",
+                "󱩖",
+                "󰛨"
             ]
         }
     },
@@ -132,7 +128,7 @@
         },
         "format": "{icon} {capacity}%",
         "format-alt": "{icon}",
-        "format-plugged": "{capacity}%",
+        "format-plugged": " {capacity}%",
         "format-icons": {
             "charging": [
                 "󰢜",

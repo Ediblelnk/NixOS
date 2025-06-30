@@ -86,14 +86,14 @@ button {
 }
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
+/* .modules-left>widget:first-child>#workspaces {
     margin-left: 0;
-}
+} */
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
+/* .modules-right>widget:last-child>#workspaces {
     margin-right: 0;
-}
+} */
 
 #battery.critical:not(.charging) {
     background-color: @color1;
@@ -113,18 +113,18 @@ button {
 }
 
 #power-profiles-daemon.performance {
-    background-color: @color9;
-    color: @color7;
+    /* background-color: @color9; */
+    color: @color9;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: @color4;
-    color: @color7;
+    /* background-color: @color4; */
+    color: @color4;
 }
 
 #battery.charging,
 #battery.plugged,
 #power-profiles-daemon.power-saver {
-    background-color: @color6;
-    color: @color0;
+    /* background-color: @color6; */
+    color: @color6;
 }

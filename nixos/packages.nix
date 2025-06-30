@@ -7,6 +7,8 @@
   environment.systemPackages = with pkgs; [
     vim
     brave
+    firefox
+
     github-desktop
     vscode
     libsecret
