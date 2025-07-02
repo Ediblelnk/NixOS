@@ -11,11 +11,13 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
     in {
       nixosConfigurations.nixos = lib.nixosSystem {
         inherit system;
-        modules = [ ./nixos/.imports.nix ./nixos/modules/spicetify.nix ];
+        modules = [
+          ./nixos/.imports.nix
+          # ./nixos/modules/spicetify.nix 
+        ];
       };
     };
 }

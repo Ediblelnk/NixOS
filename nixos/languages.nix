@@ -1,1 +1,3 @@
-{ config, pkgs, ... }: { environment.systemPackages = with pkgs; [ ]; }
+{ config, pkgs, ... }: {
+  environment.systemPackages = with pkgs; [ rustup libgcc python314 ];
+}

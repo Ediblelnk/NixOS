@@ -1,12 +1,8 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, spicePkgs, ... }: {
   programs.spicetify = {
     enable = true;
-    enabledExtensions = with spicePkgs.extensions;
-      [
-        # (special characters are sanitized out of extension names)
-        shuffle
-      ];
-    theme = spicePkgs.themes.catppuccin;
-    colorScheme = "mocha";
+    enabledExtensions = with spicePkgs.extensions; [ ];
+    theme = spicePkgs.themes.sleek;
+    colorScheme = "coral";
   };
 }
