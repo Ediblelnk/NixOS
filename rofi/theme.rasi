@@ -4,10 +4,10 @@
     font:   "FiraCode Nerd Font Medium 14";
     highlight: bold;
 
-    background:                  @color0;
+    --background:                  @background;
     text:                        @color7;
-    urgent:                      @color1;
-    accent:                      @color7;
+    urgent:                      @color3;
+    accent:                      @color6;
 
 
     text-color:                  @text;
@@ -120,7 +120,11 @@ element selected urgent {
 }
 
 element-icon {
-  size: 0.8em;
+  size: 1.5em;
+}
+
+element-icon selected {
+    background-color: @accent;
 }
 
 element-text {

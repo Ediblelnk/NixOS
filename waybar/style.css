@@ -9,13 +9,13 @@
 }
 
 window#waybar {
-    background-color: @color0;
+    background-color: @background;
     border-radius: 10px;
     border: 1px solid @color7
 }
 
 tooltip {
-    background: @color0;
+    background: @background;
     border: 1px solid @color7;
     border-radius: 10px;
 }
@@ -37,7 +37,7 @@ button {
 
 #workspaces button.urgent {
     background-color: @color11;
-    color: @color0;
+    color: @background;
     border-radius: 5px;
 }
 
@@ -47,7 +47,7 @@ button {
 #cpu.critical,
 #memory.critical {
     background-color: @color9;
-    color: @color0;
+    color: @background;
 }
 
 #cpu.warning,
@@ -55,7 +55,7 @@ button {
 #idle_inhibitor.activated,
 #pulseaudio.muted {
     background-color: @color11;
-    color: @color0;
+    color: @background;
 }
 
 
@@ -97,7 +97,7 @@ button {
 
 #battery.critical:not(.charging) {
     background-color: @color1;
-    color: @color0;
+    color: @background;
     animation-name: blink;
     animation-duration: 1s;
     animation-timing-function: steps(2);
@@ -108,7 +108,7 @@ button {
 @keyframes blink {
     to {
         background-color: @color2;
-        color: @color0;
+        color: @background;
     }
 }
 

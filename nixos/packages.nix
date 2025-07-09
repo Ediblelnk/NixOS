@@ -6,15 +6,19 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
+
     brave
     firefox
+    google-chrome
+
+    discord
 
     github-desktop
     vscode
     libsecret
-    nixfmt-classic
     pix
 
+    nixfmt-classic
     stow
     git
     fzf
