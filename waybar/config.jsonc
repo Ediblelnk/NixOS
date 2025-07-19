@@ -180,7 +180,7 @@
     },
     "network": {
         "format-wifi": "{icon}",
-        "format-alt": "{icon} {signalStrength}%",
+        // "format-alt": "{icon} {signalStrength}%",
         "format-ethernet": "{icon}",
         "tooltip-format": "{essid}",
         "format-disconnected": "󰤫",
@@ -193,7 +193,8 @@
                 "󰤨"
             ],
             "ethernet": "󰈁"
-        }
+        },
+        "on-click": "kitty nmtui-connect"
     },
     "pulseaudio": {
         "format": "{icon} {volume}% {format_source}",
