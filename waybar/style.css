@@ -3,7 +3,7 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, FiraCode, FiraCode Symbols, monospace;
+    font-family: FontAwesome, FiraCode, monospace;
     font-size: 18px;
     padding: 2px;
 }
@@ -30,39 +30,60 @@ button {
     border-radius: 0;
 }
 
+#workspaces {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 5px;
+    color: @color0;
+}
+
 #workspaces button {
-    padding: 0 5px;
+    padding: 0px;
+    margin: 1px;
+    border-radius: 5px;
+    color: @color7;
+
+}
+
+#workspaces button:hover {
+    background-color: @color1;
     color: @color7;
 }
 
 #workspaces button.urgent {
-    background-color: @color11;
-    color: @background;
+    color: @color11;
     border-radius: 5px;
 }
 
+#workspaces button.active {
+    color: @background;
+    background-color: @color6;
+
+}
 
 #network.disconnected,
 #temperature.critical,
 #cpu.critical,
 #memory.critical {
-    background-color: @color9;
-    color: @background;
+    color: @color9;
 }
 
 #cpu.warning,
 #memory.warning,
 #idle_inhibitor.activated,
 #pulseaudio.muted {
-    background-color: @color11;
-    color: @background;
+    color: @color11;
 }
 
+#clock {
+    padding: 0 0 0 10px;
+    border-radius: 5px;
+    color: @color7;
+}
 
 #backlight,
 #battery,
 #bluetooth,
-#clock,
 #cpu,
 #custom-power,
 #custom-notification,
@@ -77,23 +98,12 @@ button {
 #temperature,
 #tray,
 #window,
-#wireplumber,
-#workspaces {
+#wireplumber {
     padding: 0px 10px;
     margin: 0 1px;
     border-radius: 5px;
     color: @color7;
 }
-
-/* If workspaces is the leftmost module, omit left margin */
-/* .modules-left>widget:first-child>#workspaces {
-    margin-left: 0;
-} */
-
-/* If workspaces is the rightmost module, omit right margin */
-/* .modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
-} */
 
 #battery.critical:not(.charging) {
     background-color: @color1;
@@ -124,6 +134,7 @@ button {
 
 #battery.charging,
 #battery.plugged,
+#bluetooth.connected,
 #power-profiles-daemon.power-saver {
     /* background-color: @color6; */
     color: @color6;

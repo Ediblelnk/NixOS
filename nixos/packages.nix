@@ -8,7 +8,6 @@
     vim
 
     brave
-    firefox
     google-chrome
 
     discord
@@ -22,6 +21,5 @@
     stow
     git
     fzf
-    starship
   ];
 }

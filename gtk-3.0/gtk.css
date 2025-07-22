@@ -1,0 +1,34 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, FiraCode, monospace;
+    font-size: 18px;
+    /* padding: 2px; */
+}
+
+#power-menu {
+    background-color: @background;
+    border-radius: 10px;
+    border: 1px solid @color7;
+}
+
+#power-menu menuitem {
+    /* padding: 4px 10px; */
+    border-radius: 5px;
+}
+
+#power-menu menuitem label {
+    color: @color7;
+}
+
+#power-menu menuitem:hover,
+#power-menu menuitem:selected {
+    background-color: @background;
+    border-radius: 5px;
+}
+
+#power-menu menuitem:hover label,
+#power-menu menuitem:selected label {
+    color: @color1;
+}

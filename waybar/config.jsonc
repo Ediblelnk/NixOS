@@ -11,8 +11,8 @@
         "power-profiles-daemon",
         "idle_inhibitor",
         "clock",
-        "hyprland/workspaces",
         "custom/notification",
+        "hyprland/workspaces",
         "cpu",
         "memory",
         "temperature",
@@ -30,21 +30,20 @@
         "custom/power"
     ],
     "hyprland/workspaces": {
-        "format": "{icon}",
+        "format": "󰓩 {icon}:{windows} ",
         "format-icons": {
-            "1": "󰇊",
-            "2": "󰇋",
-            "3": "󰇌",
-            "4": "󰇍",
-            "5": "󰇎",
-            "6": "󰇏",
-            "special": "󰝮",
-            "active": "󱓼"
+            "special": "S"
         },
-        "show-special": true,
-        "persistent-workspaces": {
-            "*": 6 // 6 workspaces by default on every monitor
-        }
+        "format-window-separator": " ",
+        "window-rewrite-default": "",
+        "window-rewrite": {
+            "title<.*youtube.*>": " ",
+            "class<brave-browser>": "󰖟",
+            "class<brave-browser> title<.*github.*>": "󰊤",
+            "kitty": "",
+            "code": "󰨞"
+        },
+        "show-special": true
     },
     "hyprland/window": {
         "format": "{title}",
@@ -198,29 +197,36 @@
     },
     "pulseaudio": {
         "format": "{icon} {volume}% {format_source}",
-        "format-muted": "󰸈 {format_source}",
+        "format-muted": "{icon} {format_source}",
         "format-source": "",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "󰋋",
+            "headphone-muted": "󰟎",
             "hands-free": "󰋋",
+            "hands-free-muted": "󰟎",
             "headset": "󰋋",
+            "headset-muted": "󰟎",
             "phone": "󰏲",
+            "phone-muted": "󰷯",
             "portable": "󰏲",
+            "portable-muted": "󰷯",
             "car": "󰄋",
+            "car-muted": "󰸜",
             "default": [
                 "󰕿",
                 "󰖀",
                 "󰕾"
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "scroll-step": 5
     },
     "custom/power": {
         "format": "󰐥",
         "tooltip": false,
         "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/power_menu.xml",
+        "menu-file": "$HOME/.config/waybar/menus/power.xml",
         "menu-actions": {
             "shutdown": "shutdown",
             "reboot": "reboot",
