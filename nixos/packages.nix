@@ -9,6 +9,8 @@
 
     brave
     google-chrome
+    firefox
+    signal-desktop
 
     discord
 

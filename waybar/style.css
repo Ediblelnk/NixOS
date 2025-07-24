@@ -45,20 +45,12 @@ button {
 
 }
 
-#workspaces button:hover {
-    background-color: @color1;
-    color: @color7;
-}
-
 #workspaces button.urgent {
     color: @color11;
-    border-radius: 5px;
 }
 
 #workspaces button.active {
-    color: @background;
-    background-color: @color6;
-
+    color: @color5;
 }
 
 #network.disconnected,

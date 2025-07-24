@@ -37,7 +37,7 @@
         "format-window-separator": " ",
         "window-rewrite-default": "",
         "window-rewrite": {
-            "title<.*youtube.*>": " ",
+            "title<*- YouTube*>": " ",
             "class<brave-browser>": "󰖟",
             "class<brave-browser> title<.*github.*>": "󰊤",
             "kitty": "",

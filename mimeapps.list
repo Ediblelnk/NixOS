@@ -9,7 +9,11 @@ application/json=code.desktop
 text/plain=code.desktop
 application/octet-stream=code.desktop
 image/png=pix.desktop
+image/jpg=pix.desktop
+image/jpeg=pix.desktop
 x-scheme-handler/webcal=brave-browser.desktop
+x-scheme-handler/sgnl=signal.desktop
+x-scheme-handler/signalcaptcha=signal.desktop
 
 [Added Associations]
 text/css=code.desktop;
