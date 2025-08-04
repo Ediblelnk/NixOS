@@ -42,13 +42,14 @@
             "class<brave-browser>": "󰖟",
             "class<spotify>": "󰓇",
             "class<nemo>": "󰒋",
-            "kitty": "",
-            "code": "󰨞"
+            "class<steam>": "󰓓",
+            "class<kitty>": "",
+            "class<code>": "󰨞"
         },
         "show-special": true
     },
     "hyprland/window": {
-        "format": "{class}:{title}",
+        "format": "{title}",
         "icon": true,
         "icon-size": 20,
         "rewrite": {

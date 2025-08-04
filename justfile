@@ -2,16 +2,17 @@
 # NC := "033[0m"
 
 build:
+    just stow
     @echo -e "\033[1;36m[info]: building system\033[0m"
-    sudo nixos-rebuild switch --flake `pwd`
+    sudo nixos-rebuild switch --flake .
 
 dry:
     @echo -e "\033[1;36m[info]: dry-building system\033[0m"
-    sudo nixos-rebuild dry-build --flake `pwd`
+    sudo nixos-rebuild dry-build --flake .
 
 update:
     @echo -e "\033[1;36m[info]: updating packages\033[0m"
-    sudo nix flake update --flake `pwd`
+    sudo nix flake update --flake .
 
 upgrade:
     just update

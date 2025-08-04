@@ -2,10 +2,24 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall =
+      true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall =
+      true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall =
+      true; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
+
+    libreoffice-qt
+    hunspell
+    hunspellDicts.en_US
 
     brave
     google-chrome
@@ -13,8 +27,7 @@
     signal-desktop
 
     discord
-    # spicetify-cli
-    # spotify
+    # spotify -- this is done through a flake for spicetify
 
     github-desktop
     vscode
