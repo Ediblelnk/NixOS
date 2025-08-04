@@ -32,3 +32,29 @@
 #power-menu menuitem:selected label {
     color: @color1;
 }
+
+#nixos-menu {
+    background-color: @background;
+    border-radius: 10px;
+    border: 1px solid @color7;
+}
+
+#nixos-menu menuitem {
+    /* padding: 4px 10px; */
+    border-radius: 5px;
+}
+
+#nixos-menu menuitem label {
+    color: @color7;
+}
+
+#nixos-menu menuitem:hover,
+#nixos-menu menuitem:selected {
+    background-color: @background;
+    border-radius: 5px;
+}
+
+#nixos-menu menuitem:hover label,
+#nixos-menu menuitem:selected label {
+    color: @color1;
+}

@@ -8,6 +8,7 @@
     "margin-left": 5,
     "reload_style_on_change": true,
     "modules-left": [
+        "custom/nixos",
         "power-profiles-daemon",
         "idle_inhibitor",
         "clock",
@@ -30,7 +31,7 @@
         "custom/power"
     ],
     "hyprland/workspaces": {
-        "format": "󰓩 {icon}:{windows} ",
+        "format": "{icon}:{windows} ",
         "format-icons": {
             "special": "S"
         },
@@ -39,14 +40,15 @@
         "window-rewrite": {
             "title<*- YouTube*>": " ",
             "class<brave-browser>": "󰖟",
-            "class<brave-browser> title<.*github.*>": "󰊤",
+            "class<spotify>": "󰓇",
+            "class<nemo>": "󰒋",
             "kitty": "",
             "code": "󰨞"
         },
         "show-special": true
     },
     "hyprland/window": {
-        "format": "{title}",
+        "format": "{class}:{title}",
         "icon": true,
         "icon-size": 20,
         "rewrite": {
@@ -100,12 +102,6 @@
         "format-alt": "{icon} {percent}%",
         "tooltip-format": "{icon} {percent}%",
         "format-icons": {
-            // "default": [
-            //     "󰽥",
-            //     "󰽣",
-            //     "󰽦",
-            //     "󰽢"
-            // ]
             "default": [
                 "󰛩",
                 "󱩎",
@@ -236,6 +232,18 @@
             "reboot": "reboot",
             "suspend": "systemctl suspend",
             "hibernate": "systemctl hibernate"
+        }
+    },
+    "custom/nixos": {
+        "format": "󱄅",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/menus/nixos.xml",
+        "menu-actions": {
+            "build": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just build\"",
+            "update": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just update\"",
+            "dry": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just dry\"",
+            "powerwash": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just powerwash\""
         }
     },
     "custom/notification": {

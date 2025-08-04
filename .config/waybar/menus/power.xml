@@ -5,7 +5,6 @@
     <child>
       <object class="GtkMenuItem" id="suspend">
         <property name="label">󰏤 Suspend</property>
-        <property name="name">power-item</property>
       </object>
     </child>
     <!-- <child>
@@ -17,7 +16,6 @@
     <child>
       <object class="GtkMenuItem" id="shutdown">
         <property name="label">󰓛 Shutdown</property>
-        <property name="name">power-item</property>
       </object>
     </child>
     <child>
@@ -26,7 +24,6 @@
     <child>
       <object class="GtkMenuItem" id="reboot">
         <property name="label">󰑓 Reboot</property>
-        <property name="name">power-item</property>
       </object>
     </child>
   </object>
