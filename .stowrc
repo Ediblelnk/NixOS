@@ -1,9 +1,9 @@
---target=~/.config
+--target=~
 --ignore=.git/*
 --ignore=.vscode/*
 --ignore=nixos/*
 --ignore=.stowrc
 --ignore=flake.lock
 --ignore=flake.nix
+--ignore=justfile
 --ignore=README.md
---ignore=slang.sh

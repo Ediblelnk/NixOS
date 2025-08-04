@@ -13,6 +13,8 @@
     signal-desktop
 
     discord
+    # spicetify-cli
+    # spotify
 
     github-desktop
     vscode
@@ -20,6 +22,7 @@
     pix
 
     nixfmt-classic
+    just
     stow
     git
     fzf

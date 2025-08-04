@@ -1,8 +1,11 @@
-{ config, pkgs, spicePkgs, ... }: {
+{ config, pkgs, inputs, ... }:
+let spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
+in {
+  # Enable the spicetify module
   programs.spicetify = {
     enable = true;
-    enabledExtensions = with spicePkgs.extensions; [ ];
     theme = spicePkgs.themes.sleek;
-    colorScheme = "coral";
+    colorScheme = "Coral";
+    enabledExtensions = [ ];
   };
 }
