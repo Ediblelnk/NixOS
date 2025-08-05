@@ -16,9 +16,18 @@
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
-          ./nixos/.imports.nix
           spicetify-nix.nixosModules.default
-          ./nixos/modules/spicetify.nix
+          ./nixos/.imports.nix
+          ./nixos/clients/nixos/client.nix
+        ];
+      };
+      nixosConfigurations.framework = lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs; };
+        modules = [
+          spicetify-nix.nixosModules.default
+          ./nixos/.imports.nix
+          ./nixos/clients/framework/client.nix
         ];
       };
     };

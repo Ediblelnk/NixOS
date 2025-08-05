@@ -4,7 +4,6 @@
     ./boot.nix
     ./fonts.nix
     ./hyprland.nix
-    ./hardware.nix
     ./il8n.nix
     ./languages.nix
     ./network.nix
@@ -12,6 +11,8 @@
     ./power.nix
     ./time.nix
     ./users.nix
+
+    ./modules/spicetify.nix
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

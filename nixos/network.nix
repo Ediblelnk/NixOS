@@ -1,5 +1,6 @@
 { config, pkgs, ... }: {
-  networking.hostName = "nixos"; # Define your hostname.
+  # THE HOSTNAME IS SET IN nixos/clients/ for each client.
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary

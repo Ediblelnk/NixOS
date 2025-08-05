@@ -16,6 +16,9 @@
     pam.services.login.enableGnomeKeyring = true;
   };
 
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
+
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
@@ -62,5 +65,11 @@
     qt5.qtwayland # Qt Wayland support
     qt6.qmake # Qt6 build system
     qt6.qtwayland # Qt6 Wayland support
+
+    # utilities for managing disks and USB devices
+    udisks2
+    gvfs
+    usbutils
+    udiskie
   ];
 }
