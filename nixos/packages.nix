@@ -39,5 +39,6 @@
     stow
     git
     fzf
+    zip
   ];
 }
