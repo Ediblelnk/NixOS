@@ -9,6 +9,7 @@
     ./network.nix
     ./packages.nix
     ./power.nix
+    ./printing.nix
     ./time.nix
     ./users.nix
 

@@ -44,7 +44,9 @@
             "class<nemo>": "󰒋",
             "class<steam>": "󰓓",
             "class<kitty>": "",
-            "class<code>": "󰨞"
+            "class<code>": "󰨞",
+            "class<signal>": "󰍡",
+            "class<rofi>": "󰌧"
         },
         "show-special": true
     },
