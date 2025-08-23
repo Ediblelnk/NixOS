@@ -13,8 +13,8 @@
       </object>
     </child>
     <child>
-      <object class="GtkMenuItem" id="update">
-        <property name="label">󰦗 Update</property>
+      <object class="GtkMenuItem" id="upgrade">
+        <property name="label">󰦗 Upgrade</property>
       </object>
     </child>
     

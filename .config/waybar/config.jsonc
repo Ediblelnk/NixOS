@@ -244,7 +244,7 @@
         "menu-file": "$HOME/.config/waybar/menus/nixos.xml",
         "menu-actions": {
             "build": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just build\"",
-            "update": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just update\"",
+            "upgrade": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just upgrade\"",
             "dry": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just dry\"",
             "powerwash": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just powerwash\""
         }

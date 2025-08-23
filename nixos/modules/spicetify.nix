@@ -5,7 +5,7 @@ in {
   programs.spicetify = {
     enable = true;
     theme = spicePkgs.themes.sleek;
-    colorScheme = "Coral";
+    colorScheme = "BladeRunner";
     enabledExtensions = [ ];
   };
 }
