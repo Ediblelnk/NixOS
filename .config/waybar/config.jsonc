@@ -46,7 +46,12 @@
             "class<kitty>": "",
             "class<code>": "󰨞",
             "class<signal>": "󰍡",
-            "class<rofi>": "󰌧"
+            "class<rofi>": "󰌧",
+            "class<obsidian>": "󰍔",
+            "class<Github Desktop>": "󰊤",
+            "class<libreoffice-impress>": "",
+            "class<libreoffice-writer": "",
+            "class<libreoffice-calc": ""
         },
         "show-special": true
     },
@@ -56,7 +61,11 @@
         "icon-size": 20,
         "rewrite": {
             "(.*) - Brave": "$1",
-            "(.*) :: (.*) :: Visual Studio Code": "$2 󰘬 $1"
+            "(.*) :: (.*) :: Visual Studio Code": "$2 󰘬 $1",
+            "(.*) :: Visual Studio Code": "$1 󰘬",
+            "(.*) — LibreOffice Impress": "$1",
+            "(.*) — LibreOffice Writer": "$1",
+            "(.*) — LibreOffice Calc": "$1"
         },
         "separate-outputs": true
     },

@@ -25,6 +25,7 @@
     google-chrome
     firefox
     signal-desktop
+    obsidian
 
     discord
     # spotify -- this is done through a flake for spicetify

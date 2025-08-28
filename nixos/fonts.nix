@@ -5,5 +5,5 @@
     nerd-fonts.arimo
   ];
 
-  environment.systemPackages = with pkgs; [ font-awesome noto-fonts ];
+  environment.systemPackages = with pkgs; [ font-awesome noto-fonts corefonts ];
 }
