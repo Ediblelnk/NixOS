@@ -17,13 +17,20 @@
         <property name="label">󰦗 Upgrade</property>
       </object>
     </child>
-    
     <child>
       <object class="GtkSeparatorMenuItem" id="delimiter1"/>
     </child>
     <child>
       <object class="GtkMenuItem" id="powerwash">
         <property name="label">󰲼 Powerwash</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="delimiter2"/>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="keybinds">
+        <property name="label">󰥻 Keybinds</property>
       </object>
     </child>
   </object>

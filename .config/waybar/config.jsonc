@@ -267,10 +267,11 @@
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/menus/nixos.xml",
         "menu-actions": {
-            "build": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just build\"",
-            "upgrade": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just upgrade\"",
-            "dry": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just dry\"",
-            "powerwash": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just powerwash\""
+            "build": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just build\"",
+            "upgrade": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just upgrade\"",
+            "dry": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just dry\"",
+            "powerwash": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just powerwash\"",
+            "keybinds": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"cat ./.config/hypr/settings.keybindings.conf\""
         }
     },
     "custom/notification": {
