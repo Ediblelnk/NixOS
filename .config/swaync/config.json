@@ -21,7 +21,7 @@
     "timeout-critical": 0,
     "fit-to-screen": true,
     "relative-timestamps": true,
-    "control-center-positionX": "right",
+    "control-center-positionX": "left",
     "control-center-positionY": "top",
     "control-center-width": 350,
     "control-center-height": 600,

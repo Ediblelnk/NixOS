@@ -46,11 +46,13 @@ button {
 }
 
 #workspaces button.urgent {
-    color: @color11;
+    background-color: @color1;
+    color: @background;
 }
 
 #workspaces button.active {
-    color: @color5;
+    background-color: @color2;
+    color: @background;
 }
 
 #network.disconnected,

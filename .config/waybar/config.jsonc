@@ -35,23 +35,34 @@
         "format-icons": {
             "special": "S"
         },
+        // "format-window-separator": "",
+        // "workspace-taskbar": {
+        //     "enable": true,
+        //     "update-active-window": true,
+        //     "format": "{icon}",
+        //     "icon-size": 16,
+        // },
         "format-window-separator": " ",
-        "window-rewrite-default": "",
+        "window-rewrite-default": "󱔢",
         "window-rewrite": {
-            "title<*- YouTube*>": " ",
             "class<brave-browser>": "󰖟",
             "class<spotify>": "󰓇",
-            "class<nemo>": "󰒋",
-            "class<steam>": "󰓓",
-            "class<kitty>": "",
+            "class<nemo>": "󰉓",
+            "class<steam>": "",
+            "class<kitty>": "",
             "class<code>": "󰨞",
-            "class<signal>": "󰍡",
+            "class<signal>": "󰍩",
             "class<rofi>": "󰌧",
-            "class<obsidian>": "󰍔",
+            "class<obsidian>": "",
             "class<Github Desktop>": "󰊤",
+            "class<discord>": "",
             "class<libreoffice-impress>": "",
             "class<libreoffice-writer": "",
-            "class<libreoffice-calc": ""
+            "class<libreoffice-calc": "",
+            "class<libreoffice-base>": "",
+            "class<libreoffice-draw>": "",
+            "class<libreoffice-math>": "",
+            "class<libreoffice-startcenter>": ""
         },
         "show-special": true
     },
@@ -65,7 +76,11 @@
             "(.*) :: Visual Studio Code": "$1 󰘬",
             "(.*) — LibreOffice Impress": "$1",
             "(.*) — LibreOffice Writer": "$1",
-            "(.*) — LibreOffice Calc": "$1"
+            "(.*) — LibreOffice Calc": "$1",
+            "(.*) — LibreOffice Base": "$1",
+            "(.*) — LibreOffice Draw": "$1",
+            "(.*) — LibreOffice Math": "$1",
+            "(.*) — LibreOffice": "$1"
         },
         "separate-outputs": true
     },
