@@ -30,6 +30,8 @@
     discord
     # spotify -- this is done through a flake for spicetify
     zoom-us
+    slack
+
     gnome-calculator
 
     github-desktop

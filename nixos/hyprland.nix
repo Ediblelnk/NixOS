@@ -40,7 +40,7 @@
     kitty # terminal emulator
     seahorse # GNOME keyring manager
     nemo # file manager
-    rofi # application launcher
+    rofi-wayland # application launcher
     waybar # status bar for Wayland
     pywal # color scheme generator
 

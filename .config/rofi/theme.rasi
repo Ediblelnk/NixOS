@@ -52,7 +52,7 @@ window {
   width    : 50%;
 
   background-color: @background;
-  border: 3px;
+  border: 2px;
   border-color: @text;
   border-radius: 10px;
 
@@ -87,7 +87,7 @@ listview {
   padding      : 0px;
   margin       : 0px;
   lines        : 8;
-  columns      : 2;
+  columns      : 1;
   scrollbar    : false;
 }
 
@@ -95,6 +95,8 @@ element {
   padding : 0px 5px;
   margin  : 5px;
   spacing : 5px;
+  border  : 2px;
+  border-color: @background;
 }
 
 element normal urgent {
@@ -110,9 +112,10 @@ element alternate active {
 }
 
 element selected {
-  text-color       : @background;
-  background-color : @accent;
+/*  text-color       : @background;*/
+/*  background-color : @accent;*/
   border-radius: 5px;
+  border-color: @text;
 }
 
 element selected urgent {
@@ -124,7 +127,7 @@ element-icon {
 }
 
 element-icon selected {
-    background-color: @accent;
+    /*background-color: @accent;*/
 }
 
 element-text {
