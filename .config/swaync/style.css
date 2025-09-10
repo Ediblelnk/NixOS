@@ -59,7 +59,7 @@
 .notification-row .notification-background .notification {
     /* The actual notification */
     border-radius: 10px;
-    border: 1px solid @notification-border-color;
+    border: 2px solid @notification-border-color;
     padding: 0;
     transition: background 0.15s ease-in-out;
     background: @notification-background;
@@ -176,14 +176,14 @@
     background: @notification-background-darker;
     color: @text-color;
     caret-color: @text-color;
-    border: 1px solid @notification-border-color;
+    border: 2px solid @notification-border-color;
     border-radius: 10px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
     margin-left: 4px;
     background: @notification-background;
-    border: 1px solid @notification-border-color;
+    border: 2px solid @notification-border-color;
     border-radius: 10px;
     color: @text-color;
 }
@@ -191,7 +191,7 @@
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:disabled {
     background: initial;
     color: @text-color-disabled;
-    border: 1px solid @notification-border-color;
+    border: 2px solid @notification-border-color;
     border-color: transparent;
 }
 
@@ -277,7 +277,7 @@
     background: @control-center-background;
     color: @text-color;
     border-radius: 10px;
-    border: 1px solid @notification-border-color;
+    border: 2px solid @notification-border-color;
 }
 
 .control-center .control-center-list-placeholder {
@@ -330,7 +330,7 @@
     color: @text-color;
     text-shadow: none;
     background: @notification-background;
-    border: 1px solid @notification-border-color;
+    border: 2px solid @notification-border-color;
     box-shadow: none;
     border-radius: 10px;
 }
@@ -351,7 +351,7 @@
     font-size: initial;
     border-radius: 10px;
     background: @notification-background;
-    border: 1px solid @notification-border-color;
+    border: 2px solid @notification-border-color;
     box-shadow: none;
 }
 
@@ -361,7 +361,7 @@
 
 .widget-dnd>switch slider {
     background: @text-color;
-    border: 1px solid @notif-border-color;
+    border: 2px solid @notif-border-color;
     border-radius: 10px;
 }
 
@@ -509,7 +509,7 @@
     color: @text-color;
     text-shadow: none;
     background: @notification-background;
-    border: 1px solid @notification-border-color;
+    border: 2px solid @notification-border-color;
     box-shadow: none;
     border-radius: 10px;
 }

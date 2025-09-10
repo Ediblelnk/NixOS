@@ -11,23 +11,17 @@
 window#waybar {
     background-color: @background;
     border-radius: 10px;
-    border: 1px solid @color7
+    border: 2px solid @color7
 }
 
 tooltip {
     background: @background;
-    border: 1px solid @color7;
+    border: 2px solid @color7;
     border-radius: 10px;
 }
 
 tooltip label {
     color: @color7;
-}
-
-button {
-    box-shadow: inset 0 -3px transparent;
-    border: none;
-    border-radius: 0;
 }
 
 #workspaces {
@@ -41,25 +35,39 @@ button {
     padding: 0px;
     margin: 1px;
     border-radius: 5px;
+    border: 2px solid @color0;
+    background-color: @color0;
     color: @color7;
 
 }
 
-#workspaces button.urgent {
-    background-color: @color1;
-    color: @background;
+#workspaces button.active {
+    border: 2px solid @color7;
 }
 
-#workspaces button.active {
-    background-color: @color2;
-    color: @background;
+#workspaces button.urgent {
+    border: 2px solid @color1;
 }
+
+#workspaces button.hover {
+    border: 1px solid @color1;
+    background-color: @color1;
+    color: @color1;
+}
+
+#workspaces button.empty {
+    background-color: @color0;
+    color: @color7;
+}
+
+/* TODO: fix a hover css strangeness */
 
 #network.disconnected,
 #temperature.critical,
 #cpu.critical,
 #memory.critical {
     color: @color9;
+    /* GENERALLY A RED */
 }
 
 #cpu.warning,
@@ -67,6 +75,7 @@ button {
 #idle_inhibitor.activated,
 #pulseaudio.muted {
     color: @color11;
+    /* GENERALLY A YELLOW */
 }
 
 #clock {
@@ -118,12 +127,10 @@ button {
 }
 
 #power-profiles-daemon.performance {
-    /* background-color: @color9; */
     color: @color9;
 }
 
 #power-profiles-daemon.balanced {
-    /* background-color: @color4; */
     color: @color4;
 }
 
@@ -131,6 +138,5 @@ button {
 #battery.plugged,
 #bluetooth.connected,
 #power-profiles-daemon.power-saver {
-    /* background-color: @color6; */
     color: @color6;
 }

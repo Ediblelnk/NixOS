@@ -29,6 +29,8 @@
 
     discord
     # spotify -- this is done through a flake for spicetify
+    zoom-us
+    gnome-calculator
 
     github-desktop
     vscode

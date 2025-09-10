@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
     "layer": "bottom",
-    // "height": 40,
+    "height": 45,
     "margin-top": 5,
     "margin-right": 5,
     "margin-bottom": 0,
@@ -31,17 +31,10 @@
         "custom/power"
     ],
     "hyprland/workspaces": {
-        "format": "{icon}:{windows} ",
+        "format": "{icon}|{windows} ",
         "format-icons": {
             "special": "S"
         },
-        // "format-window-separator": "",
-        // "workspace-taskbar": {
-        //     "enable": true,
-        //     "update-active-window": true,
-        //     "format": "{icon}",
-        //     "icon-size": 16,
-        // },
         "format-window-separator": " ",
         "window-rewrite-default": "󱔢",
         "window-rewrite": {

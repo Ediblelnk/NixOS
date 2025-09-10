@@ -52,7 +52,7 @@ window {
   width    : 50%;
 
   background-color: @background;
-  border: 1px;
+  border: 3px;
   border-color: @text;
   border-radius: 10px;
 
