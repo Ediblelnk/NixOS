@@ -1,10 +1,15 @@
 { config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
+    # rust
     rustup
     libgcc
+
+    # python
     python313
     python313Packages.dbus-python
-    miktex
+    python313Packages.cryptography
 
+    # LaTeX
+    miktex
   ];
 }

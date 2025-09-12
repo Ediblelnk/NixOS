@@ -49,7 +49,7 @@ element-icon, element-text, scrollbar {
 
 window {
   location : center;
-  width    : 50%;
+  width    : 30%;
 
   background-color: @background;
   border: 2px;
