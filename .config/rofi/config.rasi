@@ -1,7 +1,7 @@
 @theme "theme.rasi"
 
 configuration {
-	modes: "window,drun";
+	modes: "";
 	font: "mono 12";
 	location: 0;
 	yoffset: 0;
@@ -15,7 +15,7 @@ configuration {
 /*	on-menu-canceled: ;*/
 /*	on-menu-error: ;*/
 /*	on-screenshot-taken: ;*/
-	terminal: "rofi-sensible-terminal";
+	terminal: "kitty";
 	ssh-client: "ssh";
 	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
 	run-command: "{cmd}";
@@ -37,13 +37,13 @@ configuration {
 	case-sensitive: false;
 	case-smart: false;
 	cycle: true;
-	sidebar-mode: true;
+	sidebar-mode: false;
 	hover-select: false;
 	eh: 1;
 	auto-select: false;
 	parse-hosts: false;
 	parse-known-hosts: true;
-	combi-modes: "window,run";
+/*	combi-modes: "window,run";*/
 	matching: "normal";
 	tokenize: true;
 	m: "-5";
@@ -51,11 +51,11 @@ configuration {
 	dpi: -1;
 	threads: 0;
 	scroll-method: 0;
-	window-format: "{w}{t}";
+	window-format: "{w}{c}{t}";
 	click-to-exit: true;
 	max-history-size: 25;
 	combi-hide-mode-prefix: false;
-	combi-display-format: "{mode} {text}";
+/*	combi-display-format: "{mode} {text}";*/
 	matching-negate-char: '-' /* unsupported */;
 /*	cache-dir: ;*/
 	window-thumbnail: false;

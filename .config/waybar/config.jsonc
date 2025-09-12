@@ -32,9 +32,6 @@
     ],
     "hyprland/workspaces": {
         "format": "{icon}|{windows} ",
-        "format-icons": {
-            "special": "S"
-        },
         "format-window-separator": " ",
         "window-rewrite-default": "󱔢",
         "window-rewrite": {
@@ -130,19 +127,6 @@
                 "󰽦",
                 "󰽢"
             ]
-            // "default": [
-            //     "󰛩",
-            //     "󱩎",
-            //     "󱩏",
-            //     "󱩐",
-            //     "󱩑",
-            //     "󱩒",
-            //     "󱩓",
-            //     "󱩔",
-            //     "󱩕",
-            //     "󱩖",
-            //     "󰛨"
-            // ]
         }
     },
     "battery": {
