@@ -28,6 +28,7 @@
         "network",
         "backlight",
         "battery",
+        "tray",
         "custom/power"
     ],
     "hyprland/workspaces": {
@@ -233,6 +234,10 @@
         },
         "on-click": "pavucontrol",
         "scroll-step": 5
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
     },
     "custom/power": {
         "format": "󰐥",

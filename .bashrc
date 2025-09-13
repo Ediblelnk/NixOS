@@ -1,1 +1,1 @@
-PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[31m\]\[\e[0;41m\] \u \[\e[31;43m\]\[\e[39m\] \w \[\e[33;42m\]\[\e[39m\] 󰘬 ${PS1_CMD1} \[\e[32;44m\]\[\e[39m\] $? \[\e[34;100m\]\[\e[39m\] 󰥔 \A \[\e[0;90m\]\n\[\e[0m\] 󱞩 '
+PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[31m\]\[\e[0;41m\] \u \[\e[31;43m\]\[\e[39m\] \w \[\e[33;42m\]\[\e[39m\] 󰘬 ${PS1_CMD1} \[\e[32;44m\]\[\e[39m\] Exit:$? Lvl:$SHLVL \[\e[34;100m\]\[\e[39m\] 󰥔 \A \[\e[0;90m\]\n\[\e[0m\] 󱞩 '
