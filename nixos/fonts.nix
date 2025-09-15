@@ -3,7 +3,10 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
     nerd-fonts.arimo
-  ];
 
-  environment.systemPackages = with pkgs; [ font-awesome noto-fonts corefonts ];
+    font-awesome
+    noto-fonts
+    corefonts
+    vista-fonts
+  ];
 }

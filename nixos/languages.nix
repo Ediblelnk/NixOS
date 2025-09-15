@@ -7,6 +7,7 @@
     python313
 
     # LaTeX
-    miktex
+    # miktex
+    texliveFull
   ];
 }
