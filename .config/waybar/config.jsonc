@@ -54,12 +54,15 @@
             "class<libreoffice-base>": "",
             "class<libreoffice-draw>": "",
             "class<libreoffice-math>": "",
-            "class<libreoffice-startcenter>": ""
+            "class<libreoffice-startcenter>": "",
+            "class<soffice>": "󰈇"
         },
         "show-special": true
     },
     "hyprland/window": {
         "format": "{title}",
+        "format-alt": "{class}",
+        "tooltip": false,
         "icon": true,
         "icon-size": 20,
         "rewrite": {

@@ -40,6 +40,7 @@
     pix
 
     nixfmt-classic
+    shfmt
     just
     stow
     git
