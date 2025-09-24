@@ -13,7 +13,8 @@
     ./time.nix
     ./users.nix
 
-    ./modules/spicetify.nix
+    ./modules/spicetify.nix\
+    ./modules/virt-manager.nix
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
