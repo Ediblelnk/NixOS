@@ -13,7 +13,7 @@
     ./time.nix
     ./users.nix
 
-    ./modules/spicetify.nix\
+    ./modules/spicetify.nix
     ./modules/virt-manager.nix
   ];
 
