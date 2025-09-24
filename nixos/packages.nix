@@ -46,5 +46,6 @@
     git
     fzf
     zip
+    unzip
   ];
 }

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/run/current-system/sw/bin/bash
 
 echo "Generating Pywal Chrome theme..."
 
