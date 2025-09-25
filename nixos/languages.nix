@@ -9,5 +9,8 @@
     # LaTeX
     # miktex
     texliveFull
+
+    # npm
+    nodejs
   ];
 }

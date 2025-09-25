@@ -15,6 +15,7 @@ wal -i $WALLPAPER
 
 ~/.config/wal-brave/generate-theme.sh
 
+pkill swaync && swaync &
 pkill waybar && waybar &
 
 echo "Wallpaper changed to $WALLPAPER!"

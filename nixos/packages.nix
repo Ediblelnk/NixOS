@@ -33,6 +33,10 @@
     slack
 
     gnome-calculator
+    gnome-system-monitor
+    gnome-disk-utility
+    gnome-calendar
+    gnome-power-manager
 
     github-desktop
     vscode
