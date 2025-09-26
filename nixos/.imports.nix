@@ -16,6 +16,7 @@
     ./modules/spicetify.nix
     ./modules/virt-manager.nix
     ./modules/docker.nix
+    ./modules/wine.nix
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

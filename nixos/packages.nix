@@ -17,6 +17,7 @@
   environment.systemPackages = with pkgs; [
     vim
 
+    # LIBREOFFICE
     libreoffice-qt
     hunspell
     hunspellDicts.en_US
@@ -27,29 +28,33 @@
     signal-desktop
     obsidian
 
+    # CHATS AND MUSIC
     discord
     # spotify -- this is done through a flake for spicetify
     zoom-us
     slack
 
+    # DEV TOOLS
     gnome-calculator
     gnome-system-monitor
     gnome-disk-utility
     gnome-calendar
     gnome-power-manager
 
+    # DEVELOPMENT
     github-desktop
     vscode
+    nixfmt-classic
     libsecret
     pix
 
-    nixfmt-classic
-    shfmt
+    # COMMAND LINE TOOLS
     just
     stow
     git
     fzf
     zip
     unzip
+    tree
   ];
 }
