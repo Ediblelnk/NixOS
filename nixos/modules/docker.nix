@@ -1,4 +1,4 @@
 { config, pkgs, ... }: {
   virtualisation.docker.enable = true;
-  users.extraGroups.docker.members = [ "edibleink" ];
+  users.users.edibleink.extraGroups = [ "docker" ];
 }
