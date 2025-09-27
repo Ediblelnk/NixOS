@@ -9,7 +9,7 @@
     "reload_style_on_change": true,
     "modules-left": [
         "custom/nixos",
-        "power-profiles-daemon",
+        "custom/wallpaper",
         "idle_inhibitor",
         "clock",
         "custom/notification",
@@ -28,6 +28,7 @@
         "network",
         "backlight",
         "battery",
+        "power-profiles-daemon",
         "tray",
         "custom/power"
     ],
@@ -286,6 +287,12 @@
         "exec": "swaync-client -swb",
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "custom/wallpaper": {
+        "tooltip": false,
+        "format": "󰸉",
+        "on-click": "~/.config/hypr/scripts.wallpaper.sh",
         "escape": true
     }
 }
