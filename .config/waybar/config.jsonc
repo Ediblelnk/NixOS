@@ -27,13 +27,13 @@
         "pulseaudio",
         "network",
         "backlight",
-        "battery",
         "power-profiles-daemon",
+        "battery",
         "tray",
         "custom/power"
     ],
     "hyprland/workspaces": {
-        "format": "{icon}|{windows} ",
+        "format": "{icon}󰇙{windows} ",
         "format-window-separator": " ",
         "window-rewrite-default": "󱔢",
         "window-rewrite": {
@@ -64,6 +64,7 @@
     "hyprland/window": {
         "format": "{title}",
         "format-alt": "{class}",
+        "max-length": 40,
         "tooltip": false,
         "icon": true,
         "icon-size": 20,
