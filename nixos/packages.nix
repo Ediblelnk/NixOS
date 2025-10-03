@@ -47,6 +47,7 @@
     nixfmt-classic
     libsecret
     pix
+    mdbtools
 
     # COMMAND LINE TOOLS
     just

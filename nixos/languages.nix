@@ -12,5 +12,6 @@
 
     # npm
     nodejs
+    yarn
   ];
 }
