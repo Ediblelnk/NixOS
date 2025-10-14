@@ -27,10 +27,14 @@
     firefox
     signal-desktop
     obsidian
+    themix-gui
 
     # CHATS AND MUSIC
     discord
     # spotify -- this is done through a flake for spicetify
+    musescore
+    rhythmbox
+    vlc
     zoom-us
     slack
 
@@ -57,5 +61,7 @@
     zip
     unzip
     tree
+    zenity
+    dialog
   ];
 }
