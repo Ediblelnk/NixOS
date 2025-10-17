@@ -2,10 +2,10 @@
 {
     "layer": "bottom",
     "height": 45,
-    "margin-top": 5,
-    "margin-right": 5,
+    "margin-top": 4,
+    "margin-right": 4,
     "margin-bottom": 0,
-    "margin-left": 5,
+    "margin-left": 4,
     "reload_style_on_change": true,
     "modules-left": [
         "custom/nixos",
@@ -49,6 +49,7 @@
             "class<Github Desktop>": "󰊤",
             "class<discord>": "",
             "class<Slack>": "󰒱",
+            "class<zoom>": "󰕧",
             "class<.virt-manager-wrapped>": "",
             "class<libreoffice-impress>": "",
             "class<libreoffice-writer": "",
@@ -65,7 +66,7 @@
         "format": "{title}",
         "format-alt": "{class}",
         "max-length": 40,
-        "tooltip": false,
+        "tooltip-format": "{title}\n{class}",
         "icon": true,
         "icon-size": 20,
         "rewrite": {
@@ -87,10 +88,13 @@
     },
     "idle_inhibitor": {
         "format": "{icon}",
+        "tooltip-format-activated": "Idle Inhibitor is {status}",
+        "tooltip-format-deactivated": "Idle Inhibitor is {status}",
         "format-icons": {
             "activated": "󰈈",
             "deactivated": "󰈉"
-        }
+        },
+        "start-activated": true
     },
     "clock": {
         "interval": 60,
@@ -141,8 +145,8 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-alt": "{icon}",
+        "format": "{icon}",
+        "format-alt": "{icon} {capacity}%",
         "format-plugged": " {capacity}%",
         "format-icons": {
             "charging": [
@@ -169,17 +173,19 @@
                 "󰂂",
                 "󰁹"
             ]
-        }
+        },
+        "tooltip-format": "{capacity}% {timeTo}"
     },
     "bluetooth": {
         "format": " {status}",
         "format-disabled": "󰂲",
         "format-on": "",
         "format-connected": "󰂱",
-        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format": "{controller_alias} {controller_address}",
         "tooltip-format-connected": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}",
-        "on-click": "blueman-manager"
+        "on-click": "blueman-manager",
+        "on-click-right": "rfkill toggle bluetooth"
     },
     "power-profiles-daemon": {
         "format": "{icon}",
@@ -194,9 +200,8 @@
     },
     "network": {
         "format-wifi": "{icon}",
-        // "format-alt": "{icon} {signalStrength}%",
         "format-ethernet": "{icon}",
-        "tooltip-format": "{essid}",
+        "tooltip-format": "{essid} {icon} {signalStrength}%",
         "format-disconnected": "󰤫",
         "format-icons": {
             "wifi": [
@@ -247,7 +252,7 @@
     },
     "custom/power": {
         "format": "󰐥",
-        "tooltip": false,
+        "tooltip-format": "󰐥 Power Menu",
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/menus/power.xml",
         "menu-actions": {
@@ -259,19 +264,19 @@
     },
     "custom/nixos": {
         "format": "󱄅",
-        "tooltip": false,
+        "tooltip-format": "󱄅 NixOS Menu",
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/menus/nixos.xml",
         "menu-actions": {
             "build": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just build\"",
             "upgrade": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just upgrade\"",
             "dry": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just dry\"",
-            "powerwash": "kitty -d ~/Repositories/NixOS/ --hold sh -c \"just powerwash\"",
+            "powerwash": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just powerwash\"",
             "keybinds": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"cat ./.config/hypr/settings.keybindings.conf\""
         }
     },
     "custom/notification": {
-        "tooltip": false,
+        "tooltip-format": "Notifications",
         "format": "{icon}",
         "format-icons": {
             "notification": "󰂚",
@@ -291,7 +296,7 @@
         "escape": true
     },
     "custom/wallpaper": {
-        "tooltip": false,
+        "tooltip-format": "󰸉 Change Wallpaper",
         "format": "󰸉",
         "on-click": "~/.config/hypr/scripts.wallpaper.sh",
         "escape": true

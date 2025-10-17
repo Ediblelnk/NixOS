@@ -10,14 +10,14 @@
 
 window#waybar {
     background-color: @background;
-    border-radius: 10px;
-    border: 2px solid @color7
+    border-radius: 16px;
+    border: 2px solid @color7;
 }
 
 tooltip {
     background: @background;
     border: 2px solid @color7;
-    border-radius: 10px;
+    border-radius: 16px;
 }
 
 tooltip label {
@@ -26,19 +26,18 @@ tooltip label {
 
 #workspaces {
     padding: 0px;
-    margin: 0px;
-    border-radius: 5px;
+    margin: 0 2px;
+    border-radius: 2px;
     color: @color0;
 }
 
 #workspaces button {
     padding: 0px;
     margin: 1px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 2px solid @color0;
     background-color: @color0;
     color: @color7;
-
 }
 
 #workspaces button.active {
@@ -80,7 +79,7 @@ tooltip label {
 
 #clock {
     padding: 0 0 0 10px;
-    border-radius: 5px;
+    border-radius: 12px;
     color: @color7;
 }
 
@@ -104,27 +103,15 @@ tooltip label {
 #tray,
 #window,
 #wireplumber {
-    padding: 0px 7px;
-    margin: 0 1px;
-    border-radius: 5px;
+    padding: 0px 4px;
+    margin: 4px 4px;
+    border-radius: 8px;
     color: @color7;
 }
 
 #battery.critical:not(.charging) {
     background-color: @color1;
     color: @background;
-    animation-name: blink;
-    animation-duration: 1s;
-    animation-timing-function: steps(2);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes blink {
-    to {
-        background-color: @color2;
-        color: @background;
-    }
 }
 
 #power-profiles-daemon.performance {

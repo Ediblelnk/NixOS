@@ -37,6 +37,7 @@
     vlc
     zoom-us
     slack
+    obs-studio
 
     # DEV TOOLS
     gnome-calculator
