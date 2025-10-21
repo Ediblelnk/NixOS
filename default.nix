@@ -5,7 +5,13 @@ pkgs.mkShell {
     gcc
     rustup
     swi-prolog
-    (python3.withPackages (python-pkgs: [ python-pkgs.cryptography ]))
+    (python3.withPackages (python-pkgs: [
+      python-pkgs.cryptography
+      python-pkgs.matplotlib
+      python-pkgs.pillow
+      python-pkgs.jupyter
+      python-pkgs.notebook
+    ]))
   ];
 
   shellHook = ''

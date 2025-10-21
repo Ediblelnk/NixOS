@@ -5,6 +5,7 @@
 
     # python
     python313
+    jupyter
 
     # LaTeX
     # miktex
