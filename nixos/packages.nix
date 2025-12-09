@@ -54,6 +54,13 @@
     pix
     mdbtools
 
+    # X11 libraries
+    xorg.libX11
+    xorg.libXrandr
+    xorg.libXcursor
+    xorg.libXrender
+    mesa
+
     # COMMAND LINE TOOLS
     just
     stow
