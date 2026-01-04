@@ -11,6 +11,8 @@ pkgs.mkShell {
       python-pkgs.pillow
       python-pkgs.jupyter
       python-pkgs.notebook
+      python-pkgs.numpy
+      python-pkgs.pygame
     ]))
   ];
 
