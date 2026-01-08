@@ -3,9 +3,6 @@
       "version": "1.0",
       "name": "Pywal Theme",
       "theme": {
-        "images": {
-          "theme_ntp_background" : "images/theme_ntp_background_norepeat.png"
-        },
         "colors": {
             "background_tab": [18, 37, 35],
             "background_tab_inactive": [18, 37, 35],

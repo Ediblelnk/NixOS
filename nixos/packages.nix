@@ -45,6 +45,8 @@
     gnome-disk-utility
     gnome-calendar
     gnome-power-manager
+    gnome-online-accounts-gtk
+    gnome-font-viewer
 
     # DEVELOPMENT
     github-desktop

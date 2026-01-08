@@ -30,6 +30,18 @@
     nvidia.modesetting.enable = true;
   };
 
+  programs.dconf.profiles.user.databases = [
+    {
+      settings."org/gnome/desktop/interface" = {
+        gtk-theme = "Gruvbox-Dark";
+        icon-theme = "Adwaita";
+        font-name = "FiraCode Mono Medium 10.5";
+        document-font-name = "FiraCode Mono Medium 10.5";
+        monospace-font-name = "FiraCode Mono Medium 10.5";
+      };
+    }
+  ];
+
   environment.systemPackages = with pkgs; [
     hyprpaper
     hyprpicker
@@ -39,10 +51,12 @@
 
     kitty # terminal emulator
     seahorse # GNOME keyring manager
-    nemo # file manager
+    nautilus # file manager
     rofi # application launcher
     waybar # status bar for Wayland
+    quickshell
     pywal # color scheme generator
+    wpgtk # wallpaper and theme manager
 
     libnotify # notification library
     swaynotificationcenter
@@ -56,6 +70,9 @@
     brightnessctl # control screen brightness
     playerctl # media player control
     wl-clipboard # clipboard management for Wayland
+
+    materia-theme # GTK theme
+    gruvbox-gtk-theme # GTK theme
 
     adwaita-icon-theme # icon theme
     adwaita-qt # Qt integration for Adwaita theme

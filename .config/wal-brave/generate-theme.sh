@@ -23,12 +23,6 @@ prepare() {
     fi
 
     mkdir $THEME_DIR
-    mkdir "$THEME_DIR/images"
-
-    # Copy wallpaper so it can be used in theme
-    background_image="images/theme_ntp_background_norepeat.png"
-    cp "$wallpaper" "$THEME_DIR/$background_image"
-
 }
 
 background=$(hexToRgb $background)
@@ -44,9 +38,6 @@ generate() {
       "version": "1.0",
       "name": "$THEME_NAME Theme",
       "theme": {
-        "images": {
-          "theme_ntp_background" : "$background_image"
-        },
         "colors": {
             "background_tab": [$background],
             "background_tab_inactive": [$background],
