@@ -6,12 +6,19 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
-  outputs = { self, nixpkgs, spicetify-nix, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      spicetify-nix,
+      ...
+    }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in
+    {
       nixosConfigurations.nixos = lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };

@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -31,8 +32,7 @@
     SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
-    POLKIT_AUTH_AGENT =
-      "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+    POLKIT_AUTH_AGENT = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
   };
 
   hardware = {
@@ -40,15 +40,17 @@
     nvidia.modesetting.enable = true;
   };
 
-  programs.dconf.profiles.user.databases = [{
-    settings."org/gnome/desktop/interface" = {
-      gtk-theme = "Gruvbox-Dark";
-      icon-theme = "Adwaita";
-      font-name = "FiraCode Mono Medium 10.5";
-      document-font-name = "FiraCode Mono Medium 10.5";
-      monospace-font-name = "FiraCode Mono Medium 10.5";
-    };
-  }];
+  programs.dconf.profiles.user.databases = [
+    {
+      settings."org/gnome/desktop/interface" = {
+        gtk-theme = "Gruvbox-Dark";
+        icon-theme = "Adwaita";
+        font-name = "FiraCode Mono Medium 10.5";
+        document-font-name = "FiraCode Mono Medium 10.5";
+        monospace-font-name = "FiraCode Mono Medium 10.5";
+      };
+    }
+  ];
 
   environment.systemPackages = with pkgs; [
     hyprpaper
