@@ -51,7 +51,7 @@
     # DEVELOPMENT
     github-desktop
     vscode
-    nixfmt-classic
+    nixfmt
     libsecret
     pix
     mdbtools

@@ -4,9 +4,19 @@
     xwayland.enable = true;
   };
 
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  services.displayManager.sddm.theme = "where_is_my_sddm_theme";
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd start-hyprland";
+        user = "greeter";
+      };
+    };
+  };
+
+  #   services.displayManager.sddm.enable = true;
+  #   services.displayManager.sddm.wayland.enable = true;
+  #   services.displayManager.sddm.theme = "where_is_my_sddm_theme";
   services.gnome.gnome-keyring.enable = true;
   security = {
     polkit.enable = true;
@@ -30,17 +40,15 @@
     nvidia.modesetting.enable = true;
   };
 
-  programs.dconf.profiles.user.databases = [
-    {
-      settings."org/gnome/desktop/interface" = {
-        gtk-theme = "Gruvbox-Dark";
-        icon-theme = "Adwaita";
-        font-name = "FiraCode Mono Medium 10.5";
-        document-font-name = "FiraCode Mono Medium 10.5";
-        monospace-font-name = "FiraCode Mono Medium 10.5";
-      };
-    }
-  ];
+  programs.dconf.profiles.user.databases = [{
+    settings."org/gnome/desktop/interface" = {
+      gtk-theme = "Gruvbox-Dark";
+      icon-theme = "Adwaita";
+      font-name = "FiraCode Mono Medium 10.5";
+      document-font-name = "FiraCode Mono Medium 10.5";
+      monospace-font-name = "FiraCode Mono Medium 10.5";
+    };
+  }];
 
   environment.systemPackages = with pkgs; [
     hyprpaper
