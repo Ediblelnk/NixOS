@@ -1,7 +1,7 @@
 @import "../../.cache/wal/colors-waybar.css";
 
 @define-color control-center-background @color0;
-@define-color notification-border-color @color7;
+@define-color notification-border-color @color0;
 @define-color notification-background @color0;
 @define-color notification-background-opaque @color0;
 @define-color notification-background-darker @color0;
@@ -12,7 +12,7 @@
 @define-color notification-close-background-hover @color7;
 @define-color text-color @color7;
 @define-color text-color-disabled @color9;
-@define-color background-selected @color10;
+@define-color background-selected @color4;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -350,7 +350,7 @@
     color: @text-color;
     font-size: initial;
     border-radius: 16px;
-    background: @notification-background;
+    background: @color1;
     border: 2px solid @notification-border-color;
     box-shadow: none;
 }

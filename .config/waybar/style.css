@@ -10,14 +10,14 @@
 
 window#waybar {
     background-color: @background;
-    border-radius: 16px;
-    border: 2px solid @color7;
+    /* border-radius: 16px; */
+    /* border: 2px solid @color7; */
 }
 
 tooltip {
     background: @background;
-    border: 2px solid @color7;
-    border-radius: 16px;
+    border: 0px solid @color7;
+    border-radius: 10px;
 }
 
 tooltip label {
@@ -36,27 +36,23 @@ tooltip label {
     margin: 1px;
     border-radius: 10px;
     border: 2px solid @color0;
-    background-color: @color0;
+    /* background-color: ; */
     color: @color7;
 }
 
 #workspaces button.active {
-    border: 2px solid @color7;
+    border: 2px solid @color0;
+    color: @color3
 }
 
 #workspaces button.urgent {
-    border: 2px solid @color1;
+    border: 2px solid @color2;
 }
 
 #workspaces button.hover {
     border: 1px solid @color1;
     background-color: @color1;
     color: @color1;
-}
-
-#workspaces button.empty {
-    background-color: @color0;
-    color: @color7;
 }
 
 /* TODO: fix a hover css strangeness */

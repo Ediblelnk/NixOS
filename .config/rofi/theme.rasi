@@ -7,7 +7,7 @@
     --background:                  @background;
     text:                        @color7;
     urgent:                      @color3;
-    accent:                      @color6;
+    accent:                      @color3;
 
 
     text-color:                  @text;
@@ -52,11 +52,11 @@ window {
   width    : 30%;
 
   background-color: @background;
-  border: 2px;
+  border: 0px;
   border-color: @text;
-  border-radius: 16px;
+  border-radius: 10px;
 
-  margin: 0px;
+  margin: 2px;
 }
 
 inputbar {
@@ -65,7 +65,7 @@ inputbar {
   children : [ entry ];
   background-color: @text;
   text-color: @background;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 entry, element-icon, element-text {
@@ -112,10 +112,10 @@ element alternate active {
 }
 
 element selected {
-/*  text-color       : @background;*/
-/*  background-color : @accent;*/
-  border-radius: 10px;
-  border-color: @text;
+  text-color       : @accent;
+  /*background-color : @accent;*/
+  border-radius: 5px;
+  /*border-color: @text;*/
 }
 
 element selected urgent {

@@ -10,7 +10,7 @@
 #power-menu {
     background-color: @background;
     border-radius: 10px;
-    border: 1px solid @color7;
+    border: 0px solid @color7;
 }
 
 #power-menu menuitem {
@@ -36,7 +36,7 @@
 #nixos-menu {
     background-color: @background;
     border-radius: 10px;
-    border: 1px solid @color7;
+    border: 0px solid @color7;
 }
 
 #nixos-menu menuitem {
