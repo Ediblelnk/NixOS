@@ -1,9 +1,8 @@
 --target=~
---ignore=.git/*
+--ignore=.git*
 --ignore=.vscode/*
 --ignore=nixos/*
 --ignore=.stowrc
---ignore=flake.lock
---ignore=flake.nix
+--ignore=flake.*
 --ignore=justfile
 --ignore=README.md

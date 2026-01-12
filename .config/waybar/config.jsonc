@@ -41,7 +41,7 @@
             "class<firefox>": "󰈹",
             "class<google-chrome>": "󰊯",
             "class<spotify>": "󰓇",
-            "class<nemo>": "󰉓",
+            "class<org.gnome.Nautilus>": "󰉓",
             "class<pix>": "󱇣",
             "class<steam>": "",
             "class<kitty>": "",
@@ -305,7 +305,7 @@
     "custom/wallpaper": {
         "tooltip-format": "󰸉 Change Wallpaper",
         "format": "󰸉",
-        "on-click": "~/.config/hypr/scripts.wallpaper.sh",
+        "on-click": "~/.config/hypr/scripts.get-wallpaper.sh",
         "escape": true
     }
 }

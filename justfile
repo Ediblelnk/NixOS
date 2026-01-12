@@ -26,3 +26,13 @@ powerwash:
 stow:
     @echo -e "\033[1;36m[info]: stowing files\033[0m"
     stow .
+
+create:
+    @echo -e "\033[1;36m[info]: creating home directories\033[0m"
+    @~/.create.sh
+
+install:
+    @echo -e "\033[1;36m[info]: performing first time setup\033[0m"
+    just stow
+    just create
+    just build

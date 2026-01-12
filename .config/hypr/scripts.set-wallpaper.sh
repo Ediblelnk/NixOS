@@ -1,18 +1,4 @@
-#!/run/current-system/sw/bin/bash
-
-WALLPAPER_DIR=$(dirname "$(readlink $HOME/.wallpaper)")/
-
-
-get_random_wallpaper() {
-    local CURRENT_WALL=$(readlink $HOME/.wallpaper)
-    find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1
-}
-
-get_chosen_wallpaper() {
-    zenity --file-selection --filename=$WALLPAPER_DIR --file-filter="*.png *.jpg *.webp"
-}
-
-change_wallpaper() {
+set_wallpaper() {
     local WALLPAPER="$1"
 
     ln -s -f "$WALLPAPER" "$HOME/.wallpaper"
@@ -44,10 +30,4 @@ change_wallpaper() {
     echo "Wallpaper changed to $WALLPAPER!"
 }
 
-WALLPAPER=$(get_chosen_wallpaper)
-# If no wallpaper was chosen, exit with a non-zero status so the caller can detect it.
-if [ -z "${WALLPAPER:-}" ]; then
-    exit 1
-fi
-
-change_wallpaper "$WALLPAPER"
+set_wallpaper "$1"
