@@ -37,5 +37,14 @@
           ./nixos/clients/framework/client.nix
         ];
       };
+      nixosConfigurations.turmeric = lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs; };
+        modules = [
+          spicetify-nix.nixosModules.default
+          ./nixos/.imports.nix
+          ./nixos/clients/turmeric/client.nix
+        ];
+      };
     };
 }
