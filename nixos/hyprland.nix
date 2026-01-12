@@ -38,7 +38,9 @@
   hardware = {
     graphics.enable = true;
     nvidia.modesetting.enable = true;
+    nvidia.open = true;
   };
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   programs.dconf.profiles.user.databases = [
     {

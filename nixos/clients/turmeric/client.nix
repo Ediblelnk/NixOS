@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 {
-  imports = [ ./hardware.nix ];
+  imports = [ ./hardware-configuration.nix ];
   networking.hostName = "turmeric";
 }
