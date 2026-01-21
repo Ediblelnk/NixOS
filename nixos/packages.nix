@@ -36,6 +36,7 @@
     zoom-us
     slack
     obs-studio
+    cheese
 
     # DEV TOOLS
     gnome-calculator
