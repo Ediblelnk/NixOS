@@ -13,6 +13,7 @@
         "idle_inhibitor",
         "clock",
         "custom/notification",
+        "custom/open-application",
         "hyprland/workspaces",
         "cpu",
         "memory",
@@ -306,6 +307,12 @@
         "tooltip-format": "󰸉 Change Wallpaper",
         "format": "󰸉",
         "on-click": "~/.config/hypr/scripts.get-wallpaper.sh",
+        "escape": true
+    },
+    "custom/open-application": {
+        "format": "󰜄",
+        "tooltip-format": "󰜄 Open Application Launcher",
+        "on-click": "pkill rofi || rofi -show drun",
         "escape": true
     }
 }
