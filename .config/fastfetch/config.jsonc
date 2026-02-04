@@ -30,50 +30,77 @@
             "type": "uptime"
         },
         {
-            "key": "│ {#34}{icon} distro  {#keys}│",
+            "key": "╰───────────╯",
+            "type": "custom"
+        },
+        {
+            "key": "╭───────────╮",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#31}{icon} distro  {#keys}│",
             "type": "os"
         },
         {
-            "key": "│ {#35} kernel  {#keys}│",
+            "key": "│ {#32}󰏗 packs   {#keys}│",
+            "type": "packages"
+        },
+        {
+            "key": "│ {#33} kernel  {#keys}│",
             "type": "kernel"
         },
         {
-            "key": "│ {#36}󰇄 desktop {#keys}│",
-            "type": "de"
+            "key": "│ {#34}󰍂 login   {#keys}│",
+            "type": "lm"
         },
         {
-            "key": "│ {#31} term    {#keys}│",
+            "key": "│ {#35}󰪶 manager {#keys}│",
+            "type": "wm"
+        },
+        {
+            "key": "│ {#36} term    {#keys}│",
             "type": "terminal"
         },
         {
-            "key": "│ {#32} shell   {#keys}│",
+            "key": "│ {#31} shell   {#keys}│",
             "type": "shell"
         },
         {
-            "key": "│ {#33}󰍛 cpu     {#keys}│",
-            "type": "cpu",
-            "showPeCoreCount": true
+            "key": "╰───────────╯",
+            "type": "custom"
         },
         {
-            "key": "│ {#34}󰉉 disk    {#keys}│",
+            "key": "╭───────────╮",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#31}󰉉 disk    {#keys}│",
             "type": "disk",
             "folders": "/"
         },
+        // {
+        //     "key": "│ {#31} memory  {#keys}│",
+        //     "type": "memory"
+        // },
         {
-            "key": "│ {#35} memory  {#keys}│",
-            "type": "memory"
+            "key": "│ {#32}󰁹 battery {#keys}│",
+            "type": "battery"
         },
         {
-            "key": "│ {#36}󰩟 network {#keys}│",
+            "key": "│ {#33}󰩟 address {#keys}│",
             "type": "localip",
             "format": "{ipv4} ({ifname})"
         },
         {
-            "key": "├───────────┤",
+            "key": "╰───────────╯",
             "type": "custom"
         },
         {
-            "key": "│ {#39} colors  {#keys}│",
+            "key": "╭───────────╮",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#37} colors  {#keys}│",
             "type": "colors",
             "symbol": "circle"
         },
