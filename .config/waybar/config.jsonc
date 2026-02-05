@@ -8,7 +8,7 @@
     "margin-left": 0,
     "reload_style_on_change": true,
     "modules-left": [
-        "custom/nixos",
+        "group/nixos",
         "custom/wallpaper",
         "idle_inhibitor",
         "clock",
@@ -30,9 +30,23 @@
         "backlight",
         "power-profiles-daemon",
         "battery",
-        "tray",
-        "custom/power"
+        "group/tray",
+        "group/power"
     ],
+    "group/tray": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 100,
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/tray",
+            "tray"
+        ]
+    },
+    "custom/tray": {
+        "format": "󰍜"
+    },
     "hyprland/workspaces": {
         "format": "{icon}󰇙{windows} ",
         "format-window-separator": " ",
@@ -258,30 +272,87 @@
         "icon-size": 21,
         "spacing": 10
     },
+    "group/power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 100,
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/power",
+            "custom/power-shutdown",
+            "custom/power-reboot",
+            "custom/power-hibernate",
+            "custom/power-suspend"
+        ]
+    },
     "custom/power": {
         "format": "󰐥",
-        "tooltip-format": "󰐥 Power Menu",
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/menus/power.xml",
-        "menu-actions": {
-            "shutdown": "shutdown now",
-            "reboot": "reboot",
-            "suspend": "systemctl suspend",
-            "hibernate": "systemctl hibernate"
-        }
+        "tooltip": false
+    },
+    "custom/power-shutdown": {
+        "format": "󰓛 ",
+        "tooltip-format": "󰓛 Shutdown System",
+        "on-click": "shutdown now"
+    },
+    "custom/power-reboot": {
+        "format": "󰑓 ",
+        "tooltip-format": "󰑓 Reboot System",
+        "on-click": "reboot"
+    },
+    "custom/power-suspend": {
+        "format": "󰏤 ",
+        "tooltip-format": "󰏤 Suspend System",
+        "on-click": "systemctl suspend"
+    },
+    "custom/power-hibernate": {
+        "format": "󰒲 ",
+        "tooltip-format": "󰒲 Hibernate System",
+        "on-click": "systemctl hibernate"
+    },
+    "group/nixos": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 100,
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/nixos",
+            "custom/nixos-build",
+            "custom/nixos-upgrade",
+            "custom/nixos-dry",
+            "custom/nixos-powerwash",
+            "custom/nixos-keybinds"
+        ]
     },
     "custom/nixos": {
         "format": "󱄅",
-        "tooltip-format": "󱄅 NixOS Menu",
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/menus/nixos.xml",
-        "menu-actions": {
-            "build": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just build\"",
-            "upgrade": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just upgrade\"",
-            "dry": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just dry\"",
-            "powerwash": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just powerwash\"",
-            "keybinds": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"cat ./.config/hypr/settings.keybindings.conf\""
-        }
+        "tooltip": false
+    },
+    "custom/nixos-build": {
+        "format": "󰲽 ",
+        "tooltip-format": "󰲽 Build NixOS",
+        "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just build\""
+    },
+    "custom/nixos-upgrade": {
+        "format": "󰦗 ",
+        "tooltip-format": "󰦗 Upgrade NixOS",
+        "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just upgrade\""
+    },
+    "custom/nixos-dry": {
+        "format": "󱔢 ",
+        "tooltip-format": "󱔢 Dry Build NixOS",
+        "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just dry\""
+    },
+    "custom/nixos-powerwash": {
+        "format": "󰫠 ",
+        "tooltip-format": "󰫠 Powerwash NixOS",
+        "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just powerwash\""
+    },
+    "custom/nixos-keybinds": {
+        "format": "󰥻 ",
+        "tooltip-format": "󰥻 Display NixOS Keybinds",
+        "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"cat ./.config/hypr/settings.keybindings.conf\""
     },
     "custom/notification": {
         "tooltip-format": "Notifications",
