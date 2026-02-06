@@ -9,11 +9,9 @@
     "reload_style_on_change": true,
     "modules-left": [
         "group/nixos",
-        "custom/wallpaper",
-        "idle_inhibitor",
+        "group/settings",
         "clock",
         "custom/notification",
-        "custom/open-application",
         "hyprland/workspaces",
         "cpu",
         "memory",
@@ -28,27 +26,47 @@
         "pulseaudio",
         "network",
         "backlight",
-        "power-profiles-daemon",
         "battery",
-        "group/tray",
+        "group/sandwich",
         "group/power"
     ],
-    "group/tray": {
+    "group/sandwich": {
         "orientation": "inherit",
         "drawer": {
             "transition-duration": 100,
-            "transition-left-to-right": true
+            "transition-left-to-right": false,
+            "children-class": "tray-drawer"
         },
         "modules": [
-            "custom/tray",
+            "custom/sandwich",
             "tray"
         ]
     },
-    "custom/tray": {
-        "format": "󰍜"
+    "custom/sandwich": {
+        "format": "󰍜",
+        "tooltip": false
+    },
+    "group/settings": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 100,
+            "transition-left-to-right": true,
+            "children-class": "settings-drawer"
+        },
+        "modules": [
+            "custom/settings",
+            "custom/settings-wallpaper",
+            "power-profiles-daemon",
+            "idle_inhibitor",
+            "custom/open-application"
+        ]
+    },
+    "custom/settings": {
+        "format": "",
+        "tooltip": false
     },
     "hyprland/workspaces": {
-        "format": "{icon}󰇙{windows} ",
+        "format": "{icon}.{windows}",
         "format-window-separator": " ",
         "window-rewrite-default": "󱔢",
         "window-rewrite": {
@@ -276,7 +294,8 @@
         "orientation": "inherit",
         "drawer": {
             "transition-duration": 100,
-            "transition-left-to-right": false
+            "transition-left-to-right": false,
+            "children-class": "power-drawer"
         },
         "modules": [
             "custom/power",
@@ -291,22 +310,22 @@
         "tooltip": false
     },
     "custom/power-shutdown": {
-        "format": "󰓛 ",
+        "format": "󰓛",
         "tooltip-format": "󰓛 Shutdown System",
         "on-click": "shutdown now"
     },
     "custom/power-reboot": {
-        "format": "󰑓 ",
+        "format": "󰑓",
         "tooltip-format": "󰑓 Reboot System",
         "on-click": "reboot"
     },
     "custom/power-suspend": {
-        "format": "󰏤 ",
+        "format": "󰏤",
         "tooltip-format": "󰏤 Suspend System",
         "on-click": "systemctl suspend"
     },
     "custom/power-hibernate": {
-        "format": "󰒲 ",
+        "format": "󰒲",
         "tooltip-format": "󰒲 Hibernate System",
         "on-click": "systemctl hibernate"
     },
@@ -314,7 +333,8 @@
         "orientation": "inherit",
         "drawer": {
             "transition-duration": 100,
-            "transition-left-to-right": true
+            "transition-left-to-right": true,
+            "children-class": "nixos-drawer"
         },
         "modules": [
             "custom/nixos",
@@ -330,27 +350,27 @@
         "tooltip": false
     },
     "custom/nixos-build": {
-        "format": "󰲽 ",
+        "format": "󰲽",
         "tooltip-format": "󰲽 Build NixOS",
         "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just build\""
     },
     "custom/nixos-upgrade": {
-        "format": "󰦗 ",
+        "format": "󰦗",
         "tooltip-format": "󰦗 Upgrade NixOS",
         "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just upgrade\""
     },
     "custom/nixos-dry": {
-        "format": "󱔢 ",
+        "format": "󱔢",
         "tooltip-format": "󱔢 Dry Build NixOS",
         "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just dry\""
     },
     "custom/nixos-powerwash": {
-        "format": "󰫠 ",
+        "format": "󰫠",
         "tooltip-format": "󰫠 Powerwash NixOS",
         "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just powerwash\""
     },
     "custom/nixos-keybinds": {
-        "format": "󰥻 ",
+        "format": "󰥻",
         "tooltip-format": "󰥻 Display NixOS Keybinds",
         "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"cat ./.config/hypr/settings.keybindings.conf\""
     },
@@ -374,7 +394,7 @@
         "on-click-right": "swaync-client -d -sw",
         "escape": true
     },
-    "custom/wallpaper": {
+    "custom/settings-wallpaper": {
         "tooltip-format": "󰸉 Change Wallpaper",
         "format": "󰸉",
         "on-click": "~/.config/hypr/scripts.get-wallpaper.sh",

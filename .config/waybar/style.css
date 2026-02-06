@@ -3,21 +3,18 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, FiraCode, monospace;
+    font-family: "FiraCode Nerd Font Propo";
     font-size: 18px;
     padding: 2px;
 }
 
 window#waybar {
-    background-color: @background;
-    /* border-radius: 16px; */
-    /* border: 2px solid @color7; */
+    background-color: @color0;
 }
 
 tooltip {
     background: @background;
-    border: 0px solid @color7;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 tooltip label {
@@ -56,22 +53,17 @@ tooltip label {
     color: @color1;
 }
 
-/* TODO: fix a hover css strangeness */
-
 #network.disconnected,
 #temperature.critical,
 #cpu.critical,
 #memory.critical {
     color: @color9;
-    /* GENERALLY A RED */
 }
 
 #cpu.warning,
 #memory.warning,
-#idle_inhibitor.activated,
 #pulseaudio.muted {
     color: @color11;
-    /* GENERALLY A YELLOW */
 }
 
 #clock {
@@ -84,27 +76,79 @@ tooltip label {
 #battery,
 #bluetooth,
 #cpu,
-#custom-power,
-#custom-nixos,
 #custom-notification,
-#custom-wallpaper,
-#custom-open-application,
 #disk,
-#idle_inhibitor,
 #memory,
 #mode,
 #network,
-#power-profiles-daemon,
 #pulseaudio,
 #scratchpad,
 #temperature,
-#tray,
 #window,
 #wireplumber {
     padding: 0px 6px;
-    margin: 4px 4px;
+    margin: 2px 4px;
     border-radius: 8px;
     color: @color7;
+    background-color: @color0;
+}
+
+#tray {
+    padding: 0px 6px;
+    margin: 0px 0px;
+    border-radius: 8px;
+}
+
+#custom-power,
+#custom-settings,
+#custom-nixos,
+#custom-sandwich {
+    padding: 0px 10px;
+    margin: 0px 0px;
+    border-radius: 8px;
+    color: @color7;
+    background-color: @color0;
+}
+
+#custom-nixos-build,
+#custom-nixos-upgrade,
+#custom-nixos-dry,
+#custom-nixos-powerwash,
+#custom-nixos-keybinds,
+#custom-power-shutdown,
+#custom-power-reboot,
+#custom-power-suspend,
+#custom-power-hibernate,
+#custom-settings-wallpaper,
+#power-profiles-daemon,
+#idle_inhibitor,
+#custom-open-application {
+    padding: 0px 10px;
+    margin: 0px 0px;
+    border-radius: 8px;
+}
+
+#sandwich,
+#settings,
+#nixos,
+#power {
+    padding: 0px 0px;
+    margin: 0px 4px;
+    border-radius: 8px;
+    color: @color0;
+    border: 1px solid @color7;
+    background-color: @color7;
+}
+
+.sandwich-drawer,
+.settings-drawer,
+.power-drawer,
+.nixos-drawer {
+    padding: 0px 6px;
+    margin: 0px 6px;
+    border-radius: 8px;
+    color: @color0;
+    background-color: @color7;
 }
 
 #battery.critical:not(.charging) {
@@ -112,17 +156,8 @@ tooltip label {
     color: @background;
 }
 
-#power-profiles-daemon.performance {
-    color: @color9;
-}
-
-#power-profiles-daemon.balanced {
-    color: @color4;
-}
-
 #battery.charging,
 #battery.plugged,
-#bluetooth.connected,
-#power-profiles-daemon.power-saver {
+#bluetooth.connected {
     color: @color6;
 }
