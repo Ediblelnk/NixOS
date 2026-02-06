@@ -1,6 +1,6 @@
 import QtQuick
 import Quickshell
-import "file:~/.cache/wal" as ColorScheme
+import "file:/home/edibleink/.cache/wal" as ColorScheme
 
 PanelWindow {
     id: window
@@ -10,8 +10,8 @@ PanelWindow {
 
     // --- Configuration ---
     property int waybarHeight: 45
-    property int cornerRadius: 11
-    property int borderWidth: 1
+    property int cornerRadius: 14
+    property int borderWidth: 4
     property color frameColor: theme.color0
 
     // --- Dynamic Height Calculation ---

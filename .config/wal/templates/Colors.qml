@@ -1,6 +1,6 @@
 import QtQuick
 
-QtObject {
+QtObject {{
     readonly property color foreground: "{foreground}"
     readonly property color background: "{background}"
     readonly property color cursor: "{cursor}"
@@ -21,4 +21,4 @@ QtObject {
     readonly property color color13: "{color13}"
     readonly property color color14: "{color14}"
     readonly property color color15: "{color15}"
-}
+}}
