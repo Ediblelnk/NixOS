@@ -27,7 +27,7 @@ PanelWindow {
     margins.top: window.waybarHeight
     color: "transparent"
 
-    aboveWindows: true
+    aboveWindows: false
     exclusionMode: ExclusionMode.Ignore
     mask: Region {}
 
