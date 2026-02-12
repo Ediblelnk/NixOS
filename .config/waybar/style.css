@@ -2,7 +2,6 @@
 /* assuming called in ~/.config/waybar */
 
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: "FiraCode Nerd Font Propo";
     font-size: 18px;
     padding: 2px;
