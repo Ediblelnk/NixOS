@@ -1,5 +1,6 @@
 set_wallpaper() {
     local WALLPAPER="$1"
+    local THEME="$2"
 
     ln -s -f "$WALLPAPER" "$HOME/.wallpaper"
 
@@ -10,7 +11,7 @@ set_wallpaper() {
     setsid hyprpaper >/dev/null 2>&1 &
 
     # Run wal but silence its output so it doesn't emit terminal control sequences to the caller
-    wal -i "$WALLPAPER" >/dev/null 2>&1 || true
+    wal $THEME -i "$WALLPAPER" >/dev/null 2>&1 || true
 
     # regenerate brave theme if present; silence output
     if [[ -x "${HOME}/.config/wal-brave/generate-theme.sh" ]]; then
@@ -33,4 +34,4 @@ set_wallpaper() {
     echo "Wallpaper changed to $WALLPAPER!"
 }
 
-set_wallpaper "$1"
+set_wallpaper "$1" "$2"
