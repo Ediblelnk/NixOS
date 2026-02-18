@@ -12,6 +12,7 @@
       corefonts
       vista-fonts
       inter
+      garamond-libre
     ];
   };
 }

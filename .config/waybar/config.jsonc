@@ -138,9 +138,8 @@
     },
     "clock": {
         "interval": 60,
-        "tooltip": true,
-        "format": "󰥔 {:%H:%M}",
-        "tooltip-format": "{:%Y-%m-%d}"
+        "tooltip": false,
+        "format": "󰸗 {0:%m-%d} 󰥔 {0:%H:%M}"
     },
     "cpu": {
         "format": "",
