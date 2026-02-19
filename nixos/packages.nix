@@ -56,10 +56,10 @@
     mdbtools
 
     # X11 libraries
-    xorg.libX11
-    xorg.libXrandr
-    xorg.libXcursor
-    xorg.libXrender
+    libx11
+    libxrandr
+    libxcursor
+    libxrender
     mesa
 
     # COMMAND LINE TOOLS

@@ -10,8 +10,8 @@
     "modules-left": [
         "group/nixos",
         "group/settings",
-        "clock",
         "custom/notification",
+        "clock",
         "hyprland/workspaces",
         "cpu",
         "memory",
