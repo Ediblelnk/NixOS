@@ -12,7 +12,7 @@ stdenvNoCC.mkDerivation rec {
   src = fetchzip {
     url = "https://download.microsoft.com/download/8/6/0/860a94fa-7feb-44ef-ac79-c072d9113d69/Microsoft%20Aptos%20Fonts.zip";
     stripRoot = false;
-    hash = "";
+    hash = "sha256-jkYOP5upe+zMnuQtDLCAcaG1ocbx1iHm1ygW9pqGTig=";
   };
 
   installPhase = ''
