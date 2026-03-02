@@ -13,6 +13,8 @@
       vista-fonts
       inter
       garamond-libre
+
+      (callPackage ./packages/aptos-font.nix { inherit pkgs; })
     ];
   };
 }
