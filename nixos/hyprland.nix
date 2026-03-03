@@ -15,9 +15,6 @@
     };
   };
 
-  #   services.displayManager.sddm.enable = true;
-  #   services.displayManager.sddm.wayland.enable = true;
-  #   services.displayManager.sddm.theme = "where_is_my_sddm_theme";
   services.gnome.gnome-keyring.enable = true;
   security = {
     polkit.enable = true;
@@ -35,12 +32,7 @@
     POLKIT_AUTH_AGENT = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
   };
 
-  hardware = {
-    graphics.enable = true;
-    nvidia.modesetting.enable = true;
-    nvidia.open = true;
-  };
-  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.graphics.enable = true;
 
   programs.dconf.profiles.user.databases = [
     {
