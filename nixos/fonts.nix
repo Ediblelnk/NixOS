@@ -16,6 +16,7 @@
 
       (callPackage ./packages/aptos-font.nix { inherit pkgs; })
       (callPackage ./packages/helvetica-font.nix { inherit pkgs; })
+      (callPackage ./packages/garamond-font.nix { inherit pkgs; })
     ];
   };
 }
