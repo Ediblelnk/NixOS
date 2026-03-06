@@ -4,7 +4,7 @@
 * {
     font-family: "FiraCode Nerd Font Propo";
     font-size: 18px;
-    padding: 2px;
+    padding: 0px;
 }
 
 window#waybar {
@@ -13,7 +13,9 @@ window#waybar {
 
 tooltip {
     background: @background;
-    border-radius: 8px;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    border-radius: 5px;
 }
 
 tooltip label {
@@ -22,7 +24,7 @@ tooltip label {
 
 #workspaces {
     background: @color0;
-    padding: 0px;
+    padding: 0px 10px;
     margin: 0 2px;
     border-radius: 10px;
     color: @color10;
@@ -33,7 +35,6 @@ tooltip label {
     margin: 1px;
     border-radius: 10px;
     border: 2px solid @color0;
-    /* background-color: ; */
     color: @color7;
 }
 
@@ -102,7 +103,7 @@ tooltip label {
 #custom-settings,
 #custom-nixos,
 #custom-sandwich {
-    padding: 0px 10px;
+    padding: 0px 6px;
     margin: 0px 0px;
     border-radius: 8px;
     color: @color7;
@@ -132,11 +133,16 @@ tooltip label {
 #nixos,
 #power {
     padding: 0px 0px;
-    margin: 0px 4px;
+    margin: 2px 2px 0px 2px;
     border-radius: 8px;
     color: @color0;
     border: 1px solid @color7;
     background-color: @color7;
+}
+
+#custom-spacer {
+    padding: 0px 0px;
+    margin: 0px 0px;
 }
 
 .sandwich-drawer,

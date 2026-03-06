@@ -9,7 +9,7 @@ PanelWindow {
     ColorScheme.Colors { id: theme }
 
     // --- Configuration ---
-    property int waybarHeight: 45
+    property int waybarHeight: 30
     property int cornerRadius: 14
     property int borderWidth: 4
     property color frameColor: theme.color0
