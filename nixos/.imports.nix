@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
   imports = [
     ./bluetooth.nix
@@ -18,6 +18,7 @@
     ./modules/virt-manager.nix
     ./modules/docker.nix
     ./modules/wine.nix
+    ./modules/zeditor.nix
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

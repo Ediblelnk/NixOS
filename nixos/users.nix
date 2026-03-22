@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.mutableUsers = false;
@@ -10,7 +10,7 @@
       "wheel"
       "input"
     ];
-    packages = with pkgs; [ ];
+    # packages = with pkgs; [ ];
     hashedPassword = "$y$j9T$8AO8ltVx38vcEPJoherlg0$cgwf4NXcWF6kysZaACQifPUqLbVMqnICehyyaS1hDa8";
   };
 

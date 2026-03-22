@@ -1,11 +1,6 @@
-{
-  lib,
-  stdenvNoCC,
-  fetchzip,
-  pkgs ? import <nixpkgs> { },
-}:
+{ stdenvNoCC, fetchzip, ... }:
 
-stdenvNoCC.mkDerivation rec {
+stdenvNoCC.mkDerivation {
   pname = "aptos-font";
   version = "0.1.0";
 

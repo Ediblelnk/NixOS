@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
   # THE HOSTNAME IS SET IN nixos/clients/ for each client.
 
