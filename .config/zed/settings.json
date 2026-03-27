@@ -9,50 +9,48 @@
 {
   "notification_panel": {
     "button": false,
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
   "git_panel": {
     "button": true,
     "status_style": "icon",
-    "dock": "left"
+    "dock": "left",
   },
   "use_system_window_tabs": false,
   "bottom_dock_layout": "contained",
   "tab_bar": {
     "show": true,
     "show_nav_history_buttons": false,
-    "show_tab_bar_buttons": true
+    "show_tab_bar_buttons": true,
   },
   "tabs": {
     "file_icons": true,
-    "git_status": true
+    "git_status": true,
   },
   "title_bar": {
     "show_menus": false,
-    "show_branch_icon": true
+    "show_branch_icon": true,
   },
   "search": {
-    "button": true
+    "button": true,
   },
   "diagnostics": {
-    "button": true
+    "button": true,
   },
   "debugger": {
-    "button": false
+    "button": false,
   },
   "status_bar": {
-    "active_encoding_button": "enabled"
+    "active_encoding_button": "enabled",
   },
   "file_finder": {
     "file_icons": true,
-    "git_status": true
+    "git_status": true,
   },
-  "image_viewer": {
-    
-  },
+  "image_viewer": {},
   "colorize_brackets": true,
   "middle_click_paste": false,
   "indent_guides": {
@@ -60,24 +58,24 @@
     "coloring": "fixed",
     "active_line_width": 4,
     "line_width": 4,
-    "enabled": true
+    "enabled": true,
   },
   "toolbar": {
-    "code_actions": true
+    "code_actions": true,
   },
   "gutter": {
     "runnables": false,
     "folds": true,
     "min_line_number_digits": 3,
     "line_numbers": true,
-    "breakpoints": false
+    "breakpoints": false,
   },
   "relative_line_numbers": "disabled",
   "autoscroll_on_clicks": false,
   "diff_view_style": "split",
   "outline_panel": {
     "button": false,
-    "git_status": true
+    "git_status": true,
   },
   "cursor_shape": "bar",
   "ui_font_size": 18.0,

@@ -3,22 +3,32 @@
 }:
 
 pkgs.mkShell {
-  buildInputs = with pkgs; [
+  nativeBuildInputs = with pkgs; [
     gcc
-    rustup
+    gnumake
+    clang-tools
+
+    rustc
+    cargo
+    rust-src
+    rust-analyzer
+
     swi-prolog
-    (python3.withPackages (python-pkgs: [
-      python-pkgs.cryptography
-      python-pkgs.matplotlib
-      python-pkgs.pillow
-      python-pkgs.jupyter
-      python-pkgs.notebook
-      python-pkgs.numpy
-      python-pkgs.pygame
-    ]))
+  ];
+  buildInputs = with pkgs; [
+    (python3.withPackages (
+      python-pkgs: with python-pkgs; [
+        matplotlib
+        jupyter
+        notebook
+        numpy
+        pygame
+      ]
+    ))
   ];
 
   shellHook = ''
+    export RUST_SRC_PATH="${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}"
     source ~/.bashrc
   '';
 }

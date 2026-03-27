@@ -13,7 +13,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim
+    neovim
 
     # LIBREOFFICE
     libreoffice-qt
@@ -38,7 +38,7 @@
     obs-studio
     cheese
 
-    # DEV TOOLS
+    # GNOME APPS
     gnome-calculator
     gnome-system-monitor
     gnome-disk-utility
@@ -46,6 +46,7 @@
     gnome-power-manager
     gnome-online-accounts-gtk
     gnome-font-viewer
+    evince
 
     # DEVELOPMENT
     github-desktop

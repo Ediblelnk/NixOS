@@ -2,14 +2,20 @@
 {
   environment.systemPackages = with pkgs; [
     # rust
-    rustup
+    rustc
+    cargo
+    rust-analyzer
+
+    # c/c++
+    gcc
+    gnumake
+    clang-tools
 
     # python
     python313
     jupyter
 
     # LaTeX
-    # miktex
     texliveFull
 
     # npm
