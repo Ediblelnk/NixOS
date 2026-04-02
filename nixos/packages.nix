@@ -73,5 +73,6 @@
     tree
     zenity
     dialog
+    gh
   ];
 }

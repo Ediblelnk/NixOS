@@ -2,8 +2,8 @@ PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[91
 
 alias icat="kitty +kitten icat"
 
-# only fetch for base shell
-if [ $SHLVL -eq 1 ]; then
+# only fetch for base shell and kitty
+if [ $SHLVL -eq 1 ] && grep -q "kitty" <<< "$(readlink /proc/$PPID/exe)"; then
   fastfetch
   echo
 fi

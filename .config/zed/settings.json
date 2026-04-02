@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "ui_font_size": 18.0,
+  "theme": "Base16 Chalk",
   "notification_panel": {
     "button": false,
     "dock": "left",
@@ -15,6 +17,7 @@
     "button": false,
   },
   "git_panel": {
+    "tree_view": true,
     "button": true,
     "status_style": "icon",
     "dock": "left",
@@ -74,11 +77,14 @@
   "autoscroll_on_clicks": false,
   "diff_view_style": "split",
   "outline_panel": {
-    "button": false,
+    "indent_guides": {
+      "show": "always"
+    },
+    "dock": "right",
+    "button": true,
     "git_status": true,
   },
   "cursor_shape": "bar",
-  "ui_font_size": 18.0,
   "restore_on_startup": "launchpad",
   "use_system_prompts": false,
   "use_system_path_prompts": false,
@@ -90,6 +96,8 @@
   "buffer_font_family": "FiraCode Nerd Font",
   "buffer_line_height": "comfortable",
   "project_panel": {
+    "file_icons": true,
+    "entry_spacing": "comfortable",
     "dock": "left",
     "hide_root": true,
     "hide_hidden": false,
@@ -103,8 +111,14 @@
   "show_whitespaces": "trailing",
   "soft_wrap": "editor_width",
   "terminal": {
+    "toolbar": {
+      "breadcrumbs": true
+    },
+    "working_directory": "current_project_directory",
+    "shell": "system",
+    "dock": "bottom",
     "max_scroll_history_lines": 2000,
-    "cursor_shape": "bar",
+    "cursor_shape": "block",
   },
   "cursor_blink": false,
   "minimap": {
@@ -112,7 +126,6 @@
     "show": "never",
   },
   "buffer_font_size": 18.0,
-  "theme": "Base16 Chalk",
   "file_types": {
     "Shell Script": ["conf"],
   },
