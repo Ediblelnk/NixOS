@@ -26,7 +26,7 @@ prepare() {
 }
 
 background=$(hexToRgb $background)
-foreground=$(hexToRgb $color1)
+foreground=$(hexToRgb $foreground)
 accent=$(hexToRgb $color11)
 secondary=$(hexToRgb $color8)
 

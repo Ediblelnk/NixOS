@@ -54,11 +54,11 @@
   "colorize_brackets": true,
   "middle_click_paste": false,
   "indent_guides": {
+    "active_line_width": 1,
+    "line_width": 1,
     "background_coloring": "disabled",
     "coloring": "fixed",
-    "active_line_width": 4,
-    "line_width": 4,
-    "enabled": true,
+    "enabled": false,
   },
   "toolbar": {
     "code_actions": true,
@@ -112,7 +112,7 @@
     "show": "never",
   },
   "buffer_font_size": 18.0,
-  "theme": "Base16 Eighties",
+  "theme": "Base16 Chalk",
   "file_types": {
     "Shell Script": ["conf"],
   },
