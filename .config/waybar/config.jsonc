@@ -1,414 +1,369 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "bottom",
-    "height": 30,
-    "margin-top": 0,
-    "margin-right": 0,
-    "margin-bottom": 0,
-    "margin-left": 0,
-    "reload_style_on_change": true,
-    "modules-left": [
-        "custom/spacer",
-        "group/nixos",
-        "group/settings",
-        "custom/notification",
-        "clock",
-        "hyprland/workspaces",
-        "cpu",
-        "memory",
-        "temperature",
-        "hyprland/submap"
+  "layer": "bottom",
+  "height": 32,
+  "margin-top": 0,
+  "margin-right": 0,
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "custom/spacer",
+    "group/nixos",
+    "group/settings",
+    "custom/notification",
+    "clock",
+    "hyprland/workspaces",
+    "cpu",
+    "memory",
+    "temperature",
+    "hyprland/submap",
+  ],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "bluetooth",
+    "pulseaudio",
+    "network",
+    "backlight",
+    "battery",
+    "group/sandwich",
+    "group/power",
+    "custom/spacer",
+  ],
+  "group/sandwich": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 100,
+      "transition-left-to-right": false,
+      "children-class": "tray-drawer",
+    },
+    "modules": ["custom/sandwich", "tray"],
+  },
+  "custom/sandwich": {
+    "format": "󰍜",
+    "tooltip": false,
+  },
+  "group/settings": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 100,
+      "transition-left-to-right": true,
+      "children-class": "settings-drawer",
+    },
+    "modules": [
+      "custom/settings",
+      "custom/settings-wallpaper",
+      "power-profiles-daemon",
+      "idle_inhibitor",
+      "custom/open-application",
     ],
-    "modules-center": [
-        "hyprland/window"
+  },
+  "custom/settings": {
+    "format": "",
+    "tooltip": false,
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}:{windows} ",
+    "format-window-separator": " ",
+    "window-rewrite-default": "󱔢",
+    "window-rewrite": {
+      "class<brave-browser>": "󰖟",
+      "class<firefox>": "󰈹",
+      "class<google-chrome>": "󰊯",
+      "class<spotify>": "󰓇",
+      "class<org.gnome.Nautilus>": "󰉓",
+      "class<pix>": "󱇣",
+      "class<steam>": "",
+      "class<kitty>": "",
+      "class<code>": "󰨞",
+      "class<dev.zed.Zed>": "󰬡",
+      "class<signal>": "󰍩",
+      "class<rofi>": "󰌧",
+      "class<obsidian>": "",
+      "class<Github Desktop>": "󰊤",
+      "class<discord>": "",
+      "class<Slack>": "󰒱",
+      "class<zoom>": "󰕧",
+      "class<vlc>": "󰕼",
+      "class<MuseScore4>": "󰽺",
+      "class<org.gnome.Calculator>": "󰃬",
+      "class<org.gnome.SystemMonitor>": "󰡝",
+      "class<.virt-manager-wrapped>": "",
+      "class<libreoffice-impress>": "",
+      "class<libreoffice-writer": "",
+      "class<libreoffice-calc": "",
+      "class<libreoffice-base>": "",
+      "class<libreoffice-draw>": "",
+      "class<libreoffice-math>": "",
+      "class<libreoffice-startcenter>": "",
+      "class<soffice>": "󰈇",
+    },
+    "show-special": true,
+  },
+  "hyprland/window": {
+    "format": "{title}",
+    "format-alt": "{class}",
+    "max-length": 40,
+    "tooltip-format": "{title}\n{class}",
+    "icon": true,
+    "icon-size": 20,
+    "rewrite": {
+      "(.*) - Brave": "$1",
+      "(.*) :: (.*) :: Visual Studio Code": "$2 󰘬 $1",
+      "(.*) :: Visual Studio Code": "$1 󰘬",
+      "(.*) — LibreOffice Impress": "$1",
+      "(.*) — LibreOffice Writer": "$1",
+      "(.*) — LibreOffice Calc": "$1",
+      "(.*) — LibreOffice Base": "$1",
+      "(.*) — LibreOffice Draw": "$1",
+      "(.*) — LibreOffice Math": "$1",
+      "(.*) — LibreOffice": "$1",
+    },
+    "separate-outputs": true,
+  },
+  "hyprland/submap": {
+    "format": "<span style=\"italic\">{}</span>",
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "tooltip-format-activated": "Idle Inhibitor is {status}",
+    "tooltip-format-deactivated": "Idle Inhibitor is {status}",
+    "format-icons": {
+      "activated": "󰈈",
+      "deactivated": "󰈉",
+    },
+    "start-activated": true,
+  },
+  "clock": {
+    "interval": 60,
+    "tooltip": false,
+    "format": "󰸗 {0:%m-%d} 󰥔 {0:%H:%M}",
+  },
+  "cpu": {
+    "format": "",
+    "format-warning": "󰘚 {usage}%",
+    "format-critical": "󰘚 {usage}%",
+    "states": {
+      "warning": 75,
+      "critical": 90,
+    },
+    "tooltip": false,
+  },
+  "memory": {
+    "format": "",
+    "format-warning": "󰍛 {percentage}%",
+    "format-critical": "󰍛 {percentage}%",
+    "states": {
+      "warning": 75,
+      "critical": 90,
+    },
+  },
+  "temperature": {
+    "critical-threshold": 70,
+    "format": "",
+    "format-critical": "󱃂 {temperatureC}°C",
+  },
+  "backlight": {
+    "format": "{icon}",
+    "format-alt": "{icon} {percent}%",
+    "tooltip-format": "{icon} {percent}%",
+    "format-icons": {
+      "default": ["󰽤", "󰽥", "󰽣", "󰽦", "󰽢"],
+    },
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon}",
+    "format-alt": "{icon} {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": {
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    },
+    "tooltip-format": "{capacity}% {timeTo}",
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "󰂲",
+    "format-on": "",
+    "format-connected": "󰂱",
+    "tooltip-format": "{controller_alias} {controller_address}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "on-click": "blueman-manager",
+    "on-click-right": "rfkill toggle bluetooth",
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "{profile}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "󱐋",
+      "performance": "󱐋",
+      "balanced": "󰗑",
+      "power-saver": "󰌪",
+    },
+  },
+  "network": {
+    "format-wifi": "{icon}",
+    "format-ethernet": "{icon}",
+    "tooltip-format": "{essid} {icon} {signalStrength}%",
+    "format-disconnected": "󰤫",
+    "format-icons": {
+      "wifi": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+      "ethernet": "󰈁",
+    },
+    "on-click": "kitty nmtui-connect",
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}% {format_source}",
+    "format-muted": "{icon} {format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "󰋋",
+      "headphone-muted": "󰟎",
+      "hands-free": "󰋋",
+      "hands-free-muted": "󰟎",
+      "headset": "󰋋",
+      "headset-muted": "󰟎",
+      "phone": "󰏲",
+      "phone-muted": "󰷯",
+      "portable": "󰏲",
+      "portable-muted": "󰷯",
+      "car": "󰄋",
+      "car-muted": "󰸜",
+      "default": ["󰕿", "󰖀", "󰕾"],
+      "default-muted": ["󰸈", "󰖁"],
+    },
+    "on-click": "pavucontrol",
+    "scroll-step": 5,
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+  },
+  "group/power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 100,
+      "transition-left-to-right": false,
+      "children-class": "power-drawer",
+    },
+    "modules": [
+      "custom/power",
+      "custom/power-shutdown",
+      "custom/power-reboot",
+      "custom/power-hibernate",
+      "custom/power-suspend",
     ],
-    "modules-right": [
-        "bluetooth",
-        "pulseaudio",
-        "network",
-        "backlight",
-        "battery",
-        "group/sandwich",
-        "group/power",
-        "custom/spacer"
+  },
+  "custom/power": {
+    "format": "󰐥",
+    "tooltip": false,
+  },
+  "custom/power-shutdown": {
+    "format": "󰓛",
+    "tooltip-format": "󰓛 Shutdown System",
+    "on-click": "shutdown now",
+  },
+  "custom/power-reboot": {
+    "format": "󰑓",
+    "tooltip-format": "󰑓 Reboot System",
+    "on-click": "reboot",
+  },
+  "custom/power-suspend": {
+    "format": "󰏤",
+    "tooltip-format": "󰏤 Suspend System",
+    "on-click": "systemctl suspend",
+  },
+  "custom/power-hibernate": {
+    "format": "󰒲",
+    "tooltip-format": "󰒲 Hibernate System",
+    "on-click": "systemctl hibernate",
+  },
+  "group/nixos": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 100,
+      "transition-left-to-right": true,
+      "children-class": "nixos-drawer",
+    },
+    "modules": [
+      "custom/nixos",
+      "custom/nixos-build",
+      "custom/nixos-upgrade",
+      "custom/nixos-dry",
+      "custom/nixos-powerwash",
+      "custom/nixos-keybinds",
     ],
-    "group/sandwich": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 100,
-            "transition-left-to-right": false,
-            "children-class": "tray-drawer"
-        },
-        "modules": [
-            "custom/sandwich",
-            "tray"
-        ]
+  },
+  "custom/nixos": {
+    "format": "󱄅",
+    "tooltip": false,
+  },
+  "custom/nixos-build": {
+    "format": "󰲽",
+    "tooltip-format": "󰲽 Build NixOS",
+    "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just build\"",
+  },
+  "custom/nixos-upgrade": {
+    "format": "󰦗",
+    "tooltip-format": "󰦗 Upgrade NixOS",
+    "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just upgrade\"",
+  },
+  "custom/nixos-dry": {
+    "format": "󱔢",
+    "tooltip-format": "󱔢 Dry Build NixOS",
+    "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just dry\"",
+  },
+  "custom/nixos-powerwash": {
+    "format": "󰫠",
+    "tooltip-format": "󰫠 Powerwash NixOS",
+    "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just powerwash\"",
+  },
+  "custom/nixos-keybinds": {
+    "format": "󰥻",
+    "tooltip-format": "󰥻 Display NixOS Keybinds",
+    "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"cat ./.config/hypr/settings.keybindings.conf\"",
+  },
+  "custom/notification": {
+    "tooltip-format": "Notifications",
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰂚",
+      "none": "󰂜",
+      "dnd-notification": "󰂛",
+      "dnd-none": "󰪑",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑",
     },
-    "custom/sandwich": {
-        "format": "󰍜",
-        "tooltip": false
-    },
-    "group/settings": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 100,
-            "transition-left-to-right": true,
-            "children-class": "settings-drawer"
-        },
-        "modules": [
-            "custom/settings",
-            "custom/settings-wallpaper",
-            "power-profiles-daemon",
-            "idle_inhibitor",
-            "custom/open-application"
-        ]
-    },
-    "custom/settings": {
-        "format": "",
-        "tooltip": false
-    },
-    "hyprland/workspaces": {
-        "format": "{icon}:{windows} ",
-        "format-window-separator": " ",
-        "window-rewrite-default": "󱔢",
-        "window-rewrite": {
-            "class<brave-browser>": "󰖟",
-            "class<firefox>": "󰈹",
-            "class<google-chrome>": "󰊯",
-            "class<spotify>": "󰓇",
-            "class<org.gnome.Nautilus>": "󰉓",
-            "class<pix>": "󱇣",
-            "class<steam>": "",
-            "class<kitty>": "",
-            "class<code>": "󰨞",
-            "class<signal>": "󰍩",
-            "class<rofi>": "󰌧",
-            "class<obsidian>": "",
-            "class<Github Desktop>": "󰊤",
-            "class<discord>": "",
-            "class<Slack>": "󰒱",
-            "class<zoom>": "󰕧",
-            "class<vlc>": "󰕼",
-            "class<MuseScore4>": "󰽺",
-            "class<org.gnome.Calculator>": "󰃬",
-            "class<org.gnome.SystemMonitor>": "󰡝",
-            "class<.virt-manager-wrapped>": "",
-            "class<libreoffice-impress>": "",
-            "class<libreoffice-writer": "",
-            "class<libreoffice-calc": "",
-            "class<libreoffice-base>": "",
-            "class<libreoffice-draw>": "",
-            "class<libreoffice-math>": "",
-            "class<libreoffice-startcenter>": "",
-            "class<soffice>": "󰈇"
-        },
-        "show-special": true
-    },
-    "hyprland/window": {
-        "format": "{title}",
-        "format-alt": "{class}",
-        "max-length": 40,
-        "tooltip-format": "{title}\n{class}",
-        "icon": true,
-        "icon-size": 20,
-        "rewrite": {
-            "(.*) - Brave": "$1",
-            "(.*) :: (.*) :: Visual Studio Code": "$2 󰘬 $1",
-            "(.*) :: Visual Studio Code": "$1 󰘬",
-            "(.*) — LibreOffice Impress": "$1",
-            "(.*) — LibreOffice Writer": "$1",
-            "(.*) — LibreOffice Calc": "$1",
-            "(.*) — LibreOffice Base": "$1",
-            "(.*) — LibreOffice Draw": "$1",
-            "(.*) — LibreOffice Math": "$1",
-            "(.*) — LibreOffice": "$1"
-        },
-        "separate-outputs": true
-    },
-    "hyprland/submap": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "tooltip-format-activated": "Idle Inhibitor is {status}",
-        "tooltip-format-deactivated": "Idle Inhibitor is {status}",
-        "format-icons": {
-            "activated": "󰈈",
-            "deactivated": "󰈉"
-        },
-        "start-activated": true
-    },
-    "clock": {
-        "interval": 60,
-        "tooltip": false,
-        "format": "󰸗 {0:%m-%d} 󰥔 {0:%H:%M}"
-    },
-    "cpu": {
-        "format": "",
-        "format-warning": "󰘚 {usage}%",
-        "format-critical": "󰘚 {usage}%",
-        "states": {
-            "warning": 75,
-            "critical": 90
-        },
-        "tooltip": false
-    },
-    "memory": {
-        "format": "",
-        "format-warning": "󰍛 {percentage}%",
-        "format-critical": "󰍛 {percentage}%",
-        "states": {
-            "warning": 75,
-            "critical": 90
-        }
-    },
-    "temperature": {
-        "critical-threshold": 70,
-        "format": "",
-        "format-critical": "󱃂 {temperatureC}°C"
-    },
-    "backlight": {
-        "format": "{icon}",
-        "format-alt": "{icon} {percent}%",
-        "tooltip-format": "{icon} {percent}%",
-        "format-icons": {
-            "default": [
-                "󰽤",
-                "󰽥",
-                "󰽣",
-                "󰽦",
-                "󰽢"
-            ]
-        }
-    },
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}",
-        "format-alt": "{icon} {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-icons": {
-            "charging": [
-                "󰢜",
-                "󰂆",
-                "󰂇",
-                "󰂈",
-                "󰢝",
-                "󰂉",
-                "󰢞",
-                "󰂊",
-                "󰂋",
-                "󰂅"
-            ],
-            "default": [
-                "󰁺",
-                "󰁻",
-                "󰁼",
-                "󰁽",
-                "󰁾",
-                "󰁿",
-                "󰂀",
-                "󰂁",
-                "󰂂",
-                "󰁹"
-            ]
-        },
-        "tooltip-format": "{capacity}% {timeTo}"
-    },
-    "bluetooth": {
-        "format": " {status}",
-        "format-disabled": "󰂲",
-        "format-on": "",
-        "format-connected": "󰂱",
-        "tooltip-format": "{controller_alias} {controller_address}",
-        "tooltip-format-connected": "{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}",
-        "on-click": "blueman-manager",
-        "on-click-right": "rfkill toggle bluetooth"
-    },
-    "power-profiles-daemon": {
-        "format": "{icon}",
-        "tooltip-format": "{profile}",
-        "tooltip": true,
-        "format-icons": {
-            "default": "󱐋",
-            "performance": "󱐋",
-            "balanced": "󰗑",
-            "power-saver": "󰌪"
-        }
-    },
-    "network": {
-        "format-wifi": "{icon}",
-        "format-ethernet": "{icon}",
-        "tooltip-format": "{essid} {icon} {signalStrength}%",
-        "format-disconnected": "󰤫",
-        "format-icons": {
-            "wifi": [
-                "󰤯",
-                "󰤟",
-                "󰤢",
-                "󰤥",
-                "󰤨"
-            ],
-            "ethernet": "󰈁"
-        },
-        "on-click": "kitty nmtui-connect"
-    },
-    "pulseaudio": {
-        "format": "{icon} {volume}% {format_source}",
-        "format-muted": "{icon} {format_source}",
-        "format-source": "",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "󰋋",
-            "headphone-muted": "󰟎",
-            "hands-free": "󰋋",
-            "hands-free-muted": "󰟎",
-            "headset": "󰋋",
-            "headset-muted": "󰟎",
-            "phone": "󰏲",
-            "phone-muted": "󰷯",
-            "portable": "󰏲",
-            "portable-muted": "󰷯",
-            "car": "󰄋",
-            "car-muted": "󰸜",
-            "default": [
-                "󰕿",
-                "󰖀",
-                "󰕾"
-            ],
-            "default-muted": [
-                "󰸈",
-                "󰖁"
-            ]
-        },
-        "on-click": "pavucontrol",
-        "scroll-step": 5
-    },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
-    },
-    "group/power": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 100,
-            "transition-left-to-right": false,
-            "children-class": "power-drawer"
-        },
-        "modules": [
-            "custom/power",
-            "custom/power-shutdown",
-            "custom/power-reboot",
-            "custom/power-hibernate",
-            "custom/power-suspend"
-        ]
-    },
-    "custom/power": {
-        "format": "󰐥",
-        "tooltip": false
-    },
-    "custom/power-shutdown": {
-        "format": "󰓛",
-        "tooltip-format": "󰓛 Shutdown System",
-        "on-click": "shutdown now"
-    },
-    "custom/power-reboot": {
-        "format": "󰑓",
-        "tooltip-format": "󰑓 Reboot System",
-        "on-click": "reboot"
-    },
-    "custom/power-suspend": {
-        "format": "󰏤",
-        "tooltip-format": "󰏤 Suspend System",
-        "on-click": "systemctl suspend"
-    },
-    "custom/power-hibernate": {
-        "format": "󰒲",
-        "tooltip-format": "󰒲 Hibernate System",
-        "on-click": "systemctl hibernate"
-    },
-    "group/nixos": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 100,
-            "transition-left-to-right": true,
-            "children-class": "nixos-drawer"
-        },
-        "modules": [
-            "custom/nixos",
-            "custom/nixos-build",
-            "custom/nixos-upgrade",
-            "custom/nixos-dry",
-            "custom/nixos-powerwash",
-            "custom/nixos-keybinds"
-        ]
-    },
-    "custom/nixos": {
-        "format": "󱄅",
-        "tooltip": false
-    },
-    "custom/nixos-build": {
-        "format": "󰲽",
-        "tooltip-format": "󰲽 Build NixOS",
-        "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just build\""
-    },
-    "custom/nixos-upgrade": {
-        "format": "󰦗",
-        "tooltip-format": "󰦗 Upgrade NixOS",
-        "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just upgrade\""
-    },
-    "custom/nixos-dry": {
-        "format": "󱔢",
-        "tooltip-format": "󱔢 Dry Build NixOS",
-        "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just dry\""
-    },
-    "custom/nixos-powerwash": {
-        "format": "󰫠",
-        "tooltip-format": "󰫠 Powerwash NixOS",
-        "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"just powerwash\""
-    },
-    "custom/nixos-keybinds": {
-        "format": "󰥻",
-        "tooltip-format": "󰥻 Display NixOS Keybinds",
-        "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"cat ./.config/hypr/settings.keybindings.conf\""
-    },
-    "custom/notification": {
-        "tooltip-format": "Notifications",
-        "format": "{icon}",
-        "format-icons": {
-            "notification": "󰂚",
-            "none": "󰂜",
-            "dnd-notification": "󰂛",
-            "dnd-none": "󰪑",
-            "inhibited-notification": "󰂛",
-            "inhibited-none": "󰪑",
-            "dnd-inhibited-notification": "󰂛",
-            "dnd-inhibited-none": "󰪑"
-        },
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
-        "escape": true
-    },
-    "custom/settings-wallpaper": {
-        "tooltip-format": "󰸉 Change Wallpaper",
-        "format": "󰸉",
-        "on-click": "~/.config/hypr/scripts.get-wallpaper.sh",
-        "escape": true
-    },
-    "custom/open-application": {
-        "format": "󰜄",
-        "tooltip-format": "󰜄 Open Application Launcher",
-        "on-click": "pkill rofi || rofi -show drun",
-        "escape": true
-    },
-    "custom/spacer": {
-        "format": " ",
-        "tooltip": false
-    }
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
+  "custom/settings-wallpaper": {
+    "tooltip-format": "󰸉 Change Wallpaper",
+    "format": "󰸉",
+    "on-click": "~/.config/hypr/scripts.get-wallpaper.sh",
+    "escape": true,
+  },
+  "custom/open-application": {
+    "format": "󰜄",
+    "tooltip-format": "󰜄 Open Application Launcher",
+    "on-click": "pkill rofi || rofi -show drun",
+    "escape": true,
+  },
+  "custom/spacer": {
+    "format": " ",
+    "tooltip": false,
+  },
 }

@@ -91,7 +91,7 @@
   "icon_theme": "Material Icon Theme",
   "ui_font_family": "FiraCode Nerd Font Propo",
   "sticky_scroll": {
-    "enabled": true,
+    "enabled": true
   },
   "buffer_font_family": "FiraCode Nerd Font",
   "buffer_line_height": "comfortable",
@@ -118,7 +118,7 @@
     "shell": "system",
     "dock": "bottom",
     "max_scroll_history_lines": 2000,
-    "cursor_shape": "block",
+    "cursor_shape": "bar",
   },
   "cursor_blink": false,
   "minimap": {

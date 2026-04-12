@@ -3,7 +3,7 @@
 
 * {
     font-family: "FiraCode Nerd Font Propo";
-    font-size: 18px;
+    font-size: 20px;
     padding: 0px;
 }
 
@@ -40,7 +40,7 @@ tooltip label {
 
 #workspaces button.active {
     border: 2px solid @color0;
-    color: @color3
+    color: @color3;
 }
 
 #workspaces button.urgent {
@@ -133,7 +133,7 @@ tooltip label {
 #nixos,
 #power {
     padding: 0px 0px;
-    margin: 2px 2px 0px 2px;
+    margin: 2px 2px 2px 2px;
     border-radius: 8px;
     color: @color0;
     border: 1px solid @color7;
