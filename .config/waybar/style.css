@@ -12,45 +12,13 @@ window#waybar {
 }
 
 tooltip {
-    background: @background;
-    padding: 5px 10px;
-    margin: 5px 10px;
-    border-radius: 5px;
+    background: @color0;
+    border-radius: 0px;
 }
 
 tooltip label {
+    padding: 5px 5px;
     color: @color7;
-}
-
-#workspaces {
-    background: @color0;
-    padding: 0px 10px;
-    margin: 0 2px;
-    border-radius: 10px;
-    color: @color10;
-}
-
-#workspaces button {
-    padding: 0px;
-    margin: 1px;
-    border-radius: 10px;
-    border: 2px solid @color0;
-    color: @color7;
-}
-
-#workspaces button.active {
-    border: 2px solid @color0;
-    color: @color3;
-}
-
-#workspaces button.urgent {
-    border: 2px solid @color2;
-}
-
-#workspaces button.hover {
-    border: 1px solid @color1;
-    background-color: @color1;
-    color: @color1;
 }
 
 #network.disconnected,
@@ -66,15 +34,10 @@ tooltip label {
     color: @color11;
 }
 
-#clock {
-    padding: 0 0 0 10px;
-    border-radius: 12px;
-    color: @color7;
-}
-
 #backlight,
 #battery,
 #bluetooth,
+#clock,
 #cpu,
 #custom-notification,
 #disk,
@@ -85,12 +48,19 @@ tooltip label {
 #scratchpad,
 #temperature,
 #window,
-#wireplumber {
-    padding: 0px 6px;
-    margin: 2px 4px;
-    border-radius: 8px;
+#wireplumber,
+#workspaces,
+#workspaces button {
+    min-width: 30px;
+    padding: 0px 2px;
+    margin: 0px 3px;
+    border-radius: 2px;
     color: @color7;
     background-color: @color0;
+}
+
+#workspaces button.active {
+    color: @color3;
 }
 
 #tray {
@@ -100,13 +70,14 @@ tooltip label {
 }
 
 #custom-power,
-#custom-settings,
 #custom-nixos,
+#custom-settings,
 #custom-sandwich {
-    padding: 0px 6px;
+    padding: 0px 7px;
     margin: 0px 0px;
     border-radius: 8px;
-    color: @color7;
+    /*border: 1px solid @color0;*/
+    color: @color3;
     background-color: @color0;
 }
 
@@ -123,37 +94,30 @@ tooltip label {
 #power-profiles-daemon,
 #idle_inhibitor,
 #custom-open-application {
-    padding: 0px 10px;
-    margin: 0px 0px;
-    border-radius: 8px;
+    min-width: 30px;
+    margin: 0px 3px;
+    border-radius: 2px;
+    background-color: @color1;
 }
 
 #sandwich,
 #settings,
 #nixos,
 #power {
-    padding: 0px 0px;
-    margin: 2px 2px 2px 2px;
+    min-width: 30px;
+    margin: 0px 3px;
     border-radius: 8px;
-    color: @color0;
-    border: 1px solid @color7;
-    background-color: @color7;
-}
-
-#custom-spacer {
-    padding: 0px 0px;
-    margin: 0px 0px;
+    background-color: @color0;
 }
 
 .sandwich-drawer,
 .settings-drawer,
 .power-drawer,
 .nixos-drawer {
-    padding: 0px 6px;
-    margin: 0px 6px;
-    border-radius: 8px;
+    padding: 0px 3px;
+    margin: 0px 3px;
     color: @color0;
-    background-color: @color7;
+    background-color: @color0;
 }
 
 #battery.critical:not(.charging) {

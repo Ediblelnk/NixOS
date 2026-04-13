@@ -10,8 +10,8 @@ PanelWindow {
 
     // --- Configuration ---
     property int waybarHeight: 32
-    property int cornerRadius: 14
-    property int borderWidth: 4
+    property int cornerRadius: 6
+    property int borderWidth: 2
     property color frameColor: theme.color0
 
     // --- Dynamic Height Calculation ---
