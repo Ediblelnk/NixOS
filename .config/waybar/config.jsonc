@@ -77,7 +77,7 @@
       "class<dev.zed.Zed>": "󰬡",
       "class<signal>": "󰍩",
       "class<rofi>": "󰌧",
-      "class<obsidian>": "",
+      "class<electron>": "", //<-- obsidian was renamed to electron class
       "class<Github Desktop>": "󰊤",
       "class<discord>": "",
       "class<Slack>": "󰒱",
