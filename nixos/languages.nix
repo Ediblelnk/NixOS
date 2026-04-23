@@ -5,6 +5,7 @@
     rustc
     cargo
     rust-analyzer
+    rustfmt
 
     # c/c++
     gcc

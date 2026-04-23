@@ -3,6 +3,7 @@
   imports = [
     ./bluetooth.nix
     ./boot.nix
+    ./defaults.nix
     ./fonts.nix
     ./hyprland.nix
     ./il8n.nix

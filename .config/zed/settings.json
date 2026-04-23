@@ -7,6 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "prettier": {
+    "allowed": true,
+  },
+  "inlay_hints": {
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": true,
+    "show_value_hints": true,
+    "show_type_hints": true,
+    "enabled": true,
+  },
   "ui_font_size": 18.0,
   "theme": "Base16 Chalk",
   "notification_panel": {
@@ -41,6 +52,9 @@
     "button": true,
   },
   "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
     "button": true,
   },
   "debugger": {
@@ -78,7 +92,7 @@
   "diff_view_style": "split",
   "outline_panel": {
     "indent_guides": {
-      "show": "always"
+      "show": "always",
     },
     "dock": "right",
     "button": true,
@@ -91,11 +105,12 @@
   "icon_theme": "Material Icon Theme",
   "ui_font_family": "FiraCode Nerd Font Propo",
   "sticky_scroll": {
-    "enabled": true
+    "enabled": true,
   },
   "buffer_font_family": "FiraCode Nerd Font",
   "buffer_line_height": "comfortable",
   "project_panel": {
+    "sort_mode": "mixed",
     "file_icons": true,
     "entry_spacing": "comfortable",
     "dock": "left",
@@ -112,7 +127,7 @@
   "soft_wrap": "editor_width",
   "terminal": {
     "toolbar": {
-      "breadcrumbs": true
+      "breadcrumbs": true,
     },
     "working_directory": "current_project_directory",
     "shell": "system",
@@ -128,5 +143,16 @@
   "buffer_font_size": 18.0,
   "file_types": {
     "Shell Script": ["conf"],
+  },
+  "languages": {
+    "Rust": {
+      "formatter": {
+        "external": {
+          "command": "rustfmt",
+          "arguments": []
+        }
+      },
+      "format_on_save": "on",
+    },
   },
 }
