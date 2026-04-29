@@ -14,7 +14,7 @@ set_wallpaper() {
 
     # copy zed theme if present
     if [[ -f "${HOME}/.cache/wal/zed.json" ]]; then
-        cp "${HOME}/.cache/wal/zed.json" "${HOME}/.config/zed/themes/zed.json"
+        ln -s -f "${HOME}/.cache/wal/zed.json" "${HOME}/.config/zed/themes/zed.json"
     fi
 
     ~/.config/hypr/scripts.reload.sh
