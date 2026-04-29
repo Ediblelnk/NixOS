@@ -1,18 +1,10 @@
 #!/bin/sh
 
 reload() {
+    # Restart background services detached so they don't inherit the caller's terminal
     pkill hyprpaper >/dev/null 2>&1 || true
     setsid hyprpaper >/dev/null 2>&1 &
 
-    # Run wal but silence its output so it doesn't emit terminal control sequences to the caller
-    wal $THEME -i "$WALLPAPER" >/dev/null 2>&1 || true
-
-    # regenerate brave theme if present; silence output
-    if [[ -x "${HOME}/.config/wal-brave/generate-theme.sh" ]]; then
-        "${HOME}/.config/wal-brave/generate-theme.sh" >/dev/null 2>&1 || true
-    fi
-
-    # Restart background services detached so they don't inherit the caller's terminal
     pkill swaync >/dev/null 2>&1 || true
     setsid swaync >/dev/null 2>&1 &
 

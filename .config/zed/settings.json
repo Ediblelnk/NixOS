@@ -19,7 +19,7 @@
     "enabled": true,
   },
   "ui_font_size": 18.0,
-  "theme": "Base16 Chalk",
+  "theme": "Wal",
   "notification_panel": {
     "button": false,
     "dock": "left",

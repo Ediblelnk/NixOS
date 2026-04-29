@@ -9,6 +9,7 @@
     "text/rust" = "dev.zed.Zed.desktop";
     "text/css" = "dev.zed.Zed.desktop";
     "application/json" = "dev.zed.Zed.desktop";
+    "application/schema+json" = "dev.zed.Zed.desktop";
     "application/octet-stream" = "dev.zed.Zed.desktop";
 
     # DOCUMENT VIEWER
