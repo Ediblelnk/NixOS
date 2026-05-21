@@ -1,0 +1,15 @@
+--- HYPRLAND CONFIGURATION ENTRY POINT ---
+
+require("settings.animations")
+require("settings.autostart")
+require("settings.binds")
+require("settings.environment")
+require("settings.groups")
+require("settings.input")
+require("settings.layouts")
+require("settings.misc")
+require("settings.monitors")
+require("settings.permissions")
+require("settings.rules")
+require("settings.variables")
+require("settings.visuals")

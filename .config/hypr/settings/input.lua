@@ -28,6 +28,6 @@ hl.gesture({
     fingers = 3,
     direction = "vertical",
     action = function()
-        hl.dispatch(hl.dsp.workspace.toggle_special({special_name = "Z"}))
+        hl.dispatch(hl.dsp.workspace.toggle_special("Z"))
     end,
 })

@@ -1,8 +1,8 @@
 --- VISUALS ---
 
 local home = os.getenv("HOME")
-local Variables = require("variables")
-local Colors = dofile(home .. "/.cache/wal/colors-hyprland")
+local Variables = require("settings.variables")
+local Colors = dofile(home .. "/.cache/wal/colors-hyprland.lua")
 
 hl.config({
     general = {
@@ -29,13 +29,9 @@ hl.config({
 
         shadow = {
             enabled = false,
-            size = 15,
-            xray = true,
-            passes = 1,
-            special = false,
         },
 
-        blue = {
+        blur = {
             enabled = false,
         },
 

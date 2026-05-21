@@ -1,5 +1,0 @@
-require("autostart")
-require("environment")
-require("monitors")
-require("permissions")
-require("visuals")

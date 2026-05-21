@@ -28,10 +28,10 @@ hl.animation({ leaf = "fadePopupsIn", enabled = false })
 hl.animation({ leaf = "fadePopupsOut", enabled = true, speed = 10, bezier = "cubic" })
 --
 hl.animation({ leaf = "workspaces", enabled = true, speed = 2, bezier = "circ", style = "slide" })
-hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 2, bezier = "quick", style = "fade" })
+hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 2, bezier = "circ", style = "fade" })
 
 hl.layer_rule({
     name = "notifications animation",
     match = { namespace = "swaync-notification-window" },
-    animcation = "layersIn"
+    animation = "layersIn"
 })
