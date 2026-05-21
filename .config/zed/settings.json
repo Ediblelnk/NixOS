@@ -10,7 +10,7 @@
   "agent": {
     "dock": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "prettier": {
     "allowed": true,
@@ -25,10 +25,10 @@
   },
   "ui_font_size": 18.0,
   "theme": "Wal",
-  "notification_panel": {
-    "button": false,
-    "dock": "left",
-  },
+  // "notification_panel": {
+  //   "button": false,
+  //   "dock": "left",
+  // },
   "collaboration_panel": {
     "dock": "left",
     "button": false,
@@ -51,8 +51,8 @@
     "git_status": true,
   },
   "title_bar": {
+    "show_branch_status_icon": true,
     "show_menus": false,
-    "show_branch_icon": true,
   },
   "search": {
     "button": true,
@@ -71,7 +71,7 @@
   },
   "file_finder": {
     "file_icons": true,
-    "git_status": true,
+    // "git_status": true,
   },
   "image_viewer": {},
   "colorize_brackets": true,
@@ -155,8 +155,8 @@
       "formatter": {
         "external": {
           "command": "rustfmt",
-          "arguments": []
-        }
+          "arguments": [],
+        },
       },
       "format_on_save": "on",
     },
