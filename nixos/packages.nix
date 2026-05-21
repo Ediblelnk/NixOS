@@ -50,6 +50,7 @@
 
     # DEVELOPMENT
     github-desktop
+    xdg-utils # used with github-desktop
     vscode
     nixfmt
     libsecret

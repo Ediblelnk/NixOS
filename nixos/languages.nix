@@ -22,5 +22,8 @@
     # npm
     nodejs
     yarn
+
+    # java
+    jdk
   ];
 }
