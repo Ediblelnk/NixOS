@@ -20,6 +20,7 @@
   ],
   "modules-center": ["hyprland/window"],
   "modules-right": [
+    "mpris",
     "bluetooth",
     "pulseaudio",
     "network",
@@ -240,6 +241,29 @@
     },
     "on-click": "pavucontrol",
     "scroll-step": 5,
+  },
+  "mpris": {
+    "format": "{status_icon} {player_icon} {dynamic}",
+    "format-paused": "{status_icon} {player_icon} {dynamic}",
+    "tooltip-format": "TITLE: {title}\nARTIST: {artist}\nALBUM: {album}",
+    "player-icons": {
+      "default": "󰎆",
+      "spotify": "",
+      "brave": "󰖟",
+    },
+    "status-icons": {
+      "paused": "󰐊",
+      "playing": "󰏤",
+    },
+    "title-len": 40,
+    "artist-len": 40,
+    "album-len": 40,
+    "dynamic-len": 40,
+    "dynamic-order": ["title", "artist", "album"],
+    "dynamic-importance-order": ["title", "artist", "album"],
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next",
   },
   "tray": {
     "icon-size": 21,

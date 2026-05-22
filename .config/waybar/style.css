@@ -28,6 +28,10 @@ tooltip label {
     color: @color9;
 }
 
+#mpris.paused {
+    color: @color8;
+}
+
 #cpu.warning,
 #memory.warning,
 #pulseaudio.muted {
@@ -43,6 +47,7 @@ tooltip label {
 #disk,
 #memory,
 #mode,
+#mpris,
 #network,
 #pulseaudio,
 #scratchpad,
