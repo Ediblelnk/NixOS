@@ -75,5 +75,7 @@
     zenity
     dialog
     gh
+    bat
+    cava
   ];
 }
