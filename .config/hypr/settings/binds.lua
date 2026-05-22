@@ -101,7 +101,7 @@ hl.define_submap("resize", function()
     hl.bind("up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }))
     hl.bind("down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }))
 
-    hl.bind("catchall", hl.dsp.submap("exit"))
+    hl.bind("catchall", hl.dsp.submap("reset"))
 end)
 
 -- MOUSE ACTIONS
