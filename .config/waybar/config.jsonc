@@ -62,8 +62,9 @@
     "tooltip": false,
   },
   "hyprland/workspaces": {
-    "format": "{icon}:{windows} ",
-    "format-window-separator": " ",
+    "format": "{icon}<span size=\"50%\"> </span>{windows}",
+    "on-click": "activate",
+    "format-window-separator": "<span size=\"50%\"> </span>",
     "window-rewrite-default": "󱔢",
     "window-rewrite": {
       "class<brave-browser>": "󰖟",
