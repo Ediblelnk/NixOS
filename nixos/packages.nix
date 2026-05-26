@@ -21,11 +21,8 @@
     hunspellDicts.en_US
 
     brave
-    google-chrome
-    firefox
     signal-desktop
     obsidian
-    themix-gui
 
     # CHATS AND MUSIC
     discord

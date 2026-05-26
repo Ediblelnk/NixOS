@@ -39,6 +39,7 @@ hl.bind(mod .. " + SHIFT + W", hl.dsp.exec_cmd("pkill waybar || waybar"))
 -- WORKSPACE ACTIONS
 hl.bind("ALT + TAB", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("ALT + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mod .. " + escape", hl.dsp.focus({ workspace = "e+1" }))
 
 hl.bind(mod .. " + mouse_down", hl.dsp.focus({ workspace = "r-1" }))
 hl.bind(mod .. " + mouse_up", hl.dsp.focus({ workspace = "r+1" }))

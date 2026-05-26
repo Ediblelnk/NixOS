@@ -64,7 +64,7 @@ for _, special in ipairs(specials) do
         },
         workspace = "special:S silent",
         pseudo = true,
-        size = { "(monitor_w*0.5)", "(monitor_h*0.75" },
+        size = { "(monitor_w*0.5)", "(monitor_h*0.75)" },
     })
 end
 
