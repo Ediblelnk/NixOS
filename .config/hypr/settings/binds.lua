@@ -37,8 +37,8 @@ hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd("pkill " .. Variables.menu .. " || " 
 hl.bind(mod .. " + SHIFT + W", hl.dsp.exec_cmd("pkill waybar || waybar"))
 
 -- WORKSPACE ACTIONS
-hl.bind("ALT + TAB", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("ALT + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mod .. " + TAB", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mod .. " + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mod .. " + escape", hl.dsp.focus({ workspace = "e+1" }))
 
 hl.bind(mod .. " + mouse_down", hl.dsp.focus({ workspace = "r-1" }))
@@ -56,8 +56,6 @@ for i = 1, 10 do
     hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i, follow = true }))
     hl.bind(mod .. " + CTRL + SHIFT + " .. key, hl.dsp.window.move({ workspace = i, follow = false }))
 end
-
-hl.bind(mod .. " + TAB", hl.dsp.window.move({ workspace = "empty" }))
 
 -- SPECIAL WORKSPACE ACTIONS
 
@@ -79,7 +77,13 @@ hl.bind(mod .. "  + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mod .. "  + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mod .. "  + down", hl.dsp.focus({ direction = "down" }))
 
-hl.bind(mod .. " + RETURN", hl.dsp.focus({ last = true }))
+hl.bind(mod .. " + RETURN", hl.dsp.window.move({ workspace = "empty" }))
+
+-- hl.bind("ALT + TAB", hl.dsp.focus({ last = true }))
+hl.bind("ALT + Tab", function()
+    hl.dispatch(hl.dsp.window.cycle_next())    -- Change focus to another window
+    hl.dispatch(hl.dsp.window.bring_to_top()) -- Bring it to the top
+end)
 
 -- WINDOW SWAP ACTIONS
 hl.bind(mod .. "  + SHIFT + left", hl.dsp.window.swap({ direction = "left" }))
@@ -97,10 +101,10 @@ hl.bind(mod .. " + CTRL + down", hl.dsp.layout("splitratio +0.1"))
 -- RESIZE SUBMAP
 hl.bind("ALT + R", hl.dsp.submap("resize"))
 hl.define_submap("resize", function()
-    hl.bind("left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }))
-    hl.bind("right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }))
-    hl.bind("up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }))
-    hl.bind("down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }))
+    hl.bind("left", hl.dsp.window.resize({ x = -10, y = 0, relative = true, repeating = true }))
+    hl.bind("right", hl.dsp.window.resize({ x = 10, y = 0, relative = true, repeating = true }))
+    hl.bind("up", hl.dsp.window.resize({ x = 0, y = -10, relative = true, repeating = true }))
+    hl.bind("down", hl.dsp.window.resize({ x = 0, y = 10, relative = true, repeating = true }))
 
     hl.bind("catchall", hl.dsp.submap("reset"))
 end)

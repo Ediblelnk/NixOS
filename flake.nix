@@ -8,7 +8,6 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       spicetify-nix,
       ...

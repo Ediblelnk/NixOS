@@ -10,7 +10,6 @@ pkgs.mkShell {
 
     rustc
     cargo
-    rust-src
     rust-analyzer
 
     swi-prolog
