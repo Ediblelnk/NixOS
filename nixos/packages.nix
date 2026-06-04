@@ -74,5 +74,6 @@
     gh
     bat
     cava
+    bottom
   ];
 }
