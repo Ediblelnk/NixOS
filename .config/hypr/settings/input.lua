@@ -18,6 +18,11 @@ hl.config({
     }
 })
 
+hl.device({
+    name = "glorious-model-o-wireless",
+    sensitivity = -0.2,
+})
+
 hl.gesture({
     fingers = 3,
     direction = "horizontal",
