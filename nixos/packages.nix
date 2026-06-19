@@ -75,5 +75,7 @@
     bat
     cava
     bottom
+    lsd
+    powertop
   ];
 }
