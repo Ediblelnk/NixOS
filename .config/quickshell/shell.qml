@@ -15,16 +15,15 @@ PanelWindow {
     property color frameColor: theme.color0
 
     // --- Dynamic Height Calculation ---
-    height: window.screen.height - window.waybarHeight
+    implicitHeight: window.screen.height - window.waybarHeight
 
     // --- Window Properties ---
     anchors {
-        top: true
+        bottom: true
         left: true
         right: true
     }
 
-    margins.top: window.waybarHeight
     color: "transparent"
 
     aboveWindows: false

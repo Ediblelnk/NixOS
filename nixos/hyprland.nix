@@ -59,6 +59,7 @@
     rofi # application launcher
     waybar # status bar for Wayland
     quickshell
+    kdePackages.qtdeclarative
     pywal # color scheme generator
     wpgtk # wallpaper and theme manager
 
