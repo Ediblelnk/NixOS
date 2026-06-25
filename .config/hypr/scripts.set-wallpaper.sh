@@ -2,9 +2,11 @@ set_wallpaper() {
     local WALLPAPER="$1"
     local THEME="$2"
 
-    ln -s -f "$WALLPAPER" "$HOME/.wallpaper"
-
-    # Run wal but silence its output so it doesn't emit terminal control sequences to the caller
+    # RUN WAL AND AWWW
+    awww img "$WALLPAPER" \
+        --transition-type center \
+        --transition-duration 2 \
+        --transition-fps 144
     wal $THEME -i "$WALLPAPER" >/dev/null 2>&1 || true
 
     # regenerate brave theme if present; silence output

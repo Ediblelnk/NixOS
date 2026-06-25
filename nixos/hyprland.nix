@@ -47,7 +47,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    hyprpaper
+    awww
     hyprpicker
     hyprlock
     hypridle
