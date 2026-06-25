@@ -13,16 +13,18 @@ Scope {
 
       anchors {
         top: true
-        left: true
-        right: true
+        // left: true
+        // right: true
+      }
+
+      margins {
+          top: 5
       }
 
       implicitHeight: 30
 
       ClockWidget {
         anchors.centerIn: parent
-
-        // no more time binding
       }
     }
   }
