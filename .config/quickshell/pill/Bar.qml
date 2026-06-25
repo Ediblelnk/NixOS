@@ -9,16 +9,16 @@ Scope {
 
     PanelWindow {
       required property var modelData
+
       screen: modelData
+      color: "white"
+      exclusionMode: ExclusionMode.Normal
+      exclusiveZone: 30
 
       anchors {
         top: true
-        // left: true
-        // right: true
-      }
-
-      margins {
-          top: 5
+        left: true
+        right: true
       }
 
       implicitHeight: 30
