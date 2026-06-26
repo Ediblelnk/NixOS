@@ -1,6 +1,6 @@
 #!/run/current-system/sw/bin/bash
 
-WALLPAPER_DIR=$(dirname "$(readlink $HOME/.wallpaper)")/
+WALLPAPER_DIR=~/.config/wallpapers/
 
 get_wallpaper() {
     zenity --file-selection --filename=$WALLPAPER_DIR --file-filter="*.png *.jpg *.webp"

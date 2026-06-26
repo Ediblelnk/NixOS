@@ -3,11 +3,8 @@ set_wallpaper() {
     local THEME="$2"
 
     # RUN WAL AND AWWW
-    awww img "$WALLPAPER" \
-        --transition-type center \
-        --transition-duration 2 \
-        --transition-fps 144
     wal $THEME -i "$WALLPAPER" >/dev/null 2>&1 || true
+    awww img $WALLPAPER --transition-type wipe --transition-duration 2 --transition-fps 60
 
     # regenerate brave theme if present; silence output
     if [[ -x "${HOME}/.config/wal-brave/generate-theme.sh" ]]; then
