@@ -117,7 +117,7 @@
   "buffer_font_family": "FiraCode Nerd Font",
   "buffer_line_height": "comfortable",
   "project_panel": {
-    "sort_mode": "mixed",
+    "sort_mode": "directories_first",
     "file_icons": true,
     "entry_spacing": "comfortable",
     "dock": "left",

@@ -39,6 +39,7 @@
         "icon.accent": null,
         "status_bar.background": "{color0}",
         "title_bar.background": "{color0}",
+        "title_bar.inactive_background": "{color0}",
         "toolbar.background": "{color0}",
         "tab_bar.background": "{color0}",
         "tab.inactive_background": "{color15}1f",
