@@ -47,7 +47,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    hyprpaper
+    awww
     hyprpicker
     hyprlock
     hypridle
@@ -60,8 +60,7 @@
     waybar # status bar for Wayland
     quickshell
     kdePackages.qtdeclarative
-    pywal # color scheme generator
-    wpgtk # wallpaper and theme manager
+    pywal # color scheme generator # wallpaper and theme manager
 
     libnotify # notification library
     swaynotificationcenter
@@ -76,8 +75,8 @@
     playerctl # media player control
     wl-clipboard # clipboard management for Wayland
 
-    materia-theme # GTK theme
-    gruvbox-gtk-theme # GTK theme
+    # materia-theme # GTK theme
+    # gruvbox-gtk-theme # GTK theme
 
     adwaita-icon-theme # icon theme
     adwaita-qt # Qt integration for Adwaita theme

@@ -2,9 +2,6 @@
 
 reload() {
     # Restart background services detached so they don't inherit the caller's terminal
-    pkill hyprpaper >/dev/null 2>&1 || true
-    setsid hyprpaper >/dev/null 2>&1 &
-
     pkill swaync >/dev/null 2>&1 || true
     setsid swaync >/dev/null 2>&1 &
 
@@ -15,7 +12,7 @@ reload() {
     setsid quickshell >/dev/null 2>&1 &
 
     # Ensure the terminal is left in a sane state (re-enable echo if a child changed it)
-    stty sane >/dev/null 2>&1 || true
+    # stty sane >/dev/null 2>&1 || true
 }
 
 reload

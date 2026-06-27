@@ -1,11 +1,12 @@
 set_wallpaper() {
     local WALLPAPER="$1"
-    local THEME="$2"
 
+    # RUN WAL AND AWWW
+    wal -i "$WALLPAPER" >/dev/null 2>&1 || true
+    awww img $WALLPAPER --transition-type wipe --transition-duration 2 --transition-fps 60
+
+    # UPDATE LINK FOR HYPRLOCK
     ln -s -f "$WALLPAPER" "$HOME/.wallpaper"
-
-    # Run wal but silence its output so it doesn't emit terminal control sequences to the caller
-    wal $THEME -i "$WALLPAPER" >/dev/null 2>&1 || true
 
     # regenerate brave theme if present; silence output
     if [[ -x "${HOME}/.config/wal-brave/generate-theme.sh" ]]; then
@@ -22,4 +23,4 @@ set_wallpaper() {
     echo "Wallpaper changed to $WALLPAPER!"
 }
 
-set_wallpaper "$1" "$2"
+set_wallpaper "$1"
