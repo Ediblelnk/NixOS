@@ -39,7 +39,7 @@ hl.bind(mod .. " + SHIFT + W", hl.dsp.exec_cmd("pkill waybar || waybar"))
 -- WORKSPACE ACTIONS
 hl.bind(mod .. " + TAB", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mod .. " + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(mod .. " + escape", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind("ALT + escape", hl.dsp.focus({ workspace = "e+1" }))
 
 hl.bind(mod .. " + mouse_down", hl.dsp.focus({ workspace = "r-1" }))
 hl.bind(mod .. " + mouse_up", hl.dsp.focus({ workspace = "r+1" }))
@@ -72,12 +72,16 @@ end
 
 
 -- WINDOW FOCUS ACTIONS
-hl.bind(mod .. "  + left", hl.dsp.focus({ direction = "left" }))
-hl.bind(mod .. "  + right", hl.dsp.focus({ direction = "right" }))
-hl.bind(mod .. "  + up", hl.dsp.focus({ direction = "up" }))
-hl.bind(mod .. "  + down", hl.dsp.focus({ direction = "down" }))
+hl.bind(mod .. " + left", hl.dsp.focus({ direction = "left" }))
+hl.bind(mod .. " + right", hl.dsp.focus({ direction = "right" }))
+hl.bind(mod .. " + up", hl.dsp.focus({ direction = "up" }))
+hl.bind(mod .. " + down", hl.dsp.focus({ direction = "down" }))
 
-hl.bind(mod .. " + RETURN", hl.dsp.window.move({ workspace = "empty" }))
+hl.bind(mod .. "+ ALT + left", hl.dsp.focus({ workspace = "r-1" }))
+hl.bind(mod .. "+ ALT + right", hl.dsp.focus({ workspace = "r+1" }))
+
+hl.bind(mod .. " + RETURN", hl.dsp.focus({ workspace = "empty" }))
+hl.bind(mod .. " + SHIFT + RETURN", hl.dsp.window.move({ workspace = "empty" }))
 
 -- hl.bind("ALT + TAB", hl.dsp.focus({ last = true }))
 hl.bind("ALT + Tab", function()
