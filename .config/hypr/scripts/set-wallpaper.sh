@@ -3,7 +3,7 @@ set_wallpaper() {
 
     # RUN WAL AND AWWW
     wal -i "$WALLPAPER" >/dev/null 2>&1 || true
-    awww img $WALLPAPER --transition-type wipe --transition-duration 2 --transition-fps 60
+    awww img $WALLPAPER --transition-type wave --transition-duration 2 --transition-fps 60
 
     # UPDATE LINK FOR HYPRLOCK
     ln -s -f "$WALLPAPER" "$HOME/.wallpaper"
