@@ -18,7 +18,7 @@ set_wallpaper() {
         ln -s -f "${HOME}/.cache/wal/zed.json" "${HOME}/.config/zed/themes/zed.json"
     fi
 
-    ~/.config/hypr/scripts.reload.sh
+    ~/.config/hypr/scripts/reload.sh
 
     echo "Wallpaper changed to $WALLPAPER!"
 }

@@ -64,8 +64,19 @@ tooltip label {
     background-color: @color0;
 }
 
+#window,
+#workspaces button {
+    min-width: 15px;
+    color: @color8;
+}
+
+#workspaces {
+    padding: 0px;
+    margin: 0px;
+}
+
 #workspaces button.active {
-    color: @color3;
+    color: @color7;
 }
 
 #tray {

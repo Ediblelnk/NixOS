@@ -13,4 +13,4 @@ if [ -z "${WALLPAPER:-}" ]; then
     exit 1
 fi
 
-~/.config/hypr/scripts.set-wallpaper.sh $WALLPAPER
+~/.config/hypr/scripts/set-wallpaper.sh $WALLPAPER
