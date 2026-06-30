@@ -64,7 +64,10 @@ tooltip label {
     background-color: @color0;
 }
 
-#window,
+#window {
+    min-width: 22px;
+}
+
 #workspaces button {
     min-width: 15px;
     color: @color8;
