@@ -63,9 +63,14 @@
   },
   "hyprland/workspaces": {
     "format": "{icon}",
+    "format-icons": {
+      "spotify": "󰓇",
+      "S": "󰭹",
+    },
     "on-click": "kitty",
     "format-window-separator": "",
     "show-special": true,
+    "sort-by": "number",
   },
   "hyprland/window": {
     "format": "",
@@ -96,26 +101,26 @@
   },
   "cpu": {
     "format": "",
-    "format-warning": "󰻠<span size=\"50%\"> </span>{usage}%",
-    "format-critical": "󰻠<span size=\"50%\"> </span>{usage}%",
+    "format-warning": "󰍛<span size=\"50%\"> </span>{usage}%",
+    "format-critical": "󰍛<span size=\"50%\"> </span>{usage}%",
     "states": {
-      "warning": 50,
-      "critical": 75,
+      "warning": 70,
+      "critical": 85,
     },
     "tooltip": false,
   },
   "memory": {
     "format": "",
-    "format-warning": "󰍛<span size=\"50%\"> </span>{percentage}%",
-    "format-critical": "󰍛<span size=\"50%\"> </span>{percentage}%",
+    "format-warning": "<span size=\"50%\"> </span>{percentage}%",
+    "format-critical": "<span size=\"50%\"> </span>{percentage}%",
     "states": {
-      "warning": 50,
-      "critical": 75,
+      "warning": 70,
+      "critical": 85,
     },
     "tooltip": false,
   },
   "temperature": {
-    "critical-threshold": 50,
+    "critical-threshold": 60,
     "format": "",
     "format-critical": "󱃂<span size=\"50%\"> </span>{temperatureC}°C",
   },
@@ -200,8 +205,8 @@
     "scroll-step": 5,
   },
   "mpris": {
-    "format": "{status_icon} {player_icon} {dynamic}",
-    "format-paused": "{status_icon} {player_icon} {dynamic}",
+    "format": "{player_icon}<span size=\"50%\"> </span>{dynamic}",
+    "format-paused": "{player_icon}<span size=\"50%\"> </span>{dynamic}",
     "tooltip-format": "TITLE: {title}\nARTIST: {artist}\nALBUM: {album}",
     "player-icons": {
       "default": "󰎆",
@@ -215,8 +220,8 @@
     "dynamic-order": ["title", "artist", "album"],
     "dynamic-importance-order": ["title", "artist", "album"],
     "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl previous",
-    "on-scroll-down": "playerctl next",
+    "on-scroll-up": "playerctl volume 0.1+",
+    "on-scroll-down": "playerctl volume 0.1-",
   },
   "tray": {
     "icon-size": 21,

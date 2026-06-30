@@ -52,7 +52,7 @@ hl.window_rule({
     match = {
         class = "spotify"
     },
-    workspace = "special:F1 silent"
+    workspace = "special:spotify silent"
 })
 
 local specials = { "signal", "discord" }
