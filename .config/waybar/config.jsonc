@@ -309,7 +309,7 @@
   "custom/nixos-keybinds": {
     "format": "󰥻",
     "tooltip-format": "󰥻 Display NixOS Keybinds",
-    "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"cat ./.config/hypr/settings.keybindings.conf\"",
+    "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"cat ./.config/hypr/settings/binds.lua\"",
   },
   "custom/notification": {
     "tooltip-format": "Notifications",
@@ -335,6 +335,7 @@
     "tooltip-format": "󰸉 Change Wallpaper",
     "format": "󰸉",
     "on-click": "~/.config/hypr/scripts/get-wallpaper.sh",
+    "on-click-right": "~/.config/hypr/scripts/get-wallpaper.sh select",
     "escape": true,
   },
   "custom/open-application": {
