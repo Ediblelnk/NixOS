@@ -74,9 +74,7 @@
     brightnessctl # control screen brightness
     playerctl # media player control
     wl-clipboard # clipboard management for Wayland
-
-    # materia-theme # GTK theme
-    # gruvbox-gtk-theme # GTK theme
+    wev # Wayland event viewer
 
     adwaita-icon-theme # icon theme
     adwaita-qt # Qt integration for Adwaita theme

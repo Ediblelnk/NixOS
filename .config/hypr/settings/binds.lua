@@ -169,3 +169,11 @@ hl.bind(
     hl.dsp.exec_cmd("playerctl previous"),
     { locked = true }
 )
+hl.bind(
+    "XF86AudioMedia",
+    hl.dsp.send_shortcut({
+        mods = "CTRL + SHIFT",
+        key = "M",
+        window = "class:^(discord)$"
+    })
+)
