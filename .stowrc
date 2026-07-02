@@ -6,3 +6,4 @@
 --ignore=flake.*
 --ignore=justfile
 --ignore=README.md
+--ignore=hl.meta.lua

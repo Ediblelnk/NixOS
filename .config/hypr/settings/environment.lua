@@ -20,5 +20,6 @@ hl.env("XCURSOR_THEME", "Adwaita")
 hl.env("HYPRCURSOR_THEME", "Adwaita")
 hl.env("GTK_THEME", "Adwaita:dark")
 
-hl.env("HYPRSHOT_DIR", "$HOME/Pictures/Screenshots")
+local home = os.getenv("HOME")
+hl.env("HYPRSHOT_DIR", home .. "/Pictures/Screenshots")
 hl.env("EDITOR", "zeditor")
