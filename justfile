@@ -20,8 +20,8 @@ upgrade:
 
 powerwash:
     @echo -e "\033[1;36m[info]: powerwashing system\033[0m"
-    sudo nix-collect-garbage -d
     just build
+    sudo nix-collect-garbage -d
 
 stow:
     @echo -e "\033[1;36m[info]: stowing files\033[0m"

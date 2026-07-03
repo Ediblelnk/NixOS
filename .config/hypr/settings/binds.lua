@@ -169,11 +169,29 @@ hl.bind(
     hl.dsp.exec_cmd("playerctl previous"),
     { locked = true }
 )
+
+--- DISCORD ---
 hl.bind(
     "XF86AudioMedia",
     hl.dsp.send_shortcut({
         mods = "CTRL + SHIFT",
         key = "M",
+        window = "class:^(discord)$"
+    })
+)
+hl.bind(
+    "Pause",
+    hl.dsp.send_shortcut({
+        mods = "CTRL + SHIFT",
+        key = "M",
+        window = "class:^(discord)$"
+    })
+)
+hl.bind(
+    "Scroll_Lock",
+    hl.dsp.send_shortcut({
+        mods = "CTRL + SHIFT",
+        key = "D",
         window = "class:^(discord)$"
     })
 )
