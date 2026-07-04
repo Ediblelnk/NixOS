@@ -1,6 +1,14 @@
 --- AUTOSTART ---
 
 hl.on("hyprland.start", function()
+    local handle = io.popen("hostname")
+    if handle ~= nil then
+        local hostname = handle:read("*a"):gsub("\n$", "")
+        handle:close()
+        if hostname == "turmeric" then
+            hl.exec_cmd("openrgb --startminimized")
+        end
+    end
     hl.exec_cmd("waybar")
     hl.exec_cmd("quickshell")
     hl.exec_cmd("blueman-applet")

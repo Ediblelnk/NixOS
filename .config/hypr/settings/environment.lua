@@ -8,8 +8,8 @@ if handle ~= nil then
         hl.env("XCURSOR_SIZE", "24")
         hl.env("HYPRCURSOR_SIZE", "24")
     else
-        hl.env("XCURSOR_SIZE", "20")
-        hl.env("HYPRCURSOR_SIZE", "20")
+        hl.env("XCURSOR_SIZE", "16")
+        hl.env("HYPRCURSOR_SIZE", "16")
     end
 else
     hl.env("XCURSOR_SIZE", "20")
