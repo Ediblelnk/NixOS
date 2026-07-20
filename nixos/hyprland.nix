@@ -52,6 +52,7 @@
     hyprlock
     hypridle
     hyprshot
+    hyprpolkitagent # polkit agent for Hyprland
 
     kitty # terminal emulator
     seahorse # GNOME keyring manager
