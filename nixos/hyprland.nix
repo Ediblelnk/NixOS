@@ -57,6 +57,7 @@
     kitty # terminal emulator
     seahorse # GNOME keyring manager
     nautilus # file manager
+    libadwaita # used for gnome theming
     rofi # application launcher
     waybar # status bar for Wayland
     quickshell
