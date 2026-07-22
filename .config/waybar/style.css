@@ -8,12 +8,16 @@
 }
 
 window#waybar {
-    background-color: @color0;
+    background-color: transparent;
+}
+
+#waybar {
+    border-radius: 10px;
 }
 
 tooltip {
     background: @color0;
-    border-radius: 0px;
+    border-radius: 10px;
 }
 
 tooltip label {
@@ -59,7 +63,7 @@ tooltip label {
     min-width: 30px;
     padding: 0px 2px;
     margin: 0px 3px;
-    border-radius: 2px;
+    border-radius: 10px;
     color: @color7;
     background-color: @color0;
 }
@@ -85,7 +89,7 @@ tooltip label {
 #tray {
     padding: 0px 6px;
     margin: 0px 0px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 #custom-power,
@@ -94,7 +98,7 @@ tooltip label {
 #custom-sandwich {
     padding: 0px 7px;
     margin: 0px 0px;
-    border-radius: 8px;
+    border-radius: 10px;
     /*border: 1px solid @color0;*/
     color: @color3;
     background-color: @color0;
@@ -115,7 +119,7 @@ tooltip label {
 #custom-open-application {
     min-width: 30px;
     margin: 0px 3px;
-    border-radius: 2px;
+    border-radius: 10px;
     color: @color1;
 }
 
@@ -124,8 +128,8 @@ tooltip label {
 #nixos,
 #power {
     min-width: 30px;
-    margin: 0px 3px;
-    border-radius: 8px;
+    margin: 0px 0px;
+    border-radius: 10px;
     background-color: @color0;
 }
 
@@ -133,10 +137,18 @@ tooltip label {
 .settings-drawer,
 .power-drawer,
 .nixos-drawer {
-    padding: 0px 3px;
+    padding: 0px 0px;
     margin: 0px 3px;
     color: @color0;
     background-color: @color0;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: @color0;
+    padding: 0px 5px;
+    border-radius: 10px;
 }
 
 #battery.critical:not(.charging) {

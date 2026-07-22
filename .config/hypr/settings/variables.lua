@@ -5,9 +5,9 @@ local Variables = {}
 -- variables
 Variables.wallpaper = "~/.wallpaper"
 Variables.gaps_out = 4
-Variables.gaps_in = 1
+Variables.gaps_in = 2
 Variables.border_size = 0
-Variables.rounding = 4
+Variables.rounding = 10
 
 -- programs
 Variables.terminal = "kitty"

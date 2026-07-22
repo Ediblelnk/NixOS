@@ -91,14 +91,14 @@ hl.window_rule({
 })
 
 --- WORKSPACE RULES ---
-hl.workspace_rule({
-    workspace = "w[tv1]",
-    gaps_out = Variables.gaps_out // 2,
-    gaps_in = 0,
-})
+-- hl.workspace_rule({
+--     workspace = "w[tv1]",
+--     gaps_out = Variables.gaps_out // 2,
+--     gaps_in = 0,
+-- })
 
-hl.workspace_rule({
-    workspace = "w[tg1]",
-    gaps_out = Variables.gaps_out // 2,
-    gaps_in = 0,
-})
+-- hl.workspace_rule({
+--     workspace = "w[tg1]",
+--     gaps_out = Variables.gaps_out // 2,
+--     gaps_in = 0,
+-- })

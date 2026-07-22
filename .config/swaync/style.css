@@ -21,15 +21,12 @@
         FiraCode,
         FiraCode Symbols,
         monospace;
-    /* font-size: 14px;
-    padding: 2px; */
 }
 
 .notification-row {
     outline: none;
 }
-
-.notification-row:focus,
+.notification-row:focus-within,
 .notification-row:hover {
     background: @notification-background-focus;
 }
@@ -61,24 +58,13 @@
 }
 
 .notification-row .notification-background .notification {
-    /* The actual notification */
-    border-radius: 4px;
+    /* The actual notification. Priority variants (.low / .normal / .critical) are
+       available for overrides if you want per-priority styling. */
+    border-radius: 10px;
     border: 2px solid @notification-border-color;
     padding: 0;
     transition: background 0.15s ease-in-out;
     background: @notification-background;
-}
-
-.notification-row .notification-background .notification.low {
-    /* Low Priority Notification */
-}
-
-.notification-row .notification-background .notification.normal {
-    /* Normal Priority Notification */
-}
-
-.notification-row .notification-background .notification.critical {
-    /* Critical Priority Notification */
 }
 
 .notification-row .notification-background .notification .notification-action,
@@ -103,7 +89,6 @@
     .notification-background
     .notification
     .notification-default-action:hover {
-    -gtk-icon-effect: none;
     background: @notification-background-hover;
 }
 
@@ -112,7 +97,7 @@
     .notification
     .notification-default-action {
     /* The large action that also displays the notification summary and body */
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .notification-row
@@ -130,7 +115,7 @@
     .notification-default-action
     .notification-content {
     background: transparent;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 4px;
 }
 
@@ -140,10 +125,8 @@
     .notification-default-action
     .notification-content
     .image {
-    /* Notification Primary Image */
-    -gtk-icon-effect: none;
+    /* Notification primary image */
     border-radius: 100px;
-    /* Size in px */
     margin: 4px;
 }
 
@@ -154,7 +137,6 @@
     .notification-content
     .app-icon {
     /* Notification app icon (only visible when the primary image is set) */
-    -gtk-icon-effect: none;
     -gtk-icon-shadow: 0 1px 4px black;
     margin: 6px;
 }
@@ -205,6 +187,47 @@
     text-shadow: none;
 }
 
+/* Hovered notification: text -> @color1 */
+.notification-row:hover
+    .notification-background
+    .notification
+    .notification-default-action
+    .notification-content
+    .text-box
+    .summary,
+.notification-row:hover
+    .notification-background
+    .notification
+    .notification-default-action
+    .notification-content
+    .text-box
+    .time,
+.notification-row:hover
+    .notification-background
+    .notification
+    .notification-default-action
+    .notification-content
+    .text-box
+    .body {
+    color: @color1;
+}
+
+/* Keyboard-selected notification: box-shadow ring -> @color1, standing in for a border.
+   Testing confirmed arrow-key nav sets :focus-within (not :focus), and that it's reliably
+   visible on .notification-group directly. Chaining .notification-group:focus-within down
+   through .notification-row never showed anything -- collapsed groups likely don't render
+   .notification-row in the tree at all until expanded, so that chain matched nothing. Ringing
+   .notification-group itself sidesteps that; the .notification-row rule below is kept for
+   notifications that aren't wrapped in a group. */
+.notification-group:focus-within {
+    box-shadow: 0 0 0 3px @color1;
+    border-radius: 10px;
+}
+
+.notification-row:focus-within .notification-background .notification {
+    box-shadow: 0 0 0 3px @color1;
+}
+
 .notification-row
     .notification-background
     .notification
@@ -224,8 +247,7 @@
     /* The "extra" optional bottom notification image */
     margin-top: 4px;
     background-color: white;
-    border-radius: 4px;
-    -gtk-icon-effect: none;
+    border-radius: 10px;
 }
 
 .notification-row
@@ -234,7 +256,6 @@
     .notification-default-action
     .notification-content
     .inline-reply {
-    /* The inline reply section */
     margin-top: 4px;
 }
 
@@ -249,7 +270,7 @@
     color: @text-color;
     caret-color: @text-color;
     border: 2px solid @notification-border-color;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .notification-row
@@ -262,7 +283,7 @@
     margin-left: 4px;
     background: @notification-background;
     border: 2px solid @notification-border-color;
-    border-radius: 4px;
+    border-radius: 10px;
     color: @text-color;
 }
 
@@ -312,51 +333,19 @@
     border-right: none;
 }
 
-.notification-group {
-    /* Styling only for Grouped Notifications */
-}
-
-.notification-group.low {
-    /* Low Priority Group */
-}
-
-.notification-group.normal {
-    /* Low Priority Group */
-}
-
-.notification-group.critical {
-    /* Low Priority Group */
-}
-
 .notification-group .notification-group-buttons,
 .notification-group .notification-group-headers {
     margin: 0 16px;
     color: @text-color;
 }
 
-.notification-group .notification-group-headers {
-    /* Notification Group Headers */
-}
-
-.notification-group .notification-group-headers .notification-group-icon {
-    color: @text-color;
-}
-
+.notification-group .notification-group-headers .notification-group-icon,
 .notification-group .notification-group-headers .notification-group-header {
     color: @text-color;
 }
 
-.notification-group .notification-group-buttons {
-    /* Notification Group Buttons */
-}
-
 .notification-group.collapsed .notification-row .notification {
     background-color: @notification-background-opaque;
-}
-
-.notification-group.collapsed .notification-row:not(:last-child) {
-    /* Top notification in stack */
-    /* Set lower stacked notifications opacity to 0 */
 }
 
 .notification-group.collapsed
@@ -365,6 +354,7 @@
 .notification-group.collapsed
     .notification-row:not(:last-child)
     .notification-default-action {
+    /* Hide actions on the stacked (non-top) notifications in a collapsed group */
     opacity: 0;
 }
 
@@ -378,7 +368,7 @@
     /* The Control Center which contains the old notifications + widgets */
     background: @control-center-background;
     color: @text-color;
-    border-radius: 4px;
+    border-radius: 10px;
     border: 2px solid @notification-border-color;
 }
 
@@ -414,6 +404,35 @@
     background-color: @notification-background-hover;
 }
 
+.control-center .notification-background,
+.control-center .notification-group {
+    /* Remove shadow/background from the notification container + grouped notifications */
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.control-center .notification-background .notification,
+.control-center .notification-row:focus,
+.control-center .notification-row:hover {
+    box-shadow: none;
+}
+
+/* REMOVE HOVER BACKGROUNDS */
+list,
+listview,
+row,
+listview row,
+listview row:selected,
+listview row:hover,
+listview row:focus,
+listview row:active,
+.notification-group {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    outline: none;
+}
+
 .blank-window {
     /* Window behind control center and on all other monitors */
     background: transparent;
@@ -421,9 +440,21 @@
 
 .floating-notifications {
     background: transparent;
+    margin: -2px;
 }
 
 .floating-notifications .notification {
+    box-shadow: none;
+}
+
+.floating-notifications .notification-row {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+.floating-notifications .notification-group {
+    background-color: transparent;
     box-shadow: none;
 }
 
@@ -442,7 +473,7 @@
     background: @notification-background;
     border: 2px solid @notification-border-color;
     box-shadow: none;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .widget-title > button:hover {
@@ -471,15 +502,14 @@
 
 .widget-dnd > switch slider {
     background: @text-color;
-    border: 2px solid @notif-border-color;
-    border-radius: 4px;
+    border: 2px solid @notification-border-color;
+    border-radius: 10px;
 }
 
 /* Label widget */
 .widget-label {
     margin: 8px;
 }
-
 .widget-label > label {
     font-size: 1.1rem;
 }
@@ -488,16 +518,11 @@
 @define-color mpris-album-art-overlay rgba(0, 0, 0, 0.55);
 @define-color mpris-button-hover rgba(0, 0, 0, 0.50);
 
-.widget-mpris {
-    /* The parent to all players */
-}
-
 .widget-mpris .widget-mpris-player {
-    padding: 8px;
     padding: 16px;
     margin: 16px 20px;
     background-color: @mpris-album-art-overlay;
-    border-radius: 4px;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 }
 
@@ -507,7 +532,7 @@
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-album-art {
-    border-radius: 4px;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 }
 
@@ -520,37 +545,21 @@
     font-size: 1.1rem;
 }
 
-.widget-mpris .widget-mpris-player > box > button {
-    /* Change player control buttons */
-}
-
 .widget-mpris .widget-mpris-player > box > button:hover {
     background-color: @mpris-button-hover;
-}
-
-.widget-mpris > box > button {
-    /* Change player side buttons */
-}
-
-.widget-mpris > box > button:disabled {
-    /* Change player side buttons insensitive */
 }
 
 /* Buttons widget */
 .widget-buttons-grid {
     padding: 8px;
     margin: 8px;
-    border-radius: 4px;
+    border-radius: 10px;
     background-color: @notification-background;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
     background: @notification-background;
-    border-radius: 4px;
-}
-
-.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
-    /* style given to the active toggle button */
+    border-radius: 10px;
 }
 
 /* Menubar widget */
@@ -559,23 +568,8 @@
     background: transparent;
 }
 
-/* .AnyName { Name defined in config after #
-  background-color: @notification-background;
-  padding: 8px;
-  margin: 8px;
-  border-radius: 4px;
-}
-
-.AnyName>button {
-  background: transparent;
-  border: none;
-}
-
-.AnyName>button:hover {
-  background-color: @notification-background-hover;
-} */
+/* .AnyName is the widget name defined in config after # */
 .topbar-buttons > button {
-    /* Name defined in config after # */
     border: none;
     background: transparent;
 }
@@ -585,7 +579,7 @@
     background-color: @notification-background;
     padding: 8px;
     margin: 8px;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .widget-volume > box > button {
@@ -597,7 +591,7 @@
     background-color: @notification-background-alt;
     padding: 4px 8px 8px 8px;
     margin: 0px 8px 8px 8px;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 /* Backlight widget */
@@ -605,7 +599,7 @@
     background-color: @notification-background;
     padding: 8px;
     margin: 8px;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 /* Inhibitors widget */
@@ -621,9 +615,13 @@
     background: @notification-background;
     border: 2px solid @notification-border-color;
     box-shadow: none;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 .widget-inhibitors > button:hover {
     background: @notification-background-hover;
 }
+
+/*.notification-group:focus-within {
+    background-color: #ffaa00;
+}*/
