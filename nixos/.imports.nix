@@ -20,6 +20,7 @@
     ./modules/docker.nix
     ./modules/wine.nix
     ./modules/zeditor.nix
+    ./modules/steam.nix
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
