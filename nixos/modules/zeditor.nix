@@ -6,5 +6,9 @@
     # NIX LANGUAGE SUPPORT
     nil
     nixd
+
+    # ruby lsp
+    rubyPackages.ruby-lsp
+    rubyPackages.rubocop
   ];
 }

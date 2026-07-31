@@ -161,5 +161,24 @@
       },
       "format_on_save": "on",
     },
+    "Ruby": {
+      "language_servers": ["ruby-lsp"],
+    },
+    "HTML+ERB": {
+      "language_servers": ["ruby-lsp"],
+    },
+    "JS+ERB": {
+      "language_servers": ["ruby-lsp"],
+    },
+    "YAML+ERB": {
+      "language_servers": ["ruby-lsp"],
+    },
+  },
+  "lsp": {
+    "ruby-lsp": {
+      "binary": {
+        "path": "ruby-lsp",
+      },
+    },
   },
 }

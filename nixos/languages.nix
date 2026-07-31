@@ -25,5 +25,9 @@
 
     # java
     jdk
+
+    # ruby
+    ruby
+    rubyPackages.rspec
   ];
 }
