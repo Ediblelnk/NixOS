@@ -1,5 +1,7 @@
 # NixOS
 
+Welcome to my NixOS Configuration! This repository is mostly for my own personal usage, but feel free to look around. There is not a whole lot of documentation as most of the code is self-explanatory. At some point, I'll get around to sharing some photos of what the desktop looks and feels like.
+
 ## New Installation Notes
 
 ### Visual Studio Code
