@@ -518,12 +518,16 @@ listview row:active,
 @define-color mpris-album-art-overlay rgba(0, 0, 0, 0.55);
 @define-color mpris-button-hover rgba(0, 0, 0, 0.50);
 
+.widget-mpris-player {
+    background-color: @color0;
+}
+
 .widget-mpris .widget-mpris-player {
-    padding: 16px;
-    margin: 16px 20px;
-    background-color: @mpris-album-art-overlay;
+    /*padding: 16px;*/
+    /*margin: 16px 20px;*/
+    background-color: @color0;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+    /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);*/
 }
 
 .widget-mpris .widget-mpris-player button:hover {
@@ -533,7 +537,8 @@ listview row:active,
 
 .widget-mpris .widget-mpris-player .widget-mpris-album-art {
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+    background-color: @color0;
+    /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);*/
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-title {
@@ -548,6 +553,18 @@ listview row:active,
 .widget-mpris .widget-mpris-player > box > button:hover {
     background-color: @mpris-button-hover;
 }
+
+picture.mpris-background {
+  opacity: 0;
+  background: transparent;
+  padding: 0px;
+  margin: 0px;
+}
+
+.widget-mpris-player > box {
+  background-color: @color0;
+}
+
 
 /* Buttons widget */
 .widget-buttons-grid {
