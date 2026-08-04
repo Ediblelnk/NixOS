@@ -121,22 +121,22 @@ hl.bind(mod .. " + CTRL + mouse:272", hl.dsp.window.resize(), { mouse = true })
 -- MULTIMEDIA KEYS
 hl.bind(
     "XF86AudioRaiseVolume",
-    hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
+    hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+ && ~/.config/hypr/scripts/notification-volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
     "XF86AudioLowerVolume",
-    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ~/.config/hypr/scripts/notification-volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
     "XF86AudioMute",
-    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
+    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && ~/.config/hypr/scripts/notification-volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
     "XF86AudioMicMute",
-    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
+    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && ~/.config/hypr/scripts/notification-volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
