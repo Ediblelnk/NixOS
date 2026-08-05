@@ -1,30 +1,29 @@
 {
-  "$schema": "~/.config/swaync/configSchema.json",
+  "$schema": "/run/current-system/sw/etc/xdg/swaync/configSchema.json",
   "positionX": "center",
   "positionY": "top",
   "layer": "overlay",
   "control-center-layer": "top",
   "layer-shell": true,
   "layer-shell-cover-screen": true,
-  "cssPriority": "application",
+  "cssPriority": "user",
   "control-center-margin-top": 4,
   "control-center-margin-bottom": 4,
   "control-center-margin-right": 4,
   "control-center-margin-left": 4,
   "notification-2fa-action": true,
   "notification-inline-replies": true,
-  "notification-icon-size": 64,
   "notification-body-image-height": 100,
   "notification-body-image-width": 200,
   "timeout": 10,
   "timeout-low": 5,
   "timeout-critical": 0,
-  "fit-to-screen": true,
+  "fit-to-screen": false,
   "relative-timestamps": true,
-  "control-center-positionX": "left",
+  "control-center-positionX": "center",
   "control-center-positionY": "top",
-  "control-center-width": 400,
-  "control-center-height": 600,
+  "control-center-width": 700,
+  "control-center-height": 800,
   "notification-window-width": 500,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
@@ -52,11 +51,11 @@
     }
   },
   "widgets": [
+    "mpris",
     "inhibitors",
     "title",
     "dnd",
     "buttons-grid",
-    "mpris",
     "notifications"
   ],
   "widget-config": {
@@ -66,23 +65,18 @@
       "clear-all-button": true
     },
     "title": {
-      "text": "Notifications",
+      "text": "Control Center",
       "clear-all-button": true,
       "button-text": "Clear All"
     },
     "dnd": {
       "text": "Do Not Disturb"
     },
-    "label": {
-      "max-lines": 5,
-      "text": "Label Text"
-    },
     "mpris": {
       "show-album-art": "always",
       "autohide": true,
       "blacklist": ["playerctl"],
-      "loop-carousel": true,
-      "blur-image": false
+      "loop-carousel": true
     },
     "buttons-grid": {
       "actions": [

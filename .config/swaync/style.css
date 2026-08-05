@@ -15,11 +15,8 @@
 @define-color background-selected @color4;
 
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family:
-        FontAwesome,
-        FiraCode,
-        FiraCode Symbols,
+        FiraCode Nerd Font Propo,
         monospace;
 }
 
@@ -484,7 +481,7 @@ listview row:active,
 .widget-dnd {
     color: @text-color;
     margin: 8px;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .widget-dnd > switch {
@@ -515,7 +512,7 @@ listview row:active,
 }
 
 /* Mpris widget */
-@define-color mpris-album-art-overlay rgba(0, 0, 0, 0.55);
+@define-color mpris-album-art-overlay rgba(0, 0, 0, 0.9);
 @define-color mpris-button-hover rgba(0, 0, 0, 0.50);
 
 .widget-mpris-player {
@@ -523,11 +520,11 @@ listview row:active,
 }
 
 .widget-mpris .widget-mpris-player {
-    /*padding: 16px;*/
-    /*margin: 16px 20px;*/
-    background-color: @color0;
+    padding: 0px;
+    margin: 5px;
+    background-color: @mpris-album-art-overlay;
     border-radius: 10px;
-    /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);*/
+    box-shadow: none;
 }
 
 .widget-mpris .widget-mpris-player button:hover {
@@ -537,8 +534,7 @@ listview row:active,
 
 .widget-mpris .widget-mpris-player .widget-mpris-album-art {
     border-radius: 10px;
-    background-color: @color0;
-    /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);*/
+    box-shadow: none;
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-title {
@@ -547,7 +543,7 @@ listview row:active,
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .widget-mpris .widget-mpris-player > box > button:hover {
@@ -555,16 +551,15 @@ listview row:active,
 }
 
 picture.mpris-background {
-  opacity: 0;
-  background: transparent;
-  padding: 0px;
-  margin: 0px;
+    opacity: 1;
+    padding: 0px;
+    margin: 0px;
+    box-shadow: none;
 }
 
-.widget-mpris-player > box {
+/*.widget-mpris-player > box {
   background-color: @color0;
-}
-
+}*/
 
 /* Buttons widget */
 .widget-buttons-grid {
