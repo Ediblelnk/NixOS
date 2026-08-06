@@ -1,0 +1,5 @@
+@import url(../variables.css);
+
+.widget-slider label {
+    font-size: inherit;
+}

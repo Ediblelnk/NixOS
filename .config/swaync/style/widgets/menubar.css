@@ -1,0 +1,53 @@
+@import url(../variables.css);
+
+.widget-menubar {
+    /* The revealer buttons */
+    /* .AnyName { Name defined in config after #
+    background-color: rgba(var(--notification-background), 1.0);
+    padding: 8px;
+    margin: 8px;
+    border-radius: 12px;
+  }
+
+  .AnyName>button {
+    background: transparent;
+    border: none;
+  }
+
+  .AnyName>button:hover {
+    background-color: var(--notification-background-hover);
+  } */
+}
+
+.widget-menubar > .menu-button-bar {
+    /* The left button container */
+    /* The right button container */
+    /* The left and right button container */
+}
+
+.widget-menubar > .menu-button-bar > .start {
+    margin-left: 8px;
+}
+
+.widget-menubar > .menu-button-bar > .end {
+    margin-right: 8px;
+}
+
+.widget-menubar > .menu-button-bar > .widget-menubar-container button {
+    border-radius: var(--border-radius);
+    margin: 0 4px;
+}
+
+.widget-menubar > revealer * {
+    margin-top: 8px;
+}
+
+.widget-menubar > revealer * button {
+    border-radius: var(--border-radius);
+    margin: 8px;
+    margin-top: 0;
+}
+
+.widget-menubar > revealer * button:last-child {
+    margin-bottom: 0;
+}

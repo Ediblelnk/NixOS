@@ -1,0 +1,9 @@
+@import url(../variables.css);
+
+.widget-buttons-grid flowboxchild > button {
+    border-radius: var(--border-radius);
+}
+
+.widget-buttons-grid flowboxchild > button.toggle:checked {
+    /* style given to the active toggle button */
+}

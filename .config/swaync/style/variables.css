@@ -1,0 +1,51 @@
+@import url(../../../.cache/wal/colors.css);
+
+:root {
+    --control-center-background: var(--background);
+
+    --notification-border-color: color-mix(
+        in oklab,
+        var(--background),
+        var(--foreground) 5%
+    );
+    --notification-background: color-mix(
+        in oklab,
+        var(--background),
+        var(--foreground) 5%
+    );
+    --notification-background-reply: rgb(255, 255, 0);
+    --notification-background-hover: color-mix(
+        in oklab,
+        var(--background),
+        var(--foreground) 10%
+    );
+    --notification-background-focus: rgba(0, 255, 255);
+
+    --notification-close-background: var(--color1);
+    --notification-close-background-hover: var(--foreground);
+    --notification-close-fg-hover: var(--background);
+
+    --text-color: var(--foreground);
+    --text-color-disabled: rgb(255, 0, 0);
+
+    --background-selected: rgb(0, 0, 255);
+
+    --notification-icon-size: 64px;
+    --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
+    --notification-group-icon-size: calc(var(--notification-icon-size) / 2);
+
+    --border: 1px solid var(--notification-border-color);
+    --border-radius: 10px;
+
+    --font-size-body: 15px;
+    --font-size-summary: 16px;
+
+    --hover-transition: background 0.15s ease-in-out;
+    --group-collapse-transition: opacity 400ms ease-in-out;
+}
+
+* {
+    font-family:
+        FiraCode Nerd Font Propo,
+        monospace;
+}

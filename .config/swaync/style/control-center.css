@@ -1,0 +1,36 @@
+@import url(variables.css);
+
+.control-center {
+    /* The Control Center which contains the old notifications + widgets */
+    background: var(--control-center-background);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    border: 5px solid var(--notification-border-color);
+}
+
+.control-center .control-center-list-placeholder {
+    /* The placeholder when there are no notifications */
+    opacity: 0.5;
+}
+
+.control-center .control-center-list {
+    /* List of notifications */
+    background: transparent;
+}
+
+.control-center .control-center-list .notification {
+    box-shadow: none;
+}
+
+.control-center .control-center-list .notification .notification-default-action,
+.control-center .control-center-list .notification .notification-action {
+    transition: var(--group-collapse-transition), var(--hover-transition);
+}
+
+.control-center
+    .control-center-list
+    .notification
+    .notification-default-action:hover,
+.control-center .control-center-list .notification .notification-action:hover {
+    background-color: var(--notification-background-hover);
+}

@@ -1,0 +1,21 @@
+@import url(../variables.css);
+
+.widget-dnd label {
+    color: var(--text-color);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.widget-dnd switch {
+    border-radius: var(--border-radius);
+    margin-left: 8px;
+}
+
+.widget-dnd switch slider {
+    border-radius: var(--border-radius);
+}
+
+/* Label widget */
+.widget-label > label {
+    font-size: 1.1rem;
+}

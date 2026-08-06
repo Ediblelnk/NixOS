@@ -1,0 +1,17 @@
+@import url(../variables.css);
+
+:root {
+    --widget-volume-row-icon-size: 24px;
+}
+
+/* Each row app icon */
+.widget-volume row image {
+    -gtk-icon-size: var(--widget-volume-row-icon-size);
+}
+
+.per-app-volume {
+    background-color: var(--notification-background-alt);
+    margin: 8px;
+    margin-bottom: 0;
+    border-radius: var(--border-radius);
+}

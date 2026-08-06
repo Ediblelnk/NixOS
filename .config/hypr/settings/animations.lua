@@ -39,5 +39,5 @@ hl.layer_rule({
 hl.layer_rule({
     name = "notifications animation",
     match = { namespace = "swaync-control-center" },
-    animation = "slide top"
+    animation = "fade"
 })
