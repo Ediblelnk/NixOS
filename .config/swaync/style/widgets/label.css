@@ -1,0 +1,5 @@
+@import url(../variables.css);
+
+.widget-label > label {
+    font-size: 1.1rem;
+}

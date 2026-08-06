@@ -3,11 +3,7 @@
 :root {
     --control-center-background: var(--background);
 
-    --notification-border-color: color-mix(
-        in oklab,
-        var(--background),
-        var(--foreground) 5%
-    );
+    --notification-border-color: var(--notification-background);
     --notification-background: color-mix(
         in oklab,
         var(--background),
@@ -26,9 +22,6 @@
     --notification-close-fg-hover: var(--background);
 
     --text-color: var(--foreground);
-    --text-color-disabled: rgb(255, 0, 0);
-
-    --background-selected: rgb(0, 0, 255);
 
     --notification-icon-size: 64px;
     --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
@@ -42,6 +35,9 @@
 
     --hover-transition: background 0.15s ease-in-out;
     --group-collapse-transition: opacity 400ms ease-in-out;
+
+    --small-button-size: 1.5rem;
+    --large-button-size: 2rem;
 }
 
 * {

@@ -3,19 +3,19 @@
 .widget-dnd label {
     color: var(--text-color);
     margin-right: 8px;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
 }
 
 .widget-dnd switch {
     border-radius: var(--border-radius);
     margin-left: 8px;
+    background: var(--notification-background);
+}
+
+.widget-dnd switch:checked {
+    background: var(--color1);
 }
 
 .widget-dnd switch slider {
-    border-radius: var(--border-radius);
-}
-
-/* Label widget */
-.widget-label > label {
-    font-size: 1.1rem;
+    border-radius: calc(var(--border-radius) - 2px);
 }

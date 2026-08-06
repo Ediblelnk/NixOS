@@ -2,8 +2,7 @@
 
 notificationwindow,
 blankwindow {
-    background: black;
-    border: 5px solid re;
+    background: transparent;
 }
 
 .close-button {

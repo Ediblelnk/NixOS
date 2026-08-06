@@ -2,8 +2,10 @@
 
 .widget-buttons-grid flowboxchild > button {
     border-radius: var(--border-radius);
+    font-size: var(--large-button-size);
 }
 
+/*cannot figure out how to use or navigate this*/
 .widget-buttons-grid flowboxchild > button.toggle:checked {
-    /* style given to the active toggle button */
+    background: var(--color1);
 }

@@ -9,6 +9,27 @@
     -gtk-icon-size: var(--widget-volume-row-icon-size);
 }
 
+.widget-volume scale slider {
+    background: var(--text-color);
+    border-radius: calc(var(--border-radius) - 2px);
+}
+
+.widget-volume scale trough {
+    background: var(--notification-background);
+}
+
+.widget-volume scale trough highlight {
+    background: var(--color1);
+}
+
+.widget-volume label {
+    font-size: var(--small-button-size);
+}
+
+.per-app-volume label {
+    font-size: 1rem;
+}
+
 .per-app-volume {
     background-color: var(--notification-background-alt);
     margin: 8px;
