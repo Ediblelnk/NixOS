@@ -121,7 +121,7 @@ blankwindow {
     /* Notification app icon (only visible when the primary image is set) */
     -gtk-icon-filter: none;
     -gtk-icon-size: var(--notification-app-icon-size);
-    -gtk-icon-shadow: 0 1px 4px orange;
+    -gtk-icon-shadow: none;
     margin: 6px;
 }
 
