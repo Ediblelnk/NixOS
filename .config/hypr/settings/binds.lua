@@ -18,11 +18,11 @@ hl.bind(mod .. " + A", hl.dsp.exec_cmd("swaync-client -t -sw"))
 hl.bind(mod .. " + R", hl.dsp.exec_cmd("hyprctl reload"))
 
 -- OPEN COLOR PICKER
-hl.bind(mod .. " + SHIFT + O", hl.dsp.exec_cmd("hyprpicker -a"))
+hl.bind(mod .. " + SHIFT + O", hl.dsp.exec_cmd("~/.scripts/picker.sh"))
 
 -- OPEN A RANDOM FILE WITH DEFAULT APPLICATION
 hl.bind(mod .. " + O",
-    hl.dsp.exec_cmd([[kitty -e sh -c "file=\$(fzf); setsid xdg-open \"\$file\" > /dev/null 2>&1 & sleep 0.1"]]))
+    hl.dsp.exec_cmd("~/.scripts/open.sh -f"))
 
 -- HYPRSHOT ACTIONS
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd("hyprshot -m region"))
@@ -121,22 +121,22 @@ hl.bind(mod .. " + CTRL + mouse:272", hl.dsp.window.resize(), { mouse = true })
 -- MULTIMEDIA KEYS
 hl.bind(
     "XF86AudioRaiseVolume",
-    hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+ && ~/.config/hypr/scripts/notification-volume.sh"),
+    hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+ && ~/.scripts/notification-volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
     "XF86AudioLowerVolume",
-    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ~/.config/hypr/scripts/notification-volume.sh"),
+    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ~/.scripts/notification-volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
     "XF86AudioMute",
-    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && ~/.config/hypr/scripts/notification-volume.sh"),
+    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && ~/.scripts/notification-volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
     "XF86AudioMicMute",
-    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && ~/.config/hypr/scripts/notification-volume.sh"),
+    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && ~/.scripts/notification-volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(

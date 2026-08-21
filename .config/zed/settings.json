@@ -24,7 +24,7 @@
     "show_type_hints": true,
     "enabled": true,
   },
-  "ui_font_size": 18.0,
+  "ui_font_size": 20.0,
   "theme": "System",
   // "notification_panel": {
   //   "button": false,

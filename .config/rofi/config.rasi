@@ -1,7 +1,7 @@
 @theme "theme.rasi"
 
 configuration {
-	modes: "";
+	modes: [drun,window];
 	font: "mono 12";
 	location: 0;
 	yoffset: 0;
@@ -28,7 +28,7 @@ configuration {
 /*	drun-categories: ;*/
 /*	drun-exclude-categories: ;*/
 	drun-show-actions: false;
-	drun-display-format: "{name} [<span weight='light' size='small'>({generic})</span>]";
+	drun-display-format: "{name} [<span weight='light' size='small'>{generic}</span>]";
 	drun-url-launcher: "xdg-open";
 	disable-history: false;
 	ignored-prefixes: "";
@@ -50,8 +50,8 @@ configuration {
 	filter: "";
 	dpi: -1;
 	threads: 0;
-	scroll-method: 0;
-	window-format: "{w}{c} {t}";
+	scroll-method: 1;
+	window-format: "{w}{c:10} {t:20}";
 	click-to-exit: true;
 	max-history-size: 25;
 	combi-hide-mode-prefix: false;

@@ -249,22 +249,22 @@
   "custom/power-shutdown": {
     "format": "󰓛",
     "tooltip-format": "󰓛 Shutdown System",
-    "on-click": "shutdown now",
+    "on-click": "~/.scripts/system/shutdown.sh",
   },
   "custom/power-reboot": {
     "format": "󰑓",
     "tooltip-format": "󰑓 Reboot System",
-    "on-click": "reboot",
+    "on-click": "~/.scripts/system/reboot.sh",
   },
   "custom/power-suspend": {
     "format": "󰏤",
     "tooltip-format": "󰏤 Suspend System",
-    "on-click": "systemctl suspend",
+    "on-click": "~/.scripts/system/suspend.sh",
   },
   "custom/power-hibernate": {
     "format": "󰒲",
     "tooltip-format": "󰒲 Hibernate System",
-    "on-click": "systemctl hibernate",
+    "on-click": "~/.scripts/system/hibernate.sh",
   },
   "group/nixos": {
     "orientation": "inherit",
@@ -334,8 +334,8 @@
   "custom/settings-wallpaper": {
     "tooltip-format": "󰸉 Change Wallpaper",
     "format": "󰸉",
-    "on-click": "~/.config/hypr/scripts/get-wallpaper.sh",
-    "on-click-right": "~/.config/hypr/scripts/get-wallpaper.sh select",
+    "on-click": "~/.scripts/wallpaper.sh -r",
+    "on-click-right": "~/.scripts/wallpaper.sh -s",
     "escape": true,
   },
   "custom/open-application": {

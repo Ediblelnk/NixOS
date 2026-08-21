@@ -50,13 +50,7 @@
       "app-name": "Spotify"
     }
   },
-  "widgets": [
-    "mpris",
-    "volume",
-    "buttons-grid",
-    "title",
-    "notifications"
-  ],
+  "widgets": ["mpris", "volume", "buttons-grid", "title", "notifications"],
   "widget-config": {
     "title": {
       "text": "Control Center",
@@ -94,27 +88,27 @@
         {
           "label": "󰌾",
           "type": "normal",
-          "command": "sh -c '~/.config/hypr/scripts/system/lock.sh'"
+          "command": "~/.scripts/system/lock.sh"
         },
         {
           "label": "󰑓",
           "type": "normal",
-          "command": ""
+          "command": "~/.scripts/system/reboot.sh"
         },
         {
           "label": "󰒲",
           "type": "normal",
-          "command": ""
+          "command": "~/.scripts/system/hibernate.sh"
         },
         {
           "label": "󰏤",
           "type": "normal",
-          "command": ""
+          "command": "~/.scripts/system/suspend.sh"
         },
         {
           "label": "󰓛",
           "type": "normal",
-          "command": ""
+          "command": "~/.scripts/system/shutdown.sh"
         },
         {
           "label": "󰂯",
@@ -129,12 +123,12 @@
         {
           "label": "󰃬",
           "type": "normal",
-          "command": "sh -c gnome-calculator"
+          "command": "gnome-calculator"
         },
         {
           "label": "󰈊",
           "type": "normal",
-          "command": ""
+          "command": "~/.scripts/picker.sh"
         },
         {
           "label": "󰂛",
@@ -149,7 +143,12 @@
         {
           "label": "󰸉",
           "type": "normal",
-          "command": "~/.config/hypr/scripts/get-wallpaper.sh"
+          "command": "~/.scripts/wallpaper.sh -r"
+        },
+        {
+          "label": "󰩉",
+          "type": "normal",
+          "command": "~/.scripts/window.sh -f"
         }
       ]
     }
