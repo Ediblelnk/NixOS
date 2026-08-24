@@ -86,13 +86,13 @@
   },
   "idle_inhibitor": {
     "format": "{icon}",
-    "tooltip-format-activated": "Idle Inhibitor is {status}",
-    "tooltip-format-deactivated": "Idle Inhibitor is {status}",
+    "tooltip-format-activated": "Idle Inhibitor is 󰈈 {status}",
+    "tooltip-format-deactivated": "Idle Inhibitor is 󰈉 {status}",
     "format-icons": {
       "activated": "󰈈",
       "deactivated": "󰈉",
     },
-    "start-activated": false,
+    "start-activated": true,
   },
   "clock": {
     "interval": 60,
@@ -127,7 +127,7 @@
   "backlight": {
     "format": "{icon}",
     "format-alt": "{icon}<span size=\"50%\"> </span>{percent}%",
-    "tooltip-format": "{icon}<span size=\"50%\"> </span>{percent}%",
+    "tooltip-format": "{icon} {percent}%",
     "format-icons": {
       "default": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
     },
@@ -150,7 +150,8 @@
   "bluetooth": {
     "format": " {status}",
     "format-disabled": "󰂲",
-    "format-on": "",
+    // "format-on": "",
+    "format-on": "",
     "format-connected": "󰂱",
     "tooltip-format": "{controller_alias} {controller_address}",
     "tooltip-format-connected": "{device_enumerate}",
@@ -211,7 +212,7 @@
     "player-icons": {
       "default": "󰎆",
       "spotify": "",
-      "brave": "󰖟",
+      "brave": "󰓩",
     },
     "title-len": 10,
     "artist-len": 10,
