@@ -3,7 +3,7 @@ WALLPAPER_DIR=$(dirname $WALLPAPER)/
 WALLPAPER=$(basename $WALLPAPER)
 
 select_wallpaper() {
-    zenity --file-selection --filename=$WALLPAPER_DIR --file-filter="*.png *.jpg *.webp"
+    zenity --file-selection --filename=$WALLPAPER_DIR
 }
 
 random_wallpaper() {

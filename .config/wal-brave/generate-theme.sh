@@ -1,5 +1,3 @@
-#!/run/current-system/sw/bin/bash
-
 echo "Generating Pywal Chrome theme..."
 
 . ~/.cache/wal/colors.sh # import colors from pywal
