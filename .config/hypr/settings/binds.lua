@@ -14,8 +14,11 @@ hl.bind(mod .. " + P", hl.dsp.window.pseudo({ action = "toggle" }))
 hl.bind(mod .. " + T", hl.dsp.group.toggle())
 hl.bind(mod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mod .. " + L", hl.dsp.exec_cmd("loginctl lock-session"))
-hl.bind(mod .. " + A", hl.dsp.exec_cmd("swaync-client -t -sw"))
-hl.bind(mod .. " + R", hl.dsp.exec_cmd("hyprctl reload"))
+hl.bind(mod .. " + A", hl.dsp.exec_cmd("swaync-client --toggle-panel --skip-wait"))
+hl.bind(mod .. " + SHIFT + A", hl.dsp.exec_cmd("swaync-client --toggle-dnd --skip-wait"))
+hl.bind(mod .. " + R", hl.dsp.exec_cmd("~/.scripts/reload.sh"))
+hl.bind(mod .. " + W", hl.dsp.exec_cmd("~/.scripts/wallpaper.sh --random"))
+hl.bind(mod .. " + SHIFT + W", hl.dsp.exec_cmd("~/.scripts/wallpaper.sh --select"))
 
 -- OPEN COLOR PICKER
 hl.bind(mod .. " + SHIFT + O", hl.dsp.exec_cmd("~/.scripts/picker.sh"))
@@ -33,16 +36,13 @@ hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m output"))
 hl.bind(mod.. " + SUPER_L", hl.dsp.exec_cmd("pkill " .. Variables.menu .. " || " .. Variables.menu_launcher))
 hl.bind(mod .. " + SPACE", hl.dsp.exec_cmd("pkill " .. Variables.menu .. " || " .. Variables.menu_window))
 
--- WAYBAR ACTIONS
-hl.bind(mod .. " + SHIFT + W", hl.dsp.exec_cmd("pkill waybar || waybar"))
-
 -- WORKSPACE ACTIONS
 hl.bind(mod .. " + TAB", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mod .. " + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind("ALT + escape", hl.dsp.focus({ workspace = "e+1" }))
 
-hl.bind(mod .. " + mouse_down", hl.dsp.focus({ workspace = "r-1" }))
-hl.bind(mod .. " + mouse_up", hl.dsp.focus({ workspace = "r+1" }))
+hl.bind(mod .. " + mouse_up", hl.dsp.focus({ workspace = "r-1" }))
+hl.bind(mod .. " + mouse_down", hl.dsp.focus({ workspace = "r+1" }))
 
 hl.bind(mod .. " + MINUS", hl.dsp.focus({ workspace = "-1" }))
 hl.bind(mod .. " + EQUAL", hl.dsp.focus({ workspace = "+1" }))
@@ -121,22 +121,22 @@ hl.bind(mod .. " + CTRL + mouse:272", hl.dsp.window.resize(), { mouse = true })
 -- MULTIMEDIA KEYS
 hl.bind(
     "XF86AudioRaiseVolume",
-    hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+ && ~/.scripts/notification-volume.sh"),
+    hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+ && ~/.scripts/notify/volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
     "XF86AudioLowerVolume",
-    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ~/.scripts/notification-volume.sh"),
+    hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- && ~/.scripts/notify/volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
     "XF86AudioMute",
-    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && ~/.scripts/notification-volume.sh"),
+    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && ~/.scripts/notify/volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
     "XF86AudioMicMute",
-    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && ~/.scripts/notification-volume.sh"),
+    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && ~/.scripts/notify/volume.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
