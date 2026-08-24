@@ -15,3 +15,11 @@
 .floating-notifications .notification {
     box-shadow: none;
 }
+
+.floating-notifications .notification progress {
+    background-color: var(--color1);
+}
+
+.floating-notifications .notification trough {
+    background-color: var(--color0);
+}
