@@ -10,8 +10,14 @@ reload() {
 
     hyprctl reload
 
+    # create necessary directories
+    ~/.scripts/create.sh
+
     # regenerate system icon resources
     ~/.scripts/resources.sh --update
+
+    # generate desktop entry for system
+    ~/.scripts/desktop.sh
 }
 
 reload

@@ -20,4 +20,8 @@ hl.on("hyprland.start", function()
     -- tray programs
     hl.exec_cmd("blueman-applet")
     hl.exec_cmd("steam -silent")
+
+    -- desktop entry
+    hl.exec_cmd("~/.scripts/reload.sh")
+
 end)
