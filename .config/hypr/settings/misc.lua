@@ -13,6 +13,7 @@ hl.config({
     },
 
     cursor = {
+        no_hardware_cursors = true,
         inactive_timeout = 60,
         persistent_warps = false,
         warp_on_change_workspace = true,

@@ -37,6 +37,17 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "Brave Profile Selection",
+    match = {
+        title = "Brave",
+        class = "brave-browser"
+    },
+    center = true,
+    pseudo = true,
+    size = { 1000, 750 }
+})
+
+hl.window_rule({
     name = "soffice-export-rules",
     match = {
         class = "soffice",
@@ -44,7 +55,7 @@ hl.window_rule({
     },
     float = true,
     center = true,
-    size = { 900, 700 }
+    size = { 900, 700 },
 })
 
 hl.window_rule({
