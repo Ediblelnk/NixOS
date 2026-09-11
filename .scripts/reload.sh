@@ -17,7 +17,7 @@ reload() {
     ~/.scripts/resources.sh --update
 
     # generate desktop entry for system
-    ~/.scripts/desktop.sh
+    ~/.scripts/desktop-entry.sh
 }
 
 reload

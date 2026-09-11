@@ -141,12 +141,12 @@ hl.bind(
 )
 hl.bind(
     "XF86MonBrightnessUp",
-    hl.dsp.exec_cmd("brightnessctl -n1 set 5%+"),
+    hl.dsp.exec_cmd("brightnessctl -n1 set 5%+ && ~/.scripts/notify/brightness.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
     "XF86MonBrightnessDown",
-    hl.dsp.exec_cmd("brightnessctl -n1 set 5%-"),
+    hl.dsp.exec_cmd("brightnessctl -n1 set 5%- && ~/.scripts/notify/brightness.sh"),
     { locked = true, repeating = true }
 )
 hl.bind(
