@@ -5,6 +5,7 @@ name="$(hostname)"
 system_name="${name^}"
 
 NixOS=$resources_dir/NixOS.svg
+BrightnessEmpty=$resources_dir/BrightnessEmpty.svg
 Eyedropper=$resources_dir/Eyedropper.svg
 Notifications=$resources_dir/Notifications.svg
 NotificationsOff=$resources_dir/NotificationsOff.svg
