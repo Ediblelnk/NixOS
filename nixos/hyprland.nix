@@ -2,6 +2,7 @@
 {
   programs.hyprland = {
     enable = true;
+    withUWSM = true;
     xwayland.enable = true;
   };
 
@@ -9,7 +10,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd start-hyprland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd 'uwsm start -e -D Hyprland hyprland.desktop'";
         user = "greeter";
       };
     };
@@ -53,6 +54,10 @@
     hypridle
     hyprshot
     hyprpolkitagent # polkit agent for Hyprland
+    xdg-desktop-portal
+    xdg-desktop-portal-hyprland
+    pipewire
+    wireplumber
 
     kitty # terminal emulator
     seahorse # GNOME keyring manager

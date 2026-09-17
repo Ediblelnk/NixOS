@@ -20,6 +20,10 @@ hl.env("XCURSOR_THEME", "Adwaita")
 hl.env("HYPRCURSOR_THEME", "Adwaita")
 hl.env("GTK_THEME", "Adwaita:dark")
 
+hl.env("XDG_SESSION_DESKTOP", "Hyprland")
+hl.env("XDG_SESSION_TYPE", "wayland")
+hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+
 local home = os.getenv("HOME")
 hl.env("HYPRSHOT_DIR", home .. "/Pictures/Screenshots")
 hl.env("EDITOR", "zeditor")
