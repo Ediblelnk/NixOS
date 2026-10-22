@@ -18,7 +18,7 @@
     "temperature",
     "hyprland/submap",
   ],
-  "modules-center": ["clock"],
+  // "modules-center": [],
   "modules-right": [
     "mpris",
     "bluetooth",
@@ -26,6 +26,7 @@
     "network",
     "backlight",
     "battery",
+    "clock",
     "group/sandwich",
     "group/power",
   ],
@@ -97,7 +98,8 @@
   "clock": {
     "interval": 60,
     "tooltip": false,
-    "format": "󰸗<span size=\"50%\"> </span>{0:%m-%d} 󰥔<span size=\"50%\"> </span>{0:%H:%M}",
+    "format": "󰥔<span size=\"50%\"> </span>{0:%H:%M}",
+    "format-alt": "󰸗<span size=\"50%\"> </span>{0:%m-%d} 󰥔<span size=\"50%\"> </span>{0:%H:%M}"
   },
   "cpu": {
     "format": "",
@@ -134,8 +136,8 @@
   },
   "battery": {
     "states": {
-      "warning": 30,
-      "critical": 15,
+      "warning": 20,
+      "critical": 10,
     },
     "format": "{icon}",
     "format-warning": "{icon}<span size=\"50%\"> </span>{capacity}%",

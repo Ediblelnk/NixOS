@@ -1,20 +1,16 @@
 @import "../../.cache/wal/colors-waybar.css";
-/* assuming called in ~/.config/waybar */
 
 * {
     font-family: "FiraCode Nerd Font Propo";
     font-size: 20px;
-    font-style: normal;
-    font-weight: normal;
-    padding: 0px;
-}
-
-window#waybar {
+    font-weight: bold;
+    padding: 0;
+    /*color: @color7;*/
     background-color: transparent;
-}
-
-#waybar {
-    border-radius: 10px;
+    text-shadow:
+        0 0 2px @color0,
+        0 0 2px @color0,
+        0 0 2px @color0;
 }
 
 tooltip {
@@ -23,27 +19,16 @@ tooltip {
 }
 
 tooltip label {
-    padding: 5px 5px;
-    color: @color7;
+    padding: 5px;
 }
 
-#network.disconnected,
-#temperature.critical,
-#cpu.critical,
-#memory.critical {
-    color: @color9;
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 0 5px;
 }
 
-#mpris.paused {
-    color: @color8;
-}
-
-#cpu.warning,
-#memory.warning,
-#pulseaudio.muted {
-    color: @color11;
-}
-
+/* Shared module sizing */
 #backlight,
 #battery,
 #bluetooth,
@@ -60,52 +45,7 @@ tooltip label {
 #temperature,
 #window,
 #wireplumber,
-#workspaces,
-#workspaces button {
-    min-width: 30px;
-    padding: 0px 2px;
-    margin: 0px 3px;
-    border-radius: 10px;
-    color: @color7;
-    background-color: @color0;
-}
-
-#window {
-    min-width: 22px;
-}
-
-#workspaces button {
-    min-width: 15px;
-    color: @color8;
-}
-
-#workspaces {
-    padding: 0px;
-    margin: 0px;
-}
-
-#workspaces button.active {
-    color: @color7;
-}
-
-#tray {
-    padding: 0px 6px;
-    margin: 0px 0px;
-    border-radius: 10px;
-}
-
-#custom-power,
-#custom-nixos,
-#custom-settings,
-#custom-sandwich {
-    padding: 0px 7px;
-    margin: 0px 0px;
-    border-radius: 10px;
-    /*border: 1px solid @color0;*/
-    color: @color3;
-    background-color: @color0;
-}
-
+#workspaces button,
 #custom-nixos-build,
 #custom-nixos-upgrade,
 #custom-nixos-dry,
@@ -120,9 +60,24 @@ tooltip label {
 #idle_inhibitor,
 #custom-open-application {
     min-width: 30px;
-    margin: 0px 3px;
-    border-radius: 10px;
-    color: @color1;
+    padding: 0 2px;
+    margin: 0 3px;
+}
+
+#window {
+    min-width: 22px;
+}
+
+#workspaces button {
+    min-width: 15px;
+}
+
+#workspaces button label {
+    color: @color8;
+}
+
+#workspaces button.active label {
+    color: @color7;
 }
 
 #sandwich,
@@ -130,32 +85,56 @@ tooltip label {
 #nixos,
 #power {
     min-width: 30px;
-    margin: 0px 0px;
-    border-radius: 10px;
-    background-color: @color0;
 }
 
 .sandwich-drawer,
 .settings-drawer,
 .power-drawer,
 .nixos-drawer {
-    padding: 0px 0px;
-    margin: 0px 3px;
-    color: @color0;
-    background-color: @color0;
+    margin: 0 3px;
 }
 
-.modules-left,
-.modules-center,
-.modules-right {
-    background-color: @color0;
-    padding: 0px 5px;
-    border-radius: 10px;
+#tray,
+#custom-power,
+#custom-nixos,
+#custom-settings,
+#custom-sandwich {
+    padding: 0 6px;
+    color: @color3;
 }
 
+/* Submenu items */
+#custom-nixos-build,
+#custom-nixos-upgrade,
+#custom-nixos-dry,
+#custom-nixos-powerwash,
+#custom-nixos-keybinds,
+#custom-power-shutdown,
+#custom-power-reboot,
+#custom-power-suspend,
+#custom-power-hibernate,
+#custom-settings-wallpaper,
+#power-profiles-daemon,
+#idle_inhibitor,
+#custom-open-application,
+/* States */
+#network.disconnected,
+#temperature.critical,
+#cpu.critical,
+#memory.critical,
 #battery.critical:not(.charging) {
-    background-color: @color1;
-    color: @background;
+    color: @color1;
+}
+
+#cpu.warning,
+#memory.warning,
+#battery.warning:not(.charging),
+#pulseaudio.muted {
+    color: @color3;
+}
+
+#mpris.paused {
+    color: @color8;
 }
 
 #battery.charging,
