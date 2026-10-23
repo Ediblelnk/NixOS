@@ -65,10 +65,11 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
+      "11": "󰓇",
       "spotify": "󰓇",
       "S": "󰭹",
     },
-    "on-click": "kitty",
+    "on-click": "activate",
     "format-window-separator": "",
     "show-special": true,
     "sort-by": "number",
@@ -99,7 +100,7 @@
     "interval": 60,
     "tooltip": false,
     "format": "󰥔<span size=\"50%\"> </span>{0:%H:%M}",
-    "format-alt": "󰸗<span size=\"50%\"> </span>{0:%m-%d} 󰥔<span size=\"50%\"> </span>{0:%H:%M}"
+    "format-alt": "󰸗<span size=\"50%\"> </span>{0:%m-%d} 󰥔<span size=\"50%\"> </span>{0:%H:%M}",
   },
   "cpu": {
     "format": "",
@@ -210,7 +211,7 @@
   "mpris": {
     "format": "{player_icon}<span size=\"50%\"> </span>{dynamic}",
     "format-paused": "{player_icon}<span size=\"50%\"> </span>{dynamic}",
-    "tooltip-format": "TITLE: {title}\nARTIST: {artist}\nALBUM: {album}",
+    "tooltip-format": "󰝚 {title}\n󰠃 {artist}\n󰀥 {album}",
     "player-icons": {
       "default": "󰎆",
       "spotify": "",

@@ -21,6 +21,8 @@
     ./modules/wine.nix
     ./modules/zeditor.nix
     ./modules/steam.nix
+
+    ./patches/waybar.nix
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
