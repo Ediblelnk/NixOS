@@ -10,8 +10,10 @@ in
   # Enable the spicetify module
   programs.spicetify = {
     enable = true;
-    theme = spicePkgs.themes.sleek;
-    colorScheme = "BladeRunner";
-    enabledExtensions = [ ];
+    theme = {
+      name = "wal";
+      src = ../../.config/wal/spicetify/Pywal;
+    };
+    colorScheme = "wal";
   };
 }

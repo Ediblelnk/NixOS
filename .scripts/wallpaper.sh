@@ -21,8 +21,13 @@ set_wallpaper() {
     ln -s -f "$WALLPAPER" "$HOME/.wallpaper"
 
     # regenerate brave theme if present; silence output
-    if [[ -x "${HOME}/.config/wal-brave/generate-theme.sh" ]]; then
-        "${HOME}/.config/wal-brave/generate-theme.sh" >/dev/null 2>&1 || true
+    if [[ -x "${HOME}/.config/wal/brave/generate-theme.sh" ]]; then
+        "${HOME}/.config/wal/brave/generate-theme.sh" >/dev/null 2>&1 || true
+    fi
+
+    # prepare spicetify theme if present; silence output
+    if [[ -x "${HOME}/.config/wal/spicetify/generate-theme.sh" ]]; then
+        "${HOME}/.config/wal/spicetify/generate-theme.sh" >/dev/null 2>&1 || true
     fi
 
     # copy zed theme if present
