@@ -24,9 +24,8 @@ prepare() {
 }
 
 background=$(hexToRgb $background)
-foreground=$(hexToRgb $color8)
-accent=$(hexToRgb $color11)
-secondary=$(hexToRgb $color8)
+foreground=$(hexToRgb $foreground)
+accent=$(hexToRgb $color8)
 
 generate() {
     # Theme template
@@ -41,8 +40,8 @@ generate() {
             "background_tab_inactive": [$background],
             "background_tab_incognito": [$background],
             "background_tab_incognito_inactive": [$background],
-            "bookmark_text": [$background],
-            "button_background": [$foreground],
+            "bookmark_text": [$foreground],
+            "button_background": [$background],
             "frame": [$background],
             "frame_inactive": [$background],
             "frame_incognito": [$background],
@@ -51,15 +50,15 @@ generate() {
             "ntp_header": [$background],
             "ntp_link": [$accent],
             "ntp_text": [$foreground],
-            "omnibox_background": [$foreground],
-            "omnibox_text": [$background],
-            "tab_background_text": [$foreground],
-            "tab_background_text_inactive": [$foreground],
-            "tab_background_text_incognito": [$foreground],
-            "tab_background_text_incognito_inactive": [$foreground],
-            "tab_text": [$background],
-            "toolbar": [$foreground],
-            "toolbar_button_icon": [$background],
+            "omnibox_background": [$background],
+            "omnibox_text": [$accent],
+            "tab_background_text": [$accent],
+            "tab_background_text_inactive": [$accent],
+            "tab_background_text_incognito": [$accent],
+            "tab_background_text_incognito_inactive": [$accent],
+            "tab_text": [$foreground],
+            "toolbar": [$background],
+            "toolbar_button_icon": [$foreground],
             "toolbar_text": [$background]
         },
         "properties": {
