@@ -29,7 +29,6 @@ tooltip label {
 }
 
 /* Shared module sizing */
-#backlight,
 #battery,
 #bluetooth,
 #clock,
@@ -64,6 +63,10 @@ tooltip label {
     margin: 0 3px;
 }
 
+#custom-notification {
+    min-width: 0px;
+}
+
 #window {
     min-width: 22px;
 }
@@ -91,7 +94,8 @@ tooltip label {
 .settings-drawer,
 .power-drawer,
 .nixos-drawer {
-    margin: 0 3px;
+    margin: 0px;
+    padding: 0px;
 }
 
 #tray,
@@ -100,7 +104,7 @@ tooltip label {
 #custom-settings,
 #custom-sandwich {
     padding: 0 6px;
-    color: @color3;
+    color: @color7;
 }
 
 /* Submenu items */
@@ -116,7 +120,12 @@ tooltip label {
 #custom-settings-wallpaper,
 #power-profiles-daemon,
 #idle_inhibitor,
-#custom-open-application,
+#custom-open-application {
+    color: @color8;
+    min-width: 20px;
+    margin: 0 3px;
+}
+
 /* States */
 #network.disconnected,
 #temperature.critical,

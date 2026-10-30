@@ -24,7 +24,6 @@
     "bluetooth",
     "pulseaudio",
     "network",
-    "backlight",
     "battery",
     "clock",
     "group/sandwich",
@@ -126,14 +125,6 @@
     "critical-threshold": 60,
     "format": "",
     "format-critical": "󱃂<span size=\"50%\"> </span>{temperatureC}°C",
-  },
-  "backlight": {
-    "format": "{icon}",
-    "format-alt": "{icon}<span size=\"50%\"> </span>{percent}%",
-    "tooltip-format": "{icon} {percent}%",
-    "format-icons": {
-      "default": ["󰄰", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
-    },
   },
   "battery": {
     "states": {
@@ -316,7 +307,7 @@
     "on-click": "kitty --detach -d ~/Repositories/NixOS/ --hold sh -c \"cat ./.config/hypr/settings/binds.lua\"",
   },
   "custom/notification": {
-    "tooltip-format": "Notifications",
+    "tooltip-format": "{icon} Notifications",
     "format": "{icon}",
     "format-icons": {
       "notification": "󰂚",
@@ -343,8 +334,8 @@
     "escape": true,
   },
   "custom/open-application": {
-    "format": "󰜄",
-    "tooltip-format": "󰜄 Open Application Launcher",
+    "format": "󰐕",
+    "tooltip-format": "󰐕 Open Application Launcher",
     "on-click": "pkill rofi || rofi -show drun",
     "escape": true,
   },
