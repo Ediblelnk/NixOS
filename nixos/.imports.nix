@@ -15,12 +15,12 @@
     ./time.nix
     ./users.nix
 
-    ./modules/spicetify.nix
-    ./modules/virt-manager.nix
     ./modules/docker.nix
+    ./modules/spicetify.nix
+    ./modules/steam.nix
+    ./modules/vm.nix
     ./modules/wine.nix
     ./modules/zeditor.nix
-    ./modules/steam.nix
 
     ./patches/waybar.nix
   ];

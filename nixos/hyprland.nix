@@ -6,11 +6,13 @@
     xwayland.enable = true;
   };
 
+  environment.etc."tuigreet/config.toml".source = ../.config/tuigreet/config.toml;
+
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd 'uwsm start -e -D Hyprland hyprland.desktop'";
+        command = "tuigreet --config /etc/tuigreet/config.toml --cmd 'uwsm start -e -D Hyprland hyprland.desktop'";
         user = "greeter";
       };
     };
@@ -56,6 +58,7 @@
     hyprpolkitagent # polkit agent for Hyprland
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
+    tuigreet
     pipewire
     wireplumber
 

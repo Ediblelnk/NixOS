@@ -1,0 +1,56 @@
+[display]
+show_time = true
+align_greeting = "center"
+issue = false
+
+[layout]
+width = 50
+window_padding = 2
+container_padding = 1
+prompt_padding = 1
+
+[layout.widgets]
+# "top", "bottom", "default", "hidden"
+time_position = "top"
+status_position = "hidden"
+
+[remember]
+username = true
+session = false
+user_session = true
+
+[user_menu]
+enabled = true
+
+[secret]
+# "hidden" or "characters"
+mode = "characters"
+characters = "<=>"
+
+[keybindings]
+command = 2     # F2
+sessions = 3    # F3
+background = 4  # F4
+power = 12      # F12
+
+[background]
+# or "none" to disable
+kind = "doom"
+fps = 18
+
+[background.doom]
+height = 3  # 1-9
+spread = 2  # 0-4
+top_color = "#9F2707"
+middle_color = "#C78F17"
+bottom_color = "#CCCCCC"
+
+[theme]
+border = "white"
+text = "white"
+time = "white"
+container = "black"
+title = "lightyellow"
+greet = "lightyellow"
+prompt = "lightyellow"
+input = "white"
