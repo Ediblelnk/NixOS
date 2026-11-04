@@ -18,6 +18,16 @@
     };
   };
 
+  systemd.services.greetd.serviceConfig = {
+    Type = "idle";
+    StandardInput = "tty";
+    StandardOutput = "tty";
+    StandardError = "journal";
+    TTYReset = true;
+    TTYVHangup = true;
+    TTYVTDisallocate = true;
+  };
+
   services.gnome.gnome-keyring.enable = true;
   security = {
     polkit.enable = true;

@@ -39,18 +39,18 @@ kind = "doom"
 fps = 18
 
 [background.doom]
-height = 3  # 1-9
+height = 1  # 1-9
 spread = 2  # 0-4
 top_color = "#9F2707"
 middle_color = "#C78F17"
 bottom_color = "#CCCCCC"
 
 [theme]
-border = "white"
-text = "white"
-time = "white"
+border = "#CCCCCC"
+text = "#CCCCCC"
+time = "#CCCCCC"
 container = "black"
-title = "lightyellow"
-greet = "lightyellow"
-prompt = "lightyellow"
-input = "white"
+title = "#C78F17"
+greet = "#C78F17"
+prompt = "#C78F17"
+input = "#CCCCCC"
